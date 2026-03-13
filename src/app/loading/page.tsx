@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { useSession } from '@/context/SessionContext'
+import { SidePanelLayout } from '@/components/layout/SidePanelLayout'
 import { en } from '@/locales/en'
 
 const CHIPS = [
@@ -34,7 +35,7 @@ export default function LoadingPage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  return (
+  const main = (
     <div className="min-h-screen bg-neutral-50 flex flex-col items-center justify-center px-5">
       <div className="max-w-lg w-full">
         <h1 className="font-display text-3xl font-bold text-neutral-900 mb-2">
@@ -64,4 +65,28 @@ export default function LoadingPage() {
       </div>
     </div>
   )
+
+  const side = (
+    <div className="flex flex-col justify-center h-full px-10 py-12">
+      <p className="font-body text-xs font-semibold tracking-widest text-neutral-400 uppercase mb-6">
+        What we're doing
+      </p>
+      <div className="space-y-6">
+        <div>
+          <p className="font-display text-lg font-bold text-white mb-1">Reading your descriptions</p>
+          <p className="font-body text-sm text-neutral-400 leading-relaxed">Your free-text answers about where you live and what you love are matched against neighbourhood personality profiles.</p>
+        </div>
+        <div>
+          <p className="font-display text-lg font-bold text-white mb-1">Applying your constraints</p>
+          <p className="font-body text-sm text-neutral-400 leading-relaxed">Budget, bedrooms, transport, and timeline filter the field before the personality match runs.</p>
+        </div>
+        <div>
+          <p className="font-display text-lg font-bold text-white mb-1">Finding the analogue</p>
+          <p className="font-body text-sm text-neutral-400 leading-relaxed">We look for a Vancouver neighbourhood with a similar texture to the places you described — not just similar amenities.</p>
+        </div>
+      </div>
+    </div>
+  )
+
+  return <SidePanelLayout main={main} side={side} />
 }
