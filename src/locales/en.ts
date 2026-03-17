@@ -153,6 +153,7 @@ export const en = {
         'quiet-decompress': 'Quiet and low-key — I need to decompress at home',
         'diversity-inclusion': 'Diversity and inclusion — I want to feel welcome as I am',
         'grit-character': "I'm drawn to lived-in, working neighbourhoods — a bit of grit is part of the character",
+        grit: "A bit of grit is part of the character — I'm drawn to real, unpolished neighbourhoods",
       },
       whyWeAsk:
         "Comfort means different things to different people. For some it's personal safety, for others it's knowing your neighbours, for others it's feeling seen. Your answer adjusts how we weight safety, quietness, and cultural diversity.",

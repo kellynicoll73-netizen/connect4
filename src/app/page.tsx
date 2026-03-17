@@ -11,7 +11,7 @@ export default function LandingPage() {
       <div className="max-w-sm mx-auto w-full">
 
         {/* Eyebrow */}
-        <p className="font-body text-xs font-semibold tracking-widest text-neutral-500 mb-8">
+        <p className="font-body text-xs font-semibold uppercase tracking-widest text-neutral-500 mb-8">
           Neighbourhood Fit Tool · Vancouver
         </p>
 

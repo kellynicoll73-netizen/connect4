@@ -134,6 +134,7 @@ export type ComfortPriority =
   | 'quiet-decompress'
   | 'diversity-inclusion'
   | 'grit-character'
+  | 'grit'
   | 'other'
 
 export type CardVersion = 'A' | 'B' | 'C'

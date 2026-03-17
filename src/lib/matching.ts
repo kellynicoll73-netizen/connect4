@@ -160,6 +160,11 @@ function applyWeightAdjustments(session: SessionState): AttributeWeights {
       w.culturalDiversity += 1
       w.socialEnergy += 1
       break
+    case 'grit':
+      w.safetyPerception -= 2
+      w.socialEnergy += 1
+      w.culturalDiversity += 1
+      break
     // 'other': no adjustment
   }
 
@@ -216,9 +221,14 @@ function applyRawBonuses(
 ): number {
   let bonus = 0
 
-  // Q7 edges-emerging: +10 to Strathcona and East Vancouver
+  // Q7 edges-emerging: +10 to Strathcona, Chinatown, Surrey City Centre, and Maillardville
   if (session.neighbourhoodEnergy === 'edges-emerging') {
-    if (neighbourhood.id === 'strathcona' || neighbourhood.id === 'east-vancouver') {
+    if (
+      neighbourhood.id === 'strathcona' ||
+      neighbourhood.id === 'chinatown' ||
+      neighbourhood.id === 'surrey-city-centre' ||
+      neighbourhood.id === 'maillardville'
+    ) {
       bonus += 10
     }
   }
@@ -293,10 +303,11 @@ export function computeDisplayScores(
     0
   )
 
+  const maxRaw = Math.max(...rawScores.map((s) => s.score), 1)
   return Object.fromEntries(
     rawScores.map(({ id, score }) => [
       id,
-      Math.round(Math.max(0, Math.min(99, (score / theoreticalMax) * 100))),
+      Math.round(50 + (score / maxRaw) * 38),
     ])
   )
 }
@@ -326,9 +337,10 @@ export function computeTopMatches(
     (sum, w) => sum + Math.max(w, 0) * 10,
     0
   )
+  const maxRaw = scored.length > 0 ? Math.max(scored[0].raw, 1) : 1
   return scored.slice(0, n).map(({ neighbourhood, raw }) => ({
     neighbourhood,
-    score: Math.round(Math.max(0, Math.min(99, (raw / theoreticalMax) * 100))),
+    score: Math.round(50 + (raw / maxRaw) * 38),
   }))
 }
 
