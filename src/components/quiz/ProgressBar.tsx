@@ -1,18 +1,18 @@
-// Phase groups: Phase 1 = pips 1–5, Phase 2 = 6–10, Phase 3 = 11–12, Phase 4 = 13–14
+// Phase groups: Phase 1 = pips 1–5, Phase 2 = 6–11, Phase 3 = 12–13, Phase 4 = 14–15
 const PHASES = [
   { label: 'Phase 1', pips: [1, 2, 3, 4, 5] },
-  { label: 'Phase 2', pips: [6, 7, 8, 9, 10] },
-  { label: 'Phase 3', pips: [11, 12] },
-  { label: 'Phase 4', pips: [13, 14] },
+  { label: 'Phase 2', pips: [6, 7, 8, 9, 10, 11] },
+  { label: 'Phase 3', pips: [12, 13] },
+  { label: 'Phase 4', pips: [14, 15] },
 ]
 
 interface ProgressBarProps {
-  currentStep: number // 1–14
+  currentStep: number // 1–15
 }
 
 export function ProgressBar({ currentStep }: ProgressBarProps) {
   return (
-    <div className="flex items-center gap-3" role="progressbar" aria-valuenow={currentStep} aria-valuemin={1} aria-valuemax={14}>
+    <div className="flex items-center gap-3" role="progressbar" aria-valuenow={currentStep} aria-valuemin={1} aria-valuemax={15}>
       {PHASES.map((phase, phaseIndex) => (
         <div key={phaseIndex} className="flex items-center gap-1">
           {phase.pips.map((pip) => (

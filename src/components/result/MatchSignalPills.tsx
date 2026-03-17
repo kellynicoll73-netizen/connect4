@@ -12,7 +12,7 @@ export function MatchSignalPills({ matches, gaps }: MatchSignalPillsProps) {
     <div className="space-y-4">
       {matches.length > 0 && (
         <div>
-          <p className="text-xs font-body font-semibold tracking-widest text-neutral-400 uppercase mb-2">
+          <p className="text-xs font-body font-semibold tracking-wide text-neutral-400 mb-2">
             {en.result.matchPillsLabel}
           </p>
           <div className="flex flex-wrap gap-2">
@@ -30,7 +30,7 @@ export function MatchSignalPills({ matches, gaps }: MatchSignalPillsProps) {
 
       {gaps.length > 0 && (
         <div>
-          <p className="text-xs font-body font-semibold tracking-widest text-neutral-400 uppercase mb-2">
+          <p className="text-xs font-body font-semibold tracking-wide text-neutral-400 mb-2">
             {en.result.gapPillsLabel}
           </p>
           <div className="flex flex-wrap gap-2">

@@ -1,6 +1,6 @@
 export const en = {
   landing: {
-    productLabel: 'APT · NEIGHBOURHOOD FIT TOOL · VANCOUVER',
+    productLabel: 'Apt · Neighbourhood Fit Tool · Vancouver',
     headline1: 'Find the neighbourhood',
     headline2: 'that fits who you are.',
     body: "Tell us who you are. We'll help you find somewhere that feels like it was waiting for you.",
@@ -24,10 +24,10 @@ export const en = {
       whyWeAsk: 'Why we ask',
       whyWeAskOpen: '− Why we ask',
       whyWeAskClosed: '+ Why we ask',
-      phase1Label: 'PHASE 1 — PRACTICALITIES',
-      phase2Label: 'PHASE 2 — YOUR LIFESTYLE',
-      phase3Label: 'PHASE 3 — WHERE YOU\'RE FROM',
-      phase4Label: 'PHASE 4 — YOUR FAVOURITE PLACE',
+      phase1Label: 'Phase 1 — Practicalities',
+      phase2Label: 'Phase 2 — Your Lifestyle',
+      phase3Label: "Phase 3 — Where You're From",
+      phase4Label: 'Phase 4 — Your Favourite Place',
     },
     q1: {
       question: "What's bringing you to Vancouver?",
@@ -95,6 +95,7 @@ export const en = {
       },
       whyWeAsk:
         "Transport mode fundamentally changes which neighbourhoods work for you. If you're on transit, SkyTrain proximity is critical. If you're walking, walkability scores dominate. Car users have more flexibility.",
+      phase2Card: "Now we want to understand how you actually live. Your daily patterns tell us more about neighbourhood fit than any checklist.",
     },
     q6: {
       question: 'Picture a free day.',
@@ -205,20 +206,20 @@ export const en = {
   },
 
   result: {
-    matchLabel: 'YOUR MATCH',
-    matchPillsLabel: 'WHERE IT MATCHES',
-    gapPillsLabel: "WHERE IT DOESN'T QUITE FIT",
+    matchLabel: 'Your match',
+    matchPillsLabel: 'Where it matches',
+    gapPillsLabel: "Where it doesn't quite fit",
     alsoConsider: 'Also worth exploring',
     worthKnowing:
       'This is a match, not a certainty. No algorithm replaces walking the streets on a Tuesday morning. Shortlist two or three and visit each before you commit.',
     saveButton: 'Save my results',
     startAgain: 'Start again',
     rentalEntry: "See what's available in {neighbourhood} right now →",
-    comingNext: 'COMING NEXT',
-    howItCompares: 'HOW IT COMPARES TO WHAT YOU KNOW',
-    whatItsLike: 'WHAT THIS NEIGHBOURHOOD IS ACTUALLY LIKE',
-    communityVoice: 'FROM SOMEONE WHO LIVES HERE',
-    worthKnowingLabel: 'WORTH KNOWING',
+    comingNext: 'Coming next',
+    howItCompares: 'How it compares to what you know',
+    whatItsLike: 'What this neighbourhood is actually like',
+    communityVoice: 'From someone who lives here',
+    worthKnowingLabel: 'Worth knowing',
     dataSources: {
       walkscore: 'Walkscore',
       cmhc: 'CMHC vacancy',

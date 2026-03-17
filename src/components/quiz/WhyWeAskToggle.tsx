@@ -33,7 +33,7 @@ export function WhyWeAskToggle({ copy }: WhyWeAskToggleProps) {
         aria-hidden={!open}
       >
         <div ref={contentRef} className="pt-2 pb-1">
-          <p className="text-sm font-body text-neutral-600">{copy}</p>
+          <p className="text-sm font-body text-neutral-500 leading-relaxed">{copy}</p>
         </div>
       </div>
     </div>

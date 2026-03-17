@@ -19,7 +19,7 @@ export function QuizQuestion({
   return (
     <div className="flex flex-col gap-5">
       <div>
-        <h2 className="font-display text-2xl font-bold text-neutral-900 leading-snug">
+        <h2 className="font-display text-2xl font-semibold text-neutral-900 leading-snug">
           {headline}
         </h2>
         {subCopy && (

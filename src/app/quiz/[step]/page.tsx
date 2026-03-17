@@ -14,10 +14,12 @@ import type { Household, Transport, Bedrooms } from '@/types'
 
 // ─── Routing config ───────────────────────────────────────────────────────────
 
-const STEP_ORDER = [1, 2, 4, 6, 7, 8, 10, 11, 12, 13, 14]
-const REDIRECT_MAP: Record<number, number> = { 3: 2, 5: 4, 9: 8 }
+const STEP_ORDER = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
 const STEP_PIP: Record<number, number> = {
-  1: 1, 2: 3, 4: 5, 6: 6, 7: 7, 8: 9, 10: 10, 11: 11, 12: 12, 13: 13, 14: 14,
+  1: 1, 2: 2, 3: 3, 4: 4, 5: 5,
+  6: 6, 7: 7, 8: 8, 9: 9, 10: 10, 11: 11,
+  12: 12, 13: 13,
+  14: 14, 15: 15,
 }
 
 function getPrev(step: number): string {
@@ -74,7 +76,7 @@ const Q10_OPTS = toOptions(en.quiz.q10.options as Record<string, string>)
 
 function PhaseIntroCard({ text }: { text: string }) {
   return (
-    <div className="border-l-4 border-primary-500 bg-neutral-50 px-4 py-3 mb-6 rounded-sm">
+    <div className="border-l-4 border-primary-500 bg-primary-50 px-4 py-3 mb-6 rounded-sm">
       <p className="font-body text-sm text-neutral-700">{text}</p>
     </div>
   )
@@ -89,7 +91,6 @@ export default function QuizStepPage() {
 
   const step = Number(params.step)
 
-  // Local multi-select state (not persisted across navigations — acceptable for MVP)
   const [householdMulti, setHouseholdMulti] = useState<string[]>(() =>
     state.household ? [state.household] : []
   )
@@ -97,16 +98,13 @@ export default function QuizStepPage() {
     state.transport ? [state.transport] : []
   )
 
-  // Redirect stale / invalid steps
   useEffect(() => {
-    if (REDIRECT_MAP[step] !== undefined) {
-      router.replace(`/quiz/${REDIRECT_MAP[step]}`)
-    } else if (!STEP_ORDER.includes(step)) {
+    if (!STEP_ORDER.includes(step)) {
       router.replace('/quiz/1')
     }
   }, [step, router])
 
-  if (REDIRECT_MAP[step] !== undefined || !STEP_ORDER.includes(step)) return null
+  if (!STEP_ORDER.includes(step)) return null
 
   const pip = STEP_PIP[step] ?? 1
 
@@ -123,7 +121,7 @@ export default function QuizStepPage() {
   }
 
   function handleContinue() {
-    if (step === 14) {
+    if (step === 15) {
       runMatching()
       router.push('/loading')
     } else {
@@ -136,16 +134,20 @@ export default function QuizStepPage() {
   function isDisabled(): boolean {
     switch (step) {
       case 1:  return !state.reasonForMoving
-      case 2:  return !state.timeline || householdMulti.length === 0
-      case 4:  return !state.bedrooms || !state.budget
+      case 2:  return !state.timeline
+      case 3:  return householdMulti.length === 0
+      case 4:  return !state.bedrooms
+      case 5:  return !state.budget
       case 6:  return transportMulti.length === 0
       case 7:  return !state.freeDay
-      case 8:  return !state.neighbourhoodEnergy || !state.outdoorsAccess
-      case 10: return !state.culturalCommunity || !state.comfortPriority
-      case 11: return !state.currentCity?.trim()
-      case 12: return !state.currentDescription?.trim()
-      case 13:
-      case 14: return false
+      case 8:  return !state.neighbourhoodEnergy
+      case 9:  return !state.outdoorsAccess
+      case 10: return !state.culturalCommunity
+      case 11: return !state.comfortPriority
+      case 12: return !state.currentCity?.trim()
+      case 13: return !state.currentDescription?.trim()
+      case 14:
+      case 15: return false
       default: return false
     }
   }
@@ -172,85 +174,92 @@ export default function QuizStepPage() {
           </QuizQuestion>
         )
 
-      // ── Step 2: Timeline + Household ─────────────────────────────────────
+      // ── Step 2: Timeline ─────────────────────────────────────────────────
       case 2:
         return (
-          <div className="space-y-8">
-            <QuizQuestion
-              headline={en.quiz.q2.question}
-              whyWeAsk={en.quiz.q2.whyWeAsk}
-            >
-              <SingleSelectOptions
-                options={Q2_OPTS}
-                value={state.timeline}
-                onChange={(v) => setAnswer('timeline', v)}
-                escapeFreeText={state.timelineOther}
-                onEscapeChange={(t) => setAnswer('timelineOther', t)}
-              />
-            </QuizQuestion>
-
-            <QuizQuestion
-              headline={en.quiz.q3.question}
-              subCopy={en.quiz.q3.subQuestion}
-              whyWeAsk={en.quiz.q3.whyWeAsk}
-            >
-              <MultiSelectOptions
-                options={Q3_OPTS}
-                value={householdMulti}
-                onChange={handleHouseholdChange}
-                showEscape={false}
-              />
-            </QuizQuestion>
-          </div>
-        )
-
-      // ── Step 4: Bedrooms + Budget ─────────────────────────────────────────
-      case 4:
-        return (
-          <div className="space-y-8">
-            <QuizQuestion headline={en.quiz.q3b.question}>
-              <SingleSelectOptions
-                options={Q3B_OPTS}
-                value={state.bedrooms !== null ? String(state.bedrooms) : null}
-                onChange={(v) => setAnswer('bedrooms', Number(v) as Bedrooms)}
-                showEscape={false}
-              />
-            </QuizQuestion>
-
-            <QuizQuestion
-              headline={en.quiz.q4.question}
-              whyWeAsk={en.quiz.q4.whyWeAsk}
-            >
-              <SingleSelectOptions
-                options={Q4_OPTS}
-                value={state.budget}
-                onChange={(v) => setAnswer('budget', v)}
-                escapeFreeText={state.budgetOther}
-                onEscapeChange={(t) => setAnswer('budgetOther', t)}
-              />
-            </QuizQuestion>
-          </div>
-        )
-
-      // ── Step 6: Transport ─────────────────────────────────────────────────
-      case 6:
-        return (
           <QuizQuestion
-            headline={en.quiz.q5.question}
-            subCopy={en.quiz.q5.subQuestion}
-            whyWeAsk={en.quiz.q5.whyWeAsk}
+            headline={en.quiz.q2.question}
+            whyWeAsk={en.quiz.q2.whyWeAsk}
           >
-            <MultiSelectOptions
-              options={Q5_OPTS}
-              value={transportMulti}
-              onChange={handleTransportChange}
-              escapeFreeText={state.transportOther}
-              onEscapeChange={(t) => setAnswer('transportOther', t)}
+            <SingleSelectOptions
+              options={Q2_OPTS}
+              value={state.timeline}
+              onChange={(v) => setAnswer('timeline', v)}
+              escapeFreeText={state.timelineOther}
+              onEscapeChange={(t) => setAnswer('timelineOther', t)}
             />
           </QuizQuestion>
         )
 
-      // ── Step 7: Free day ──────────────────────────────────────────────────
+      // ── Step 3: Household ────────────────────────────────────────────────
+      case 3:
+        return (
+          <QuizQuestion
+            headline={en.quiz.q3.question}
+            subCopy={en.quiz.q3.subQuestion}
+            whyWeAsk={en.quiz.q3.whyWeAsk}
+          >
+            <MultiSelectOptions
+              options={Q3_OPTS}
+              value={householdMulti}
+              onChange={handleHouseholdChange}
+              showEscape={false}
+            />
+          </QuizQuestion>
+        )
+
+      // ── Step 4: Bedrooms ─────────────────────────────────────────────────
+      case 4:
+        return (
+          <QuizQuestion headline={en.quiz.q3b.question}>
+            <SingleSelectOptions
+              options={Q3B_OPTS}
+              value={state.bedrooms !== null ? String(state.bedrooms) : null}
+              onChange={(v) => setAnswer('bedrooms', Number(v) as Bedrooms)}
+              showEscape={false}
+            />
+          </QuizQuestion>
+        )
+
+      // ── Step 5: Budget ───────────────────────────────────────────────────
+      case 5:
+        return (
+          <QuizQuestion
+            headline={en.quiz.q4.question}
+            whyWeAsk={en.quiz.q4.whyWeAsk}
+          >
+            <SingleSelectOptions
+              options={Q4_OPTS}
+              value={state.budget}
+              onChange={(v) => setAnswer('budget', v)}
+              escapeFreeText={state.budgetOther}
+              onEscapeChange={(t) => setAnswer('budgetOther', t)}
+            />
+          </QuizQuestion>
+        )
+
+      // ── Step 6: Transport ────────────────────────────────────────────────
+      case 6:
+        return (
+          <>
+            <PhaseIntroCard text={en.quiz.q5.phase2Card} />
+            <QuizQuestion
+              headline={en.quiz.q5.question}
+              subCopy={en.quiz.q5.subQuestion}
+              whyWeAsk={en.quiz.q5.whyWeAsk}
+            >
+              <MultiSelectOptions
+                options={Q5_OPTS}
+                value={transportMulti}
+                onChange={handleTransportChange}
+                escapeFreeText={state.transportOther}
+                onEscapeChange={(t) => setAnswer('transportOther', t)}
+              />
+            </QuizQuestion>
+          </>
+        )
+
+      // ── Step 7: Free day ─────────────────────────────────────────────────
       case 7:
         return (
           <QuizQuestion
@@ -268,80 +277,84 @@ export default function QuizStepPage() {
           </QuizQuestion>
         )
 
-      // ── Step 8: Neighbourhood energy + Outdoors ───────────────────────────
+      // ── Step 8: Neighbourhood energy ─────────────────────────────────────
       case 8:
         return (
-          <div className="space-y-8">
-            <QuizQuestion
-              headline={en.quiz.q7.question}
-              whyWeAsk={en.quiz.q7.whyWeAsk}
-            >
-              <SingleSelectOptions
-                options={Q7_OPTS}
-                value={state.neighbourhoodEnergy}
-                onChange={(v) => setAnswer('neighbourhoodEnergy', v)}
-                escapeFreeText={state.neighbourhoodEnergyOther}
-                onEscapeChange={(t) => setAnswer('neighbourhoodEnergyOther', t)}
-              />
-            </QuizQuestion>
-
-            <QuizQuestion
-              headline={en.quiz.q8.question}
-              whyWeAsk={en.quiz.q8.whyWeAsk}
-            >
-              <SingleSelectOptions
-                options={Q8_OPTS}
-                value={state.outdoorsAccess}
-                onChange={(v) => setAnswer('outdoorsAccess', v)}
-                escapeFreeText={state.outdoorsAccessOther}
-                onEscapeChange={(t) => setAnswer('outdoorsAccessOther', t)}
-              />
-            </QuizQuestion>
-          </div>
+          <QuizQuestion
+            headline={en.quiz.q7.question}
+            whyWeAsk={en.quiz.q7.whyWeAsk}
+          >
+            <SingleSelectOptions
+              options={Q7_OPTS}
+              value={state.neighbourhoodEnergy}
+              onChange={(v) => setAnswer('neighbourhoodEnergy', v)}
+              escapeFreeText={state.neighbourhoodEnergyOther}
+              onEscapeChange={(t) => setAnswer('neighbourhoodEnergyOther', t)}
+            />
+          </QuizQuestion>
         )
 
-      // ── Step 10: Cultural community + Comfort priority ────────────────────
+      // ── Step 9: Outdoors access ──────────────────────────────────────────
+      case 9:
+        return (
+          <QuizQuestion
+            headline={en.quiz.q8.question}
+            whyWeAsk={en.quiz.q8.whyWeAsk}
+          >
+            <SingleSelectOptions
+              options={Q8_OPTS}
+              value={state.outdoorsAccess}
+              onChange={(v) => setAnswer('outdoorsAccess', v)}
+              escapeFreeText={state.outdoorsAccessOther}
+              onEscapeChange={(t) => setAnswer('outdoorsAccessOther', t)}
+            />
+          </QuizQuestion>
+        )
+
+      // ── Step 10: Cultural community ──────────────────────────────────────
       case 10:
         return (
-          <div className="space-y-8">
-            <QuizQuestion headline={en.quiz.q9.question}>
-              <SingleSelectOptions
-                options={Q9_OPTS}
-                value={state.culturalCommunity}
-                onChange={(v) => setAnswer('culturalCommunity', v)}
-                showEscape={false}
-              />
-              {state.culturalCommunity === 'yes' && (
-                <div className="mt-4">
-                  <label className="font-body text-sm font-semibold text-neutral-700 block mb-2">
-                    {en.quiz.q9.conditionalLabel}
-                  </label>
-                  <TextArea
-                    value={state.culturalCommunityText ?? ''}
-                    onChange={(v) => setAnswer('culturalCommunityText', v)}
-                    placeholder={en.quiz.q9.conditionalPlaceholder}
-                  />
-                </div>
-              )}
-            </QuizQuestion>
-
-            <QuizQuestion
-              headline={en.quiz.q10.question}
-              whyWeAsk={en.quiz.q10.whyWeAsk}
-            >
-              <SingleSelectOptions
-                options={Q10_OPTS}
-                value={state.comfortPriority}
-                onChange={(v) => setAnswer('comfortPriority', v)}
-                escapeFreeText={state.comfortPriorityOther}
-                onEscapeChange={(t) => setAnswer('comfortPriorityOther', t)}
-              />
-            </QuizQuestion>
-          </div>
+          <QuizQuestion headline={en.quiz.q9.question}>
+            <SingleSelectOptions
+              options={Q9_OPTS}
+              value={state.culturalCommunity}
+              onChange={(v) => setAnswer('culturalCommunity', v)}
+              showEscape={false}
+            />
+            {state.culturalCommunity === 'yes' && (
+              <div className="mt-4">
+                <label className="font-body text-sm font-semibold text-neutral-700 block mb-2">
+                  {en.quiz.q9.conditionalLabel}
+                </label>
+                <TextArea
+                  value={state.culturalCommunityText ?? ''}
+                  onChange={(v) => setAnswer('culturalCommunityText', v)}
+                  placeholder={en.quiz.q9.conditionalPlaceholder}
+                />
+              </div>
+            )}
+          </QuizQuestion>
         )
 
-      // ── Step 11: Current location ─────────────────────────────────────────
+      // ── Step 11: Comfort priority ────────────────────────────────────────
       case 11:
+        return (
+          <QuizQuestion
+            headline={en.quiz.q10.question}
+            whyWeAsk={en.quiz.q10.whyWeAsk}
+          >
+            <SingleSelectOptions
+              options={Q10_OPTS}
+              value={state.comfortPriority}
+              onChange={(v) => setAnswer('comfortPriority', v)}
+              escapeFreeText={state.comfortPriorityOther}
+              onEscapeChange={(t) => setAnswer('comfortPriorityOther', t)}
+            />
+          </QuizQuestion>
+        )
+
+      // ── Step 12: Current location ────────────────────────────────────────
+      case 12:
         return (
           <>
             <PhaseIntroCard text={en.quiz.q11.phase3Card} />
@@ -368,8 +381,8 @@ export default function QuizStepPage() {
           </>
         )
 
-      // ── Step 12: Describe current neighbourhood ───────────────────────────
-      case 12: {
+      // ── Step 13: Describe current neighbourhood ──────────────────────────
+      case 13: {
         const headline = state.currentNeighbourhood
           ? en.quiz.q12.headlineWithNeighbourhood.replace('{neighbourhood}', state.currentNeighbourhood)
           : en.quiz.q12.headlineWithCity.replace('{city}', state.currentCity ?? 'where you are')
@@ -384,8 +397,8 @@ export default function QuizStepPage() {
         )
       }
 
-      // ── Step 13: Favourite place ──────────────────────────────────────────
-      case 13:
+      // ── Step 14: Favourite place ─────────────────────────────────────────
+      case 14:
         return (
           <>
             <PhaseIntroCard text={en.quiz.q13.phase4Card} />
@@ -413,8 +426,8 @@ export default function QuizStepPage() {
           </>
         )
 
-      // ── Step 14: Describe favourite ───────────────────────────────────────
-      case 14:
+      // ── Step 15: Describe favourite ──────────────────────────────────────
+      case 15:
         return (
           <QuizQuestion headline={en.quiz.q14.question}>
             <TextArea
