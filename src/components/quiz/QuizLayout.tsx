@@ -88,6 +88,29 @@ function QuizMain({
           >
             {en.quiz.shared.back}
           </button>
+          {/* Phase indicator — visible on mobile only */}
+          <div className="flex gap-1 lg:hidden">
+            {[1,2,3,4].map((phase) => {
+              const active =
+                (phase === 1 && pip <= 5) ||
+                (phase === 2 && pip >= 6 && pip <= 10) ||
+                (phase === 3 && pip >= 11 && pip <= 12) ||
+                (phase === 4 && pip >= 13)
+              return (
+                <span
+                  key={phase}
+                  className={[
+                    'font-body text-xs font-semibold px-2 py-0.5 rounded-sm',
+                    active
+                      ? 'bg-primary-500 text-white'
+                      : 'bg-neutral-200 text-neutral-400',
+                  ].join(' ')}
+                >
+                  {phase}
+                </span>
+              )
+            })}
+          </div>
         </div>
         <ProgressBar currentStep={pip} />
         <PhaseLabel step={pip} />
