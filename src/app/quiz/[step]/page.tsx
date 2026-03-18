@@ -13,20 +13,39 @@ import { en } from '@/locales/en'
 import type { Household, Transport, Bedrooms } from '@/types'
 
 // ─── Routing config ───────────────────────────────────────────────────────────
+// 11 steps: Phase 1 = 1–4 | Phase 2 = 5–10 | Phase 3 = 11
+// Phase intro cards live at /quiz/phase/2 and /quiz/phase/3 (own pages).
 
-const STEP_ORDER = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-const STEP_PIP: Record<number, number> = {
-  1: 1, 2: 2, 3: 3, 4: 4, 5: 5,
-  6: 6, 7: 7, 8: 8, 9: 9, 10: 10, 11: 11, 12: 12,
+// ─── Why we ask — pinned above Continue in QuizLayout ─────────────────────────
+
+function getWhyWeAsk(step: number): string | undefined {
+  const map: Partial<Record<number, string>> = {
+    1:  en.quiz.q1.whyWeAsk,
+    2:  en.quiz.q2.whyWeAsk,
+    3:  en.quiz.q3.whyWeAsk,
+    4:  en.quiz.q4.whyWeAsk,
+    5:  en.quiz.q5.whyWeAsk,
+    6:  en.quiz.q6.whyWeAsk,
+    7:  en.quiz.q7.whyWeAsk,
+    8:  en.quiz.q8.whyWeAsk,
+    10: en.quiz.q10.whyWeAsk,
+  }
+  return map[step]
 }
 
+const STEP_ORDER = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+
 function getPrev(step: number): string {
+  if (step === 6)  return '/quiz/phase/2'   // back from first Phase 2 question
+  if (step === 11) return '/quiz/phase/3'   // back from Phase 3 question
   const idx = STEP_ORDER.indexOf(step)
   if (idx <= 0) return '/'
   return `/quiz/${STEP_ORDER[idx - 1]}`
 }
 
 function getNext(step: number): string {
+  if (step === 5)  return '/quiz/phase/2'   // after last Phase 1 question (transport), show intro
+  if (step === 10) return '/quiz/phase/3'   // after last Phase 2 question, show intro
   const idx = STEP_ORDER.indexOf(step)
   if (idx < 0 || idx === STEP_ORDER.length - 1) return '/loading'
   return `/quiz/${STEP_ORDER[idx + 1]}`
@@ -36,10 +55,10 @@ function getNext(step: number): string {
 
 function dominantHousehold(values: string[]): Household | null {
   if (values.includes('me-and-children')) return 'me-and-children'
-  if (values.includes('me-and-partner')) return 'me-and-partner'
-  if (values.includes('me-and-pet')) return 'me-and-pet'
-  if (values.includes('just-me')) return 'just-me'
-  if (values.includes('other')) return 'other'
+  if (values.includes('me-and-partner'))  return 'me-and-partner'
+  if (values.includes('me-and-pet'))      return 'me-and-pet'
+  if (values.includes('just-me'))         return 'just-me'
+  if (values.includes('other'))           return 'other'
   return null
 }
 
@@ -47,8 +66,8 @@ function dominantTransport(values: string[]): Transport | null {
   if (values.includes('walking')) return 'walking'
   if (values.includes('transit')) return 'transit'
   if (values.includes('cycling')) return 'cycling'
-  if (values.includes('car')) return 'car'
-  if (values.includes('other')) return 'other'
+  if (values.includes('car'))     return 'car'
+  if (values.includes('other'))   return 'other'
   return null
 }
 
@@ -69,17 +88,6 @@ const Q7_OPTS  = toOptions(en.quiz.q7.options  as Record<string, string>)
 const Q8_OPTS  = toOptions(en.quiz.q8.options  as Record<string, string>)
 const Q9_OPTS  = toOptions(en.quiz.q9.options  as Record<string, string>)
 const Q10_OPTS = toOptions(en.quiz.q10.options as Record<string, string>)
-
-// ─── Phase intro card ─────────────────────────────────────────────────────────
-
-function PhaseIntroCard({ title, body }: { title: string; body: string }) {
-  return (
-    <div className="bg-[#F4E8E0] rounded-lg px-6 py-8 mb-8">
-      <p className="font-display text-xl font-semibold text-neutral-900 mb-3">{title}</p>
-      <p className="font-body text-base text-neutral-600 leading-relaxed">{body}</p>
-    </div>
-  )
-}
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
@@ -105,8 +113,6 @@ export default function QuizStepPage() {
 
   if (!STEP_ORDER.includes(step)) return null
 
-  const pip = STEP_PIP[step] ?? 1
-
   // ─── Handlers ──────────────────────────────────────────────────────────────
 
   function handleHouseholdChange(values: string[]) {
@@ -120,7 +126,7 @@ export default function QuizStepPage() {
   }
 
   async function handleContinue() {
-    if (step === 12) {
+    if (step === 11) {
       await runMatching()
       router.push('/loading')
     } else {
@@ -135,15 +141,14 @@ export default function QuizStepPage() {
       case 1:  return !state.reasonForMoving
       case 2:  return !state.timeline
       case 3:  return householdMulti.length === 0
-      case 4:  return state.bedrooms === null
-      case 5:  return !state.budget
-      case 6:  return transportMulti.length === 0
-      case 7:  return !state.freeDay
-      case 8:  return !state.neighbourhoodEnergy
-      case 9:  return !state.outdoorsAccess
-      case 10: return !state.culturalCommunity
-      case 11: return !state.comfortPriority
-      case 12: return false
+      case 4:  return !state.budget || state.bedrooms === null   // combined step
+      case 5:  return transportMulti.length === 0
+      case 6:  return !state.freeDay
+      case 7:  return !state.neighbourhoodEnergy
+      case 8:  return !state.outdoorsAccess
+      case 9:  return !state.culturalCommunity
+      case 10: return !state.comfortPriority
+      case 11: return false
       default: return false
     }
   }
@@ -156,10 +161,7 @@ export default function QuizStepPage() {
       // ── Step 1: Why are you moving? ──────────────────────────────────────
       case 1:
         return (
-          <QuizQuestion
-            headline={en.quiz.q1.question}
-            whyWeAsk={en.quiz.q1.whyWeAsk}
-          >
+          <QuizQuestion headline={en.quiz.q1.question}>
             <SingleSelectOptions
               options={Q1_OPTS}
               value={state.reasonForMoving}
@@ -167,16 +169,33 @@ export default function QuizStepPage() {
               escapeFreeText={state.reasonForMovingOther}
               onEscapeChange={(t) => setAnswer('reasonForMovingOther', t)}
             />
+            {state.reasonForMoving === 'work' && (
+              <div className="mt-4">
+                <TextInput
+                  label="Where will you be working? (area or neighbourhood)"
+                  value={state.workLocation ?? ''}
+                  onChange={(v) => setAnswer('workLocation', v || null)}
+                  placeholder="e.g. Downtown, Yaletown, Burnaby..."
+                />
+              </div>
+            )}
+            {state.reasonForMoving === 'school' && (
+              <div className="mt-4">
+                <TextInput
+                  label="Which school or campus?"
+                  value={state.schoolLocation ?? ''}
+                  onChange={(v) => setAnswer('schoolLocation', v || null)}
+                  placeholder="e.g. UBC, SFU Burnaby, BCIT, Emily Carr..."
+                />
+              </div>
+            )}
           </QuizQuestion>
         )
 
       // ── Step 2: Timeline ─────────────────────────────────────────────────
       case 2:
         return (
-          <QuizQuestion
-            headline={en.quiz.q2.question}
-            whyWeAsk={en.quiz.q2.whyWeAsk}
-          >
+          <QuizQuestion headline={en.quiz.q2.question}>
             <SingleSelectOptions
               options={Q2_OPTS}
               value={state.timeline}
@@ -193,7 +212,6 @@ export default function QuizStepPage() {
           <QuizQuestion
             headline={en.quiz.q3.question}
             subCopy={en.quiz.q3.subQuestion}
-            whyWeAsk={en.quiz.q3.whyWeAsk}
           >
             <MultiSelectOptions
               options={Q3_OPTS}
@@ -204,67 +222,54 @@ export default function QuizStepPage() {
           </QuizQuestion>
         )
 
-      // ── Step 4: Bedrooms ─────────────────────────────────────────────────
+      // ── Step 4: Budget + Bedrooms (combined, budget first) ───────────────
       case 4:
         return (
-          <QuizQuestion headline={en.quiz.q3b.question}>
-            <SingleSelectOptions
-              options={Q3B_OPTS}
-              value={state.bedrooms !== null ? String(state.bedrooms) : null}
-              onChange={(v) => setAnswer('bedrooms', Number(v) as Bedrooms)}
-              showEscape={false}
-            />
-          </QuizQuestion>
+          <div className="flex flex-col gap-8">
+            <QuizQuestion headline={en.quiz.q4.question}>
+              <SingleSelectOptions
+                options={Q4_OPTS}
+                value={state.budget}
+                onChange={(v) => setAnswer('budget', v)}
+                escapeFreeText={state.budgetOther}
+                onEscapeChange={(t) => setAnswer('budgetOther', t)}
+              />
+            </QuizQuestion>
+
+            <QuizQuestion headline={en.quiz.q3b.question}>
+              <SingleSelectOptions
+                options={Q3B_OPTS}
+                value={state.bedrooms !== null ? String(state.bedrooms) : null}
+                onChange={(v) => setAnswer('bedrooms', Number(v) as Bedrooms)}
+                showEscape={false}
+              />
+            </QuizQuestion>
+          </div>
         )
 
-      // ── Step 5: Budget ───────────────────────────────────────────────────
+      // ── Step 5: Transport ────────────────────────────────────────────────
       case 5:
         return (
           <QuizQuestion
-            headline={en.quiz.q4.question}
-            whyWeAsk={en.quiz.q4.whyWeAsk}
+            headline={en.quiz.q5.question}
+            subCopy={en.quiz.q5.subQuestion}
           >
-            <SingleSelectOptions
-              options={Q4_OPTS}
-              value={state.budget}
-              onChange={(v) => setAnswer('budget', v)}
-              escapeFreeText={state.budgetOther}
-              onEscapeChange={(t) => setAnswer('budgetOther', t)}
+            <MultiSelectOptions
+              options={Q5_OPTS}
+              value={transportMulti}
+              onChange={handleTransportChange}
+              escapeFreeText={state.transportOther}
+              onEscapeChange={(t) => setAnswer('transportOther', t)}
             />
           </QuizQuestion>
         )
 
-      // ── Step 6: Transport — Phase 2 intro ────────────────────────────────
+      // ── Step 6: Free day ─────────────────────────────────────────────────
       case 6:
-        return (
-          <>
-            <PhaseIntroCard
-              title="Now the interesting part."
-              body="The practical stuff is sorted. These next questions are about how you actually live — the things that make a neighbourhood feel like yours, or wrong from the first week."
-            />
-            <QuizQuestion
-              headline={en.quiz.q5.question}
-              subCopy={en.quiz.q5.subQuestion}
-              whyWeAsk={en.quiz.q5.whyWeAsk}
-            >
-              <MultiSelectOptions
-                options={Q5_OPTS}
-                value={transportMulti}
-                onChange={handleTransportChange}
-                escapeFreeText={state.transportOther}
-                onEscapeChange={(t) => setAnswer('transportOther', t)}
-              />
-            </QuizQuestion>
-          </>
-        )
-
-      // ── Step 7: Free day ─────────────────────────────────────────────────
-      case 7:
         return (
           <QuizQuestion
             headline={en.quiz.q6.question}
             subCopy={en.quiz.q6.subCopy}
-            whyWeAsk={en.quiz.q6.whyWeAsk}
           >
             <SingleSelectOptions
               options={Q6_OPTS}
@@ -276,13 +281,10 @@ export default function QuizStepPage() {
           </QuizQuestion>
         )
 
-      // ── Step 8: Neighbourhood energy ─────────────────────────────────────
-      case 8:
+      // ── Step 7: Neighbourhood energy ─────────────────────────────────────
+      case 7:
         return (
-          <QuizQuestion
-            headline={en.quiz.q7.question}
-            whyWeAsk={en.quiz.q7.whyWeAsk}
-          >
+          <QuizQuestion headline={en.quiz.q7.question}>
             <SingleSelectOptions
               options={Q7_OPTS}
               value={state.neighbourhoodEnergy}
@@ -293,13 +295,10 @@ export default function QuizStepPage() {
           </QuizQuestion>
         )
 
-      // ── Step 9: Outdoors access ──────────────────────────────────────────
-      case 9:
+      // ── Step 8: Outdoors access ──────────────────────────────────────────
+      case 8:
         return (
-          <QuizQuestion
-            headline={en.quiz.q8.question}
-            whyWeAsk={en.quiz.q8.whyWeAsk}
-          >
+          <QuizQuestion headline={en.quiz.q8.question}>
             <SingleSelectOptions
               options={Q8_OPTS}
               value={state.outdoorsAccess}
@@ -310,8 +309,8 @@ export default function QuizStepPage() {
           </QuizQuestion>
         )
 
-      // ── Step 10: Cultural community ───────────────────────────────────────
-      case 10:
+      // ── Step 9: Cultural community ────────────────────────────────────────
+      case 9:
         return (
           <QuizQuestion headline={en.quiz.q9.question}>
             <SingleSelectOptions
@@ -320,7 +319,7 @@ export default function QuizStepPage() {
               onChange={(v) => setAnswer('culturalCommunity', v)}
               showEscape={false}
             />
-            {state.culturalCommunity === 'yes' && (
+            {(state.culturalCommunity === 'yes' || state.culturalCommunity === 'somewhat') && (
               <div className="mt-4">
                 <label className="font-body text-sm font-semibold text-neutral-700 block mb-2">
                   {en.quiz.q9.conditionalLabel}
@@ -335,13 +334,10 @@ export default function QuizStepPage() {
           </QuizQuestion>
         )
 
-      // ── Step 11: Comfort priority ────────────────────────────────────────
-      case 11:
+      // ── Step 10: Comfort priority ────────────────────────────────────────
+      case 10:
         return (
-          <QuizQuestion
-            headline={en.quiz.q10.question}
-            whyWeAsk={en.quiz.q10.whyWeAsk}
-          >
+          <QuizQuestion headline={en.quiz.q10.question}>
             <SingleSelectOptions
               options={Q10_OPTS}
               value={state.comfortPriority}
@@ -352,35 +348,41 @@ export default function QuizStepPage() {
           </QuizQuestion>
         )
 
-      // ── Step 12: Phase 3 — Loved neighbourhood ───────────────────────────
-      case 12:
+      // ── Step 11: Loved neighbourhood (Phase 3) ───────────────────────────
+      case 11:
         return (
-          <>
-            <PhaseIntroCard
-              title="Last one — and it's the most important."
-              body="Tell us about a place you've loved. Not where you live now — somewhere that felt right. We'll use your answer to look for that feeling in Vancouver."
-            />
-            <QuizQuestion headline="Name a neighbourhood you've loved" showWhyWeAsk={false}>
-              <div className="space-y-4">
-                <TextInput
-                  label="Neighbourhood name"
-                  value={state.favouriteNeighbourhood ?? ''}
-                  onChange={(v) => setAnswer('favouriteNeighbourhood', v || null)}
-                  placeholder="e.g. Hackney, Williamsburg, Le Plateau..."
+          <QuizQuestion headline="Tell us about a neighbourhood that's felt like home. Anywhere in the world — any point in your life.">
+            <div className="space-y-4">
+              <TextInput
+                label="Neighbourhood"
+                value={state.favouriteNeighbourhood ?? ''}
+                onChange={(v) => setAnswer('favouriteNeighbourhood', v || null)}
+                placeholder="e.g. Hackney, Williamsburg, Le Plateau..."
+              />
+              <TextInput
+                label="City"
+                value={state.favouriteCity ?? ''}
+                onChange={(v) => setAnswer('favouriteCity', v || null)}
+                placeholder="e.g. London, New York, Montreal..."
+              />
+              <TextInput
+                label="Country (optional)"
+                value={state.favouriteCountry ?? ''}
+                onChange={(v) => setAnswer('favouriteCountry', v || null)}
+                placeholder="e.g. UK, USA, Canada..."
+              />
+              <div>
+                <label className="font-body text-sm font-semibold text-neutral-700 block mb-2">
+                  What makes it feel right?
+                </label>
+                <TextArea
+                  value={state.favouriteDescription ?? ''}
+                  onChange={(v) => setAnswer('favouriteDescription', v || null)}
+                  placeholder="The streets, the energy, the people, the pace..."
                 />
-                <div>
-                  <label className="font-body text-sm font-semibold text-neutral-700 block mb-2">
-                    What made it feel right for you?
-                  </label>
-                  <TextArea
-                    value={state.favouriteDescription ?? ''}
-                    onChange={(v) => setAnswer('favouriteDescription', v || null)}
-                    placeholder="The streets, the energy, the people, the pace..."
-                  />
-                </div>
               </div>
-            </QuizQuestion>
-          </>
+            </div>
+          </QuizQuestion>
         )
 
       default:
@@ -391,10 +393,11 @@ export default function QuizStepPage() {
   return (
     <QuizLayout
       step={step}
-      pip={pip}
+      pip={step}
       continueDisabled={isDisabled()}
       onContinue={handleContinue}
       onBack={() => router.push(getPrev(step))}
+      whyWeAsk={getWhyWeAsk(step)}
     >
       {renderContent()}
     </QuizLayout>

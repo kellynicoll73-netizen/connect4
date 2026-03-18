@@ -185,7 +185,6 @@ export default function DevPage() {
           {/* QuizQuestion with WhyWeAskToggle */}
           <QuizQuestion
             headline="What's bringing you to Vancouver?"
-            whyWeAsk="Your reason for moving shapes what a neighbourhood needs to offer — proximity to a campus is a different priority to proximity to a tech district or a family home."
           >
             <SingleSelectOptions
               options={REASON_OPTIONS}

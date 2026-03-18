@@ -9,6 +9,7 @@ import { CommunityVoiceBlock } from '@/components/result/CommunityVoiceBlock'
 import { SecondaryMatchCard } from '@/components/result/SecondaryMatchCard'
 import { SaveBottomSheet } from '@/components/modals/SaveBottomSheet'
 import { Button } from '@/components/ui/Button'
+import { AptLogoHorizontal } from '@/components/ui/AptLogoHorizontal'
 import { computeMatchSignals } from '@/lib/matching'
 import { en, t } from '@/locales/en'
 import type { Neighbourhood } from '@/types'
@@ -45,7 +46,9 @@ export default function ResultPage() {
   }
 
   const winnerScore   = topMatches[0]?.score ?? 100
-  const runnerUps     = topMatches.slice(1)
+  const runnerUps     = topMatches
+    .filter((m) => m.neighbourhood.id !== matchedNeighbourhood.id)
+    .slice(0, 2)
   const winnerSignals = computeMatchSignals(state, matchedNeighbourhood)
   const analogousText = getAnalogousText(
     matchedNeighbourhood,
@@ -68,12 +71,17 @@ export default function ResultPage() {
     state.bedrooms === 3 ? '3 bed' : '1 bed'
   const walkabilityScore = matchedNeighbourhood.attributes.walkability
 
-  const showAnalogous = !!(state.favouriteCity || state.favouriteNeighbourhood)
+  const showAnalogous = !!state.favouriteNeighbourhood
 
   return (
     <>
       <div className="min-h-screen bg-[#FAF7F0]">
         <div className="max-w-lg mx-auto px-5 py-8">
+
+          {/* Logo */}
+          <div className="mb-8">
+            <AptLogoHorizontal scheme="light" size="sm" />
+          </div>
 
           {/* 1. Neighbourhood name */}
           <h1 className="font-display text-4xl font-bold text-apt-dark leading-tight mb-1">
@@ -86,7 +94,7 @@ export default function ResultPage() {
           </p>
 
           {/* 3. Tagline */}
-          <p className="font-display italic text-apt-terra text-base mb-5">
+          <p className="font-display text-apt-terra text-base mb-5">
             {matchedNeighbourhood.tagline}
           </p>
 
@@ -96,11 +104,23 @@ export default function ResultPage() {
             gaps={winnerSignals.gaps}
           />
 
-          {/* 5. Divider */}
-          <hr className="my-6 border-neutral-200" />
+          {/* 5. Key facts row — just under pills */}
+          <div className="flex gap-4 mt-5 mb-5">
+            <div className="flex-1 bg-white rounded-md border border-neutral-200 px-4 py-3">
+              <p className="text-xs font-body font-semibold uppercase tracking-widest text-neutral-400 mb-1">Walkability</p>
+              <p className="font-body text-sm font-semibold text-neutral-900">{walkabilityScore}/10</p>
+            </div>
+            <div className="flex-1 bg-white rounded-md border border-neutral-200 px-4 py-3">
+              <p className="text-xs font-body font-semibold uppercase tracking-widest text-neutral-400 mb-1">Median rent ({bedroomLabel})</p>
+              <p className="font-body text-sm font-semibold text-neutral-900">${medianRent.toLocaleString()}/mo</p>
+            </div>
+          </div>
 
-          {/* 6. Personality description with show more */}
-          <div className="mb-6">
+          {/* 6. Divider */}
+          <hr className="mb-6 border-neutral-200" />
+
+          {/* 7. Personality description with show more */}
+          <div className="mb-5">
             <p className="text-xs font-body font-semibold uppercase tracking-widest text-neutral-400 mb-2">
               {en.result.whatItsLike}
             </p>
@@ -115,36 +135,35 @@ export default function ResultPage() {
             )}
           </div>
 
-          {/* 7. Analogous comparison */}
+          {/* 8. CTA — right after description */}
+          <div className="mb-6">
+            <Button
+              variant="primary"
+              fullWidth
+              onClick={() => router.push('/result/listing')}
+            >
+              {t('result.rentalEntry', { neighbourhood: matchedNeighbourhood.name })}
+            </Button>
+          </div>
+
+          {/* 9. Analogous comparison */}
           {showAnalogous && analogousText && (
             <div className="mb-6">
               <AnalogousComparisonBlock text={analogousText} />
             </div>
           )}
 
-          {/* 8. Key facts row */}
-          <div className="flex gap-4 mb-6">
-            <div className="flex-1 bg-white rounded-md border border-neutral-200 px-4 py-3">
-              <p className="text-xs font-body font-semibold uppercase tracking-widest text-neutral-400 mb-1">Walkability</p>
-              <p className="font-body text-sm font-semibold text-neutral-900">{walkabilityScore}/10</p>
-            </div>
-            <div className="flex-1 bg-white rounded-md border border-neutral-200 px-4 py-3">
-              <p className="text-xs font-body font-semibold uppercase tracking-widest text-neutral-400 mb-1">Median rent ({bedroomLabel})</p>
-              <p className="font-body text-sm font-semibold text-neutral-900">${medianRent.toLocaleString()}/mo</p>
-            </div>
-          </div>
-
-          {/* 9. Community voice quote (version C) */}
-          {state.cardVersion === 'C' && matchedNeighbourhood.communityQuote && (
+          {/* 10. Community voice quote */}
+          {matchedNeighbourhood.communityQuote && (
             <div className="mb-6">
               <CommunityVoiceBlock quote={matchedNeighbourhood.communityQuote} />
             </div>
           )}
 
-          {/* 10. Divider */}
+          {/* 11. Divider */}
           <hr className="my-6 border-neutral-200" />
 
-          {/* 11. Secondary match cards */}
+          {/* 12. Secondary match cards */}
           {runnerUps.length > 0 && (
             <div className="mb-6">
               <p className="font-body text-xs font-semibold uppercase tracking-widest text-neutral-400 mb-4">
@@ -167,18 +186,11 @@ export default function ResultPage() {
             </div>
           )}
 
-          {/* 12. Divider */}
+          {/* 13. Divider */}
           <hr className="my-6 border-neutral-200" />
 
-          {/* 13. CTAs */}
+          {/* 14. Save CTA */}
           <div className="space-y-3 mb-4">
-            <Button
-              variant="primary"
-              fullWidth
-              onClick={() => router.push('/result/listing')}
-            >
-              {t('result.rentalEntry', { neighbourhood: matchedNeighbourhood.name })}
-            </Button>
             <Button
               variant="secondary"
               fullWidth

@@ -19,7 +19,7 @@ export function MatchSignalPills({ matches, gaps }: MatchSignalPillsProps) {
             {matches.map((label) => (
               <span
                 key={label}
-                className="inline-flex items-center px-3 py-1 rounded-full text-xs font-body font-semibold bg-apt-lime-tint text-apt-dark tracking-wide"
+                className="inline-flex items-center px-3 py-1 rounded-full text-xs font-body font-semibold bg-apt-lime-tint text-apt-dark tracking-wide border border-apt-lime"
               >
                 {label}
               </span>
@@ -37,7 +37,7 @@ export function MatchSignalPills({ matches, gaps }: MatchSignalPillsProps) {
             {gaps.map((label) => (
               <span
                 key={label}
-                className="inline-flex items-center px-3 py-1 rounded-full text-xs font-body font-semibold bg-apt-terra-tint text-apt-terra tracking-wide"
+                className="inline-flex items-center px-3 py-1 rounded-full text-xs font-body font-semibold bg-apt-terra-tint text-apt-terra tracking-wide border border-apt-terra"
               >
                 {label}
               </span>

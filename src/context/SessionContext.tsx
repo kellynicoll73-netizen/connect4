@@ -29,6 +29,8 @@ function getInitialCardVersion(): CardVersion {
 const INITIAL_STATE: SessionState = {
   reasonForMoving:          null,
   reasonForMovingOther:     null,
+  workLocation:             null,
+  schoolLocation:           null,
   timeline:                 null,
   timelineOther:            null,
   household:                null,
@@ -51,8 +53,9 @@ const INITIAL_STATE: SessionState = {
   currentCity:              null,
   currentNeighbourhood:     null,
   currentDescription:       null,
-  favouriteCity:            null,
   favouriteNeighbourhood:   null,
+  favouriteCity:            null,
+  favouriteCountry:         null,
   favouriteDescription:     null,
   matchedNeighbourhoodId:   null,
   cardVersion:              getInitialCardVersion(),
@@ -90,8 +93,13 @@ export function SessionProvider({ children }: { children: ReactNode }) {
     const structuralScores = computeDisplayScores(state, neighbourhoods)
 
     // Try semantic match
-    const userText = [state.favouriteDescription, state.favouriteNeighbourhood, state.favouriteCity]
-      .filter(Boolean).join('. ')
+    const userText = [
+      state.favouriteDescription,
+      state.favouriteNeighbourhood,
+      state.favouriteCity,
+      state.favouriteCountry,
+      state.culturalCommunityText,
+    ].filter(Boolean).join('. ')
 
     let semanticScores: Record<string, number> = {}
     if (userText.trim()) {

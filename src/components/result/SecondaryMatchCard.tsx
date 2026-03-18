@@ -25,7 +25,7 @@ export function SecondaryMatchCard({
             {neighbourhood.tagline}
           </p>
         </div>
-        <p className="font-mono text-xl text-neutral-900 shrink-0">{score}%</p>
+        <p className="font-body text-sm font-semibold text-apt-terra shrink-0">{score}% match</p>
       </div>
 
       <MatchSignalPills matches={matches} gaps={gaps} />

@@ -5,11 +5,11 @@
     "district": "West Side Vancouver",
     "tagline": "Beach town meets bookshop city",
     "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
-    "personalityDescription": "Kitsilano sits between the mountains and the ocean, and the neighbourhood knows it. It's active and self-assured — farmers markets, trail runners, coffee shops that take their beans seriously. There's money here, but it doesn't feel cold. People actually live on the street.\n\nIf your ideal Saturday involves a swim at Kits Pool, a good flat white, and a farmers market you actually shop at rather than photograph, this is probably your neighbourhood. It rewards people who want nature and city in the same breath and are willing to pay for the combination.\n\nThe trade-off is cost and transit. Kitsilano is expensive relative to square footage, and the bus network is adequate but thin. You'll want a bike, a car, or a high tolerance for the 99 B-Line.",
+    "personalityDescription": "Kitsilano runs along the water and knows exactly what it is. The seawall is the spine of daily life here — runners, cyclists, people walking dogs at 7am with coffee in hand. The beach is real and used, the farmers market is genuinely shopped at, and the coffee is taken seriously. There’s money here, but it doesn’t feel cold.\n\nIf your ideal week includes a swim at Kits Pool, a good flat white and a Saturday morning market you actually shop at rather than photograph, this neighbourhood will suit you immediately. It rewards people who want the ocean and the city in the same breath and are willing to pay for the combination.\n\nThe trade-off is cost and transit. Kitsilano is expensive relative to square footage and the bus network is adequate but thin. You’ll want a bike, a car or a high tolerance for the 99 B-Line.",
     "analogousComparisons": {
       "default": "A place that has figured out what it wants to be — and is entirely comfortable with that answer."
     },
-    "communityQuote": "\"I moved here from Toronto thinking I'd stay two years. That was eleven years ago. The seawall gets me every time.\" — a physiotherapist who runs the Kits beach loop most mornings",
+    "communityQuote": "“I moved here from Toronto thinking I’d stay two years. That was eleven years ago. The seawall gets me every time.” — a physiotherapist who runs the Kits beach loop most mornings",
     "attributes": {
       "walkability": 9,
       "transitScore": 7,
@@ -87,11 +87,11 @@
     "district": "East Side Vancouver",
     "tagline": "Breweries, murals, and a main street that still means something",
     "heroImage": "https://images.unsplash.com/photo-1514924013411-cbf25faa35bb?w=800&q=80",
-    "personalityDescription": "Main Street is genuinely good — small restaurants that last, record shops, studios above garages, a hardware store that hasn't been converted to condos yet. Mount Pleasant earns its reputation without trying, which is the thing that makes it worth the price.\n\nCreative professionals, people who bike to work, anyone who wants neighbourhood life without the performance of it. The kind of place where the coffee shop remembers your order and the person next to you at the bar is a ceramicist or a sound engineer.\n\nRents have caught up to the reputation. The undiscovered period is definitively over, and what's left is a neighbourhood that's good but no longer cheap. If budget is tight, the blocks further east give you proximity without the Main Street premium.",
+    "personalityDescription": "Main Street has pulled off something most commercial corridors can’t manage: it stays useful on a Tuesday. Small restaurants that last more than a season, record shops, studios above garages, a hardware store that hasn’t been converted to condos yet. Mount Pleasant earns its reputation without trying, which is the thing that makes it worth the price.\n\nCreative professionals, people who bike to work, anyone who wants neighbourhood life without the performance of it. The kind of place where the coffee shop remembers your order and the person next to you at the bar is a ceramicist or a sound engineer.\n\nRents have caught up to the reputation. The undiscovered period is definitively over and what’s left is a neighbourhood that’s excellent but no longer cheap.",
     "analogousComparisons": {
       "default": "A neighbourhood that earned its identity the slow way — and still wears it without thinking about it."
     },
-    "communityQuote": "\"Main Street on a Tuesday afternoon is still the best version of this city I've found.\" — a graphic designer who's lived on Quebec Street for six years",
+    "communityQuote": "“Main Street on a Tuesday afternoon is still the best version of this city I’ve found.” — a graphic designer who’s lived on Quebec Street for six years",
     "attributes": {
       "walkability": 9,
       "transitScore": 7,
@@ -169,11 +169,11 @@
     "district": "East Side Vancouver",
     "tagline": "Three waves of immigration and counting — still the most itself",
     "heroImage": "https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=800&q=80",
-    "personalityDescription": "The Drive has had at least three identities — Italian, countercultural, and whatever it is now — and none of them fully left. The espresso bar that's been there since 1962 is three doors from a natural wine shop. It is loud and alive in the way only a street with real history can be.\n\nSomeone who wants to feel like they live in a city. Who doesn't mind noise, street chaos, the occasional political leaflet under their wiper. Who'd rather have a great espresso bar at 7am than a quiet evening. The Drive rewards people who want texture.\n\nNot quiet. Not polished. Parking is impossible. Transit is adequate but not excellent — the 99 B-Line and SkyTrain at Broadway-Commercial are both nearby but it's a walk. If you need serenity, look elsewhere.",
+    "personalityDescription": "The Drive has had at least three identities — Italian, countercultural and whatever it is now — and none of them fully left. Old espresso bars sit three doors from natural wine shops. The street accumulates history rather than curating it, and the result is a texture that newer neighbourhoods simply can’t manufacture.\n\nSomeone who wants to feel like they live in a city. Who doesn’t mind noise, street chaos or the occasional political leaflet under their wiper. The Drive rewards people who want texture and are happy to be part of it, not just observe it.\n\nNot quiet. Not polished. Parking is essentially impossible and transit is adequate without being excellent. If serenity is what you’re after, look elsewhere.",
     "analogousComparisons": {
       "default": "The kind of street that accumulates history rather than curating it."
     },
-    "communityQuote": "\"I've lived on the Drive for fourteen years. I've thought about leaving exactly once, and I came back in the same afternoon.\" — a retired teacher who runs a small zine distro out of her apartment",
+    "communityQuote": "“I’ve lived on the Drive for fourteen years. I’ve thought about leaving exactly once, and I came back in the same afternoon.” — a retired teacher who runs a small zine distro out of her apartment",
     "attributes": {
       "walkability": 8,
       "transitScore": 7,
@@ -251,11 +251,11 @@
     "district": "Downtown Vancouver",
     "tagline": "Converted warehouses, cobblestones, very good restaurants",
     "heroImage": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&q=80",
-    "personalityDescription": "Yaletown pulled off something rare — industrial bones turned into a neighbourhood that actually works as a neighbourhood, not just a development project. The cobblestone lanes, the loading docks converted to restaurant patios, the seawall two minutes from anywhere. It has texture that most downtown Vancouver neighbourhoods lack.\n\nPeople who want the city version of low-maintenance. Everything is walkable, everything is available, and the streets are clean. Yaletown suits people who work long hours and want their neighbourhood to handle the rest — good food, good gyms, easy transit, safe streets.\n\nExpensive and, after a few months, somewhat predictable. The demographic skews young professional in a way that can feel homogeneous. You can feel the condo-ness of it after a while. The energy drops sharply on a Tuesday night.",
+    "personalityDescription": "Yaletown pulled off something rare — industrial bones turned into a neighbourhood that actually works as a neighbourhood. The cobblestone lanes, the loading docks converted to restaurant patios, the seawall two minutes from anywhere. It has the texture that most downtown Vancouver neighbourhoods lack.\n\nPeople who want the city version of low-maintenance. Everything is walkable, everything is available and the streets are clean. Yaletown suits people who work long hours and want their neighbourhood to handle the rest.\n\nExpensive and somewhat homogeneous. You can feel the condo-ness of it after a while. The demographic skews young professional in a way that can feel uniform.",
     "analogousComparisons": {
       "default": "What happens when a city decides to do warehouse conversion right — and then charges accordingly."
     },
-    "communityQuote": "\"I chose Yaletown because I wanted to be able to walk to work and not think about anything else. Three years later, that's still exactly what I have.\" — a UX director at a Gastown agency",
+    "communityQuote": "“I chose Yaletown because I wanted to be able to walk to work and not think about anything else. Three years later, that’s still exactly what I have.” — a UX director at a Gastown agency",
     "attributes": {
       "walkability": 10,
       "transitScore": 8,
@@ -331,13 +331,13 @@
     "id": "strathcona",
     "name": "Strathcona",
     "district": "East Side Vancouver",
-    "tagline": "Vancouver's oldest neighbourhood — still figuring out what comes next",
+    "tagline": "Vancouver’s oldest neighbourhood — still figuring out what comes next",
     "heroImage": "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&q=80",
-    "personalityDescription": "Victorian houses painted unexpected colours, community gardens in vacant lots, a social infrastructure built by people who chose to stay when staying wasn't fashionable. Strathcona is the oldest neighbourhood in Vancouver and it carries that history in its bones — the Japanese-Canadian block, the Chinese-Canadian block, the activist block.\n\nArtists, activists, people who want to feel like their neighbourhood has stakes. Not for anyone who needs sanitised surroundings or is uncomfortable with proximity to the Downtown Eastside. For everyone else, it offers something increasingly rare in Vancouver: the feeling that the people around you actually chose to be there.\n\nThe blocks immediately adjacent to the Downtown Eastside require a comfort with complexity that not everyone has. Safety perception is lower than most of Vancouver. This is the most honest disclaimer on the list — research specific blocks before committing.",
+    "personalityDescription": "Victorian houses painted unexpected colours, community gardens tucked into vacant lots, and a social infrastructure built by people who chose to stay when staying wasn’t fashionable. Strathcona is Vancouver’s oldest neighbourhood and it carries that layered history visibly — the Japanese-Canadian block, the Chinese-Canadian block, the artists who arrived in the eighties and never left. Living here feels like being part of something that has actual stakes.\n\nIf you want a neighbourhood with character that took decades to accumulate rather than weeks to brand, this is it. The housing stock is a mix of heritage character homes and newer infill — many with small yards or garden space, which is rare this close to downtown. The streets are genuinely walked and genuinely used.\n\nThe blocks immediately adjacent to the Downtown Eastside require a comfort with complexity that not everyone has. Safety perception is lower than most of Vancouver and that’s worth taking seriously — research specific streets before committing.",
     "analogousComparisons": {
       "default": "A neighbourhood where the history is visible in the architecture and the people, not just on heritage plaques."
     },
-    "communityQuote": "\"My house has been in three different hands since 1910. I think about that a lot when I'm in the garden.\" — a furniture maker who bought on Prior Street eight years ago",
+    "communityQuote": "“My house has been in three different hands since 1910. I think about that a lot when I’m in the garden.” — a furniture maker who bought on Prior Street eight years ago",
     "attributes": {
       "walkability": 9,
       "transitScore": 9,
@@ -415,11 +415,11 @@
     "district": "Downtown Vancouver",
     "tagline": "Dense, walkable, and consistently the most welcoming place in the city",
     "heroImage": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80",
-    "personalityDescription": "The West End is where the city shows its density working well. Robson, Davie, Denman — three distinct commercial strips within walking distance of each other and Stanley Park. The neighbourhood is genuinely full of people at all hours, in a way that feels safe rather than overwhelming.\n\nPeople who want street life, proximity to everything, and don't need a backyard. The West End has been welcoming to LGBTQ+ residents for decades — not as a marketing position but as an embedded fact of the neighbourhood's history and character. It suits people who want to feel like they belong in their neighbourhood from week one.\n\nThe most expensive neighbourhood on this list for rent, and apartments are often older and small. Noise from Davie Street on weekends is real. You're paying for location and density — the square footage reflects that.",
+    "personalityDescription": "Robson, Davie and Denman — three distinct commercial strips within walking distance of each other and Stanley Park. English Bay beach is at the end of Davie Street, genuinely walkable from anywhere in the neighbourhood. The stretch around Robson and Denman is one of the best concentrations of Asian restaurants in the city — Japanese, Korean, Chinese and Vietnamese spots that have been earning their regulars for decades. The West End is where the city shows its density working.\n\nPeople who want street life, proximity to everything and don’t need a backyard. The West End has been welcoming to LGBTQ+ residents for decades in a way that feels embedded in the neighbourhood’s identity, not marketed. You’ll feel at home here faster than almost anywhere else on this list.\n\nThe most expensive neighbourhood here for rent and apartments are often older and on the smaller side. Noise from Davie Street on weekends is real — the further from Davie, the quieter. You’re paying for location and density and the square footage reflects that honestly.",
     "analogousComparisons": {
       "default": "What a dense, walkable, genuinely inclusive city neighbourhood looks like when it's been doing it long enough to mean it."
     },
-    "communityQuote": "\"I've lived in six cities and I've never felt at home as fast as I did in the West End. That's not a small thing.\" — a nurse who moved from Halifax three years ago",
+    "communityQuote": "“I’ve lived in six cities and I’ve never felt at home as fast as I did in the West End. That’s not a small thing.” — a nurse who moved from Halifax three years ago",
     "attributes": {
       "walkability": 9,
       "transitScore": 9,
@@ -497,11 +497,11 @@
     "district": "East Side Vancouver",
     "tagline": "Farmers market Saturdays, character homes, genuinely neighbourly",
     "heroImage": "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80",
-    "personalityDescription": "Riley Park is the neighbourhood that people describe when they say they fell in love with Vancouver. Craftsman houses, leafy streets, the Nat Bailey Stadium on a summer evening, the Hillcrest farmers market on Saturday mornings. It is calm and confident in the way that only places with a long stable history can be.\n\nFamilies, people who want stability without sacrificing access to the rest of the city. People who make sourdough on weekends and mean it. People who know their neighbours' names and don't find that unusual. Riley Park suits a particular kind of intentional, rooted urban living.\n\nQuieter than most neighbourhoods on this list. If you want the city's energy, you'll have to travel to it. The commercial strip on Main Street has good spots but it's not extensive — for a broader night-out you're heading north.",
+    "personalityDescription": "Riley Park is the neighbourhood that people describe when they say they fell in love with Vancouver. Craftsman houses on leafy streets, the Nat Bailey Stadium on a summer evening, the Hillcrest Community Centre as a genuine social hub. The week here has a rhythm — morning coffee on the porch, school drop-off, a stop at the farmers market on the way home on Saturday. It’s one of those rare urban neighbourhoods where people actually know their neighbours’ names.\n\nFamilies, people who want stability without sacrificing access to the rest of the city and anyone for whom a backyard matters. The housing stock is predominantly character homes — many with yards — and the streets are quiet enough to feel residential without feeling remote. People tend to stay here a long time, which tells you something.\n\nQuieter than most. If you want the city’s energy on a Wednesday night, you’ll have to travel to it.",
     "analogousComparisons": {
       "default": "A neighbourhood that has always known what it is — and never needed to announce it."
     },
-    "communityQuote": "\"We moved here for the schools. We stayed because of the block. I didn't expect that second part.\" — a landscape architect who's lived on Guelph Street for nine years",
+    "communityQuote": "“We moved here for the schools. We stayed because of the block. I didn’t expect that second part.” — a landscape architect who’s lived on Guelph Street for nine years",
     "attributes": {
       "walkability": 7,
       "transitScore": 7,
@@ -579,11 +579,11 @@
     "district": "East Side Vancouver",
     "tagline": "A hundred years of history, a neighbourhood still negotiating its future",
     "heroImage": "https://images.unsplash.com/photo-1583422409516-2895a77efded?w=800&q=80",
-    "personalityDescription": "The Dr. Sun Yat-Sen Classical Chinese Garden sits behind a wall on Carrall Street, completely still. Half a block away, a new restaurant opens in a space that used to be something else entirely. Chinatown holds both of those things simultaneously — the century-old herbalist and the natural wine bar — without resolving the tension between them.\n\nPeople who can tolerate a neighbourhood in flux and find that interesting rather than unsettling. Proximity to Strathcona, Main Street, and downtown without the premium of any of them. The food culture is deep and specific — not the sanitised version, but the real thing, if you know where to look.\n\nSafety perception is genuinely mixed. The blocks closest to the Downtown Eastside require the same comfort-with-complexity that Strathcona does. Gentrification is active and contested here — if that political dimension matters to you in either direction, it's worth knowing.",
+    "personalityDescription": "The Dr. Sun Yat-Sen Classical Chinese Garden sits behind a wall on Carrall Street, completely still. Half a block away, a new speakeasy opens in a space that was a dry goods shop for fifty years. Chinatown holds both of those things simultaneously — the century-old herbalist and the cocktail bar with no sign on the door — and the tension between them is what makes it genuinely interesting to live in right now.\n\nPeople who can tolerate a neighbourhood in flux and find that interesting rather than unsettling. The nightlife and restaurant scene here is more adventurous than most newcomers expect — low-lit rooms, interesting menus, a mix of regulars who know the neighbourhood across its different chapters. Proximity to Strathcona, Main Street and downtown without the cost of any of them.\n\nGrocery options are genuinely limited — this is a practical consideration worth planning for, not just an atmosphere note. Safety perception is mixed. Gentrification is active and contested here and if that political dimension matters to you in either direction, it’s worth knowing before you arrive.",
     "analogousComparisons": {
       "default": "A neighbourhood where history and displacement are happening simultaneously, and neither is winning yet."
     },
-    "communityQuote": "\"My family has had a business on Pender Street for forty years. I've watched three versions of this neighbourhood. I'm not sure what the fourth one will be.\" — a second-generation herbalist on East Pender",
+    "communityQuote": "“My family has had a business on Pender Street for forty years. I’ve watched three versions of this neighbourhood. I’m not sure what the fourth one will be.” — a second-generation herbalist on East Pender",
     "attributes": {
       "walkability": 9,
       "transitScore": 9,
@@ -661,11 +661,11 @@
     "district": "West Side Vancouver",
     "tagline": "Village scale, quiet streets, and very good schools nearby",
     "heroImage": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
-    "personalityDescription": "Kerrisdale's commercial strip on 41st Avenue has the feel of a small-town main street that happens to be in a major city — family-owned shops that have been there for decades, a good bakery, a hardware store that hasn't been bought out. The residential streets are quiet in a way that takes genuine effort to maintain at this proximity to the city.\n\nFamilies with school-age children, people who have moved through noisier neighbourhoods and want something calmer. Anyone who finds the West End or Commercial Drive exhausting will feel immediately at ease here. Kerrisdale suits people who want to settle, not circulate.\n\nCar-dependent for anything beyond the village strip. Transit runs but infrequently. Low energy — if you want buzz, you'll drive to it. Kerrisdale is not for people who need the city to come to them.",
+    "personalityDescription": "Kerrisdale’s commercial strip on 41st Avenue has the feel of a small-town main street that happens to be in a major city — family-owned shops that have been there for decades, a reliable bakery, a hardware store that hasn’t been bought out. The residential streets are quiet in a way that takes genuine effort to maintain at this proximity to the city.\n\nFamilies with school-age children, people who have moved through noisier neighbourhoods and want something calmer. Anyone who finds the West End or Commercial Drive exhausting will feel immediately at ease here. Kerrisdale suits people who want to settle, not circulate.\n\nCar-dependent for anything beyond the village strip. Transit runs but infrequently. Low energy — if you want buzz, you’ll drive to it.",
     "analogousComparisons": {
       "default": "A neighbourhood where the ambition is stability, and it delivers on that without apology."
     },
-    "communityQuote": "\"I used to think Kerrisdale was boring. Now I have two kids and I understand that I was the problem.\" — a former advertising creative director, now a stay-at-home parent on West Boulevard",
+    "communityQuote": "“I used to think Kerrisdale was boring. Now I have two kids and I understand that I was the problem.” — a former advertising creative director, now a stay-at-home parent on West Boulevard",
     "attributes": {
       "walkability": 6,
       "transitScore": 6,
@@ -743,11 +743,11 @@
     "district": "West Side Vancouver",
     "tagline": "Affordable West Side with a Punjabi-Canadian heartbeat",
     "heroImage": "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=800&q=80",
-    "personalityDescription": "Marpole sits at the south end of Granville Street and operates on its own logic — more working-class than the neighbourhoods above it, more culturally mixed, more honest about what it is. The Punjabi community has been here for decades and the food reflects it: the best dahl on Granville is not in Yaletown.\n\nPeople priced out of Kerrisdale or Kitsilano who still want West Side access and good transit on the 98 B-Line. Anyone who cares more about the neighbourhood than the postcode. Marpole is for people who want to live well without paying for a name.\n\nLess polished than its neighbours to the north. The Granville corridor gets loud on weekends. Not much evening street life beyond a few strips. Marpole is a neighbourhood you live in, not one you show off.",
+    "personalityDescription": "Marpole sits at the south end of Granville Street and operates on its own logic — more working-class than the neighbourhoods above it, more culturally mixed, more honest about what it is. The Punjabi community has been here for decades and the food reflects it: the best dahl on Granville is not in Yaletown.\n\nPeople priced out of Kerrisdale or Kitsilano who still want West Side access and good transit on the 98 B-Line. Anyone who cares more about the neighbourhood than the postcode. Marpole is for people who want to live well without paying for a name.\n\nLess polished than its neighbours to the north. The Granville corridor gets loud on weekends. Not much evening street life beyond a few strips.",
     "analogousComparisons": {
       "default": "The affordable end of a desirable corridor — unpretentious, functional, and better than its reputation."
     },
-    "communityQuote": "\"I pay half what my friends in Kits pay and I'm a twelve-minute bus ride from downtown. I don't know what they're buying that I'm not.\" — a dental hygienist who's rented on Ash Street for four years",
+    "communityQuote": "“I pay half what my friends in Kits pay and I’m a twelve-minute bus ride from downtown. I don’t know what they’re buying that I’m not.” — a dental hygienist who’s rented on Ash Street for four years",
     "attributes": {
       "walkability": 7,
       "transitScore": 6,
@@ -823,13 +823,13 @@
     "id": "oakridge",
     "name": "Oakridge",
     "district": "West Side Vancouver",
-    "tagline": "Canada Line access, quiet streets, and a neighbourhood mid-transformation",
+    "tagline": "Canada Line access, quiet streets, a neighbourhood mid-transformation",
     "heroImage": "https://images.unsplash.com/photo-1462275646964-a0e3386b89fa?w=800&q=80",
-    "personalityDescription": "Oakridge is changing. The Oakridge Centre redevelopment is bringing towers, a new park, and a retail centre that will reshape the area over the next several years. Right now it's a quiet, Canada Line-connected neighbourhood with Langara College nearby and a residential character that hasn't fully resolved what it's becoming.\n\nStudents, young professionals who want Canada Line access without paying downtown prices, and people who are comfortable in a neighbourhood that's actively in transition. The construction is real but so is the upside — when it's done, Oakridge will have amenities it currently lacks.\n\nThe redevelopment means construction noise and disruption for the foreseeable future. The neighbourhood's current character is genuinely in flux — if you need a settled feel immediately, this isn't the right moment to be here.",
+    "personalityDescription": "Oakridge is changing. The Oakridge Centre redevelopment is bringing towers, a new park and a retail centre that will reshape the area over the next several years. Right now it’s a quiet, Canada Line-connected neighbourhood with Langara College nearby and a residential character that hasn’t fully resolved what it’s becoming.\n\nStudents, young professionals who want Canada Line access without paying downtown prices and people comfortable in a neighbourhood actively in transition. The upside of arriving mid-change is that the neighbourhood’s best chapter is still ahead.\n\nThe redevelopment means construction noise and disruption for the foreseeable future. If you need a settled feel immediately, this isn’t the right moment.",
     "analogousComparisons": {
       "default": "A neighbourhood betting on itself — mid-construction, mid-identity, and worth watching."
     },
-    "communityQuote": "\"I moved here for the Canada Line and I stayed because it's actually pleasant when you get off the main road. The construction will end eventually.\" — a Langara College instructor who rents on West 49th",
+    "communityQuote": "“I moved here for the Canada Line and I stayed because it’s actually pleasant when you get off the main road. The construction will end eventually.” — a Langara College instructor who rents on West 49th",
     "attributes": {
       "walkability": 6,
       "transitScore": 7,
@@ -905,13 +905,13 @@
     "id": "renfrew-collingwood",
     "name": "Renfrew-Collingwood",
     "district": "East Side Vancouver",
-    "tagline": "Vancouver's most affordable neighbourhood — and genuinely liveable",
+    "tagline": "Vancouver’s most affordable neighbourhood — and genuinely liveable",
     "heroImage": "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=800&q=80",
-    "personalityDescription": "Renfrew-Collingwood is the east-side hillside neighbourhood that most Vancouver transplants find by accident — and then stay in. The Millennium Line SkyTrain runs through it, rents are the lowest in the city proper, and the mix of Vietnamese, Chinese, and South Asian communities gives the food scene a breadth you won't find in posher parts of town.\n\nBudget-conscious renters who still want good transit. Families who need space. People who don't need their neighbourhood to be Instagrammable and are tired of paying for someone else's aesthetic. Renfrew-Collingwood rewards people who are willing to find the good spots rather than have them handed to them.\n\nNo obvious commercial hub and not much street life. It takes time to find the good spots — they're not announced. If you need a neighbourhood with an identity you can describe in one sentence, this isn't it.",
+    "personalityDescription": "The Millennium Line SkyTrain runs through it, rents are the lowest in the city proper and the mix of Vietnamese, Chinese and South Asian communities gives the food scene a breadth you won’t find in posher parts of town. This is the neighbourhood that budget-conscious renters find by accident and then stay in.\n\nPeople who need good transit without paying for it twice. Families who need space and aren’t attached to a postcode. The housing here is a mix of older apartments and character homes — many with yards — and you get considerably more space for your money than anywhere else in Vancouver.\n\nNo obvious commercial hub and not much street life. It takes time to find the good spots — they’re not announced. If you need your neighbourhood to have an immediately readable identity, this one takes a few weeks to reveal itself.",
     "analogousComparisons": {
       "default": "The part of the city that works without needing to be noticed."
     },
-    "communityQuote": "\"I pay $1,980 for my one-bedroom and I'm on the Millennium Line. My friends in Kits don't believe me.\" — a hospital administrator who moved from New Westminster two years ago",
+    "communityQuote": "“I pay $1,980 for my one-bedroom and I’m on the Millennium Line. My friends in Kits don’t believe me.” — a hospital administrator who moved from New Westminster two years ago",
     "attributes": {
       "walkability": 6,
       "transitScore": 8,
@@ -989,11 +989,11 @@
     "district": "West Side Vancouver",
     "tagline": "Pacific Spirit Park on the doorstep, quiet enough to hear it",
     "heroImage": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80",
-    "personalityDescription": "Dunbar is where people go when they want the city to leave them alone for a bit. Pacific Spirit Regional Park is walkable — not a five-minute drive and a parking situation, but genuinely walkable from most Dunbar streets. The commercial strip on Dunbar Street has been there since before anyone thought about coffee shops as a lifestyle signifier.\n\nPeople who work from home and need the walk more than the commute. Families who want a specific West Side quiet. Anyone for whom silence is a non-negotiable feature of where they live. Dunbar suits deliberate people who've made their choices and are not looking for stimulation from their neighbourhood.\n\nGenuinely car-dependent for most things beyond the Dunbar strip. Transit runs, but slowly — the 41 and 49 buses are not an argument for leaving your car behind. The lowest social energy neighbourhood on the Vancouver list — intentionally so.",
+    "personalityDescription": "Dunbar is where people go when they want the city to leave them alone for a bit. Pacific Spirit Regional Park is walkable — not a five-minute drive and a parking situation, but genuinely walkable from most Dunbar streets. The commercial strip has been anchored by the same independent businesses for decades.\n\nPeople who work from home and need the walk more than the commute. Families. Anyone for whom silence is a non-negotiable feature of where they live. Most homes here are detached or semi-detached with yards — space that’s genuinely rare at this price point on the West Side.\n\nGenuinely car-dependent for most things beyond the Dunbar strip. Transit runs, but slowly. The lowest social energy neighbourhood on the Vancouver list — and that’s the point.",
     "analogousComparisons": {
       "default": "A neighbourhood where the forest is closer than the freeway, and that's the entire point."
     },
-    "communityQuote": "\"I run in Pacific Spirit every morning. I've done it for seven years. I still don't take it for granted.\" — a freelance translator who lives on Dunbar Street",
+    "communityQuote": "“I run in Pacific Spirit every morning. I’ve done it for seven years. I still don’t take it for granted.” — a freelance translator who lives on Dunbar Street",
     "attributes": {
       "walkability": 7,
       "transitScore": 5,
@@ -1069,13 +1069,13 @@
     "id": "lower-lonsdale",
     "name": "Lower Lonsdale",
     "district": "North Vancouver",
-    "tagline": "SeaBus to downtown, mountains behind you, a village that works",
+    "tagline": "SeaBus to downtown, mountains at your back, a waterfront village that earns it",
     "heroImage": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
-    "personalityDescription": "The Lonsdale Quay market sits at the SeaBus terminal, and from the upper deck you can see downtown Vancouver across the water. Lower Lonsdale has figured out a trick most waterfront neighbourhoods haven't — it's expensive without feeling exclusive, and the mountains are genuinely there, not just a backdrop on a clear day.\n\nPeople who want outdoor access without giving up urban infrastructure. Commuters who don't mind the SeaBus as a daily ritual — most of them say they prefer it to SkyTrain. People who moved to Vancouver for the mountains and found that actually living near them requires crossing the water.\n\nThe most expensive GVRD neighbourhood on this list. Once you're on the North Shore, you're committed — getting to Vancouver's east side requires either the SeaBus plus transit or the bridge in traffic. It rewards people who have settled into the North Shore rather than those still testing it.",
+    "personalityDescription": "The Lonsdale Quay sits at the SeaBus terminal and the view across the water to downtown is genuinely one of the better urban vistas in Metro Vancouver — visible from the waterfront promenade at any level. The mountains aren’t a backdrop here; they’re accessible. Lower Lonsdale has a thriving craft brewery scene along the waterfront and the Polygon Gallery adds genuine cultural weight to the neighbourhood. It manages to feel like a village and a city at the same time.\n\nPeople who want outdoor access without giving up urban infrastructure. Commuters who don’t mind the SeaBus as a daily ritual tend to say they prefer it to the SkyTrain — fifteen minutes on the water is a different kind of commute. The North Shore trails and mountains are close in a way that actually changes how you spend your weekends.\n\nThe most expensive GVRD neighbourhood on this list. Once you’re on the North Shore, you’re committed to the crossing — getting to Vancouver’s east side requires either the SeaBus plus transit or a bridge in traffic. It rewards people who’ve decided the North Shore is home rather than those still testing it.",
     "analogousComparisons": {
       "default": "What Vancouver proper could look like if the mountains were closer and the ferry was part of the commute."
     },
-    "communityQuote": "\"The SeaBus ride home is the best fifteen minutes of my day. I read, I look at the water, I decompress. My colleagues in Burnaby don't have that.\" — a project manager at a downtown architecture firm",
+    "communityQuote": "“The SeaBus ride home is the best fifteen minutes of my day. I read, I look at the water, I decompress.” — a project manager at a downtown architecture firm",
     "attributes": {
       "walkability": 8,
       "transitScore": 8,
@@ -1151,13 +1151,13 @@
     "id": "deep-cove",
     "name": "Deep Cove",
     "district": "North Vancouver District",
-    "tagline": "End of the road, beginning of the water, no transit worth mentioning",
+    "tagline": "End-of-the-road village, a long bus ride from everything",
     "heroImage": "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&q=80",
-    "personalityDescription": "Deep Cove is a village at the end of a road into Indian Arm fjord. Kayaks on the water in the morning, the Honey Doughnuts line on weekends, Quarry Rock trail above the treeline by afternoon. It is the least city-like place on this entire list, and that is precisely the point.\n\nSomeone for whom nature access is the primary reason for living somewhere. Remote workers who genuinely don't need to commute. People who have made their peace with driving for everything — including the grocery run to the Safeway in North Van, which takes twenty minutes each way.\n\nNo meaningful public transit. You need a car. The village has a few coffee shops, a bakery, a kayak rental, and a general store. If you need more than that in walking distance, this is the wrong choice — and Deep Cove will not apologise for it.",
+    "personalityDescription": "Deep Cove is a village at the end of a road into Indian Arm fjord. Kayaks on the water in the morning, Quarry Rock trail above the treeline in the afternoon, and a genuinely unhurried pace that is either exactly what you’re looking for or the clearest possible sign this isn’t your place. It is the least city-like neighbourhood on this list and wears that distinction without apology.\n\nSomeone for whom nature access is the primary reason for living somewhere — not a priority among several, but the actual reason. Remote workers who genuinely don’t commute. Housing here is predominantly detached houses and townhouses with yards; this isn’t a neighbourhood for someone looking for apartment living. People who live here tend to have made a deliberate choice to slow down and mean it.\n\nA bus does run to Deep Cove but it’s infrequent and the ride is long — a car is effectively essential for daily life. The village has a handful of cafés, a bakery and a kayak rental. If you need more than that within walking distance, this is the wrong fit.",
     "analogousComparisons": {
       "default": "A fjord village that happens to be forty minutes from a major city — for the people who need both things to be true simultaneously."
     },
-    "communityQuote": "\"I moved here from Yaletown. People thought I was having a breakdown. I've never been more okay.\" — a software developer who works remotely and kayaks before every morning standup",
+    "communityQuote": "“I moved here from Yaletown. People thought I was having a breakdown. I’ve never been more okay.” — a software developer who kayaks before every morning standup",
     "attributes": {
       "walkability": 4,
       "transitScore": 3,
@@ -1233,13 +1233,13 @@
     "id": "metrotown",
     "name": "Metrotown",
     "district": "Burnaby",
-    "tagline": "97 walk score, four-minute SkyTrain walk, below Vancouver prices",
+    "tagline": "The most efficient address in Metro Vancouver — and genuinely international",
     "heroImage": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&q=80",
-    "personalityDescription": "Metrotown scores a 97 walk score — higher than most of Vancouver proper — and the Expo Line SkyTrain stop is four minutes from almost anywhere in the neighbourhood. Burnaby's designated town centre, it's dense, functional, and genuinely international in the way only a Korean-Filipino-Chinese-South Asian commercial area can be. The food is excellent and unhypeable.\n\nPeople who want maximum city function at below-Vancouver prices. Anyone for whom transit is the primary consideration. People who eat well and don't need a patio to do it. Metrotown suits people who want the city's infrastructure without the city's rent.\n\nHigh-density tower living is the dominant form here. Green space is limited. Noise and traffic are real. Metrotown is a neighbourhood built around infrastructure, and if that doesn't sound appealing, it will feel like it.",
+    "personalityDescription": "Metrotown scores a 97 walk score — higher than most of Vancouver proper — and the Expo Line SkyTrain is four minutes from almost anywhere in the neighbourhood. But the more interesting thing about Metrotown is what that walkability actually connects you to: Korean grocery stores with ingredients you won’t find elsewhere in the region, Filipino bakeries that have been feeding the same families for thirty years, South Asian sweet shops and Japanese izakayas on the same block. This is one of the most genuinely international neighbourhoods in Metro Vancouver and the food reflects that without making a fuss about it.\n\nPeople who want maximum city function at below-Vancouver prices and are comfortable in a dense, tower-heavy environment. The daily rhythm here is efficient — transit is fast, errands are walkable and the variety of food and retail within a ten-minute walk is genuinely hard to beat. If you find that kind of density energising rather than overwhelming, Metrotown delivers.\n\nHigh-rise tower living is the dominant housing form and green space is limited. Noise and traffic are constants. This is a neighbourhood built around infrastructure and if that’s not your idea of home, it’ll feel like it from the first week.",
     "analogousComparisons": {
       "default": "What happens when a suburb decides to become a real city — and mostly succeeds."
     },
-    "communityQuote": "\"I have three Korean grocery stores, two Filipino bakeries, and a SkyTrain stop within a five-minute walk. I do not miss paying Vancouver rent.\" — an accountant who moved from Kitsilano two years ago",
+    "communityQuote": "“I have three Korean grocery stores, two Filipino bakeries and a SkyTrain stop within a five-minute walk. I do not miss paying Vancouver rent.” — an accountant who moved from Kitsilano two years ago",
     "attributes": {
       "walkability": 10,
       "transitScore": 9,
@@ -1315,13 +1315,13 @@
     "id": "burnaby-heights",
     "name": "Burnaby Heights",
     "district": "Burnaby",
-    "tagline": "Italian heritage, leafy streets, and a bakery that doesn't advertise",
+    "tagline": "Italian heritage, leafy streets, and a strip that predates the word ‘curated’",
     "heroImage": "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=800&q=80",
-    "personalityDescription": "Burnaby Heights has a commercial strip on Hastings Street that predates the word curated. Italian bakeries, a Portuguese chicken spot, a hardware store that hasn't been converted. The residential streets behind it are quiet and tree-lined in a way that takes the pressure off — this is a neighbourhood that doesn't need to be discovered.\n\nPeople who want neighbourhood character without paying to be fashionable. Families who need space. Anyone who wants the Burnaby price point without the Metrotown density. Burnaby Heights suits people who have given up on Vancouver proper's costs but haven't given up on having a neighbourhood.\n\nLess transit-connected than Metrotown — the Hastings bus runs but it's not the SkyTrain. The commercial strip is good but not extensive. You will know most of what Burnaby Heights has to offer within the first month.",
+    "personalityDescription": "The commercial strip on Hastings Street has an Italian-heritage backbone — bakeries, a deli, a Portuguese chicken spot — alongside the kind of hardware store and dry cleaner that disappeared from most Vancouver neighbourhoods a decade ago. Behind the strip, the residential streets are quiet and tree-lined, with a mix of older apartments and character homes that give the neighbourhood a genuinely settled feel.\n\nPeople who want neighbourhood character without paying to be fashionable. Families who need space. The pace here is unhurried in the best way — locals know each other, the strip is genuinely used rather than photographed and the week has a comfortable rhythm that doesn’t require the city to perform for you.\n\nThe Hastings strip is reliable but not extensive — you’ll know everything it offers within the first month. Transit runs but it’s not SkyTrain-convenient for downtown commutes.",
     "analogousComparisons": {
       "default": "An Italian-heritage commercial strip that survived several waves of urban change by being exactly what it is."
     },
-    "communityQuote": "\"I buy my bread at the same bakery my landlord's mother used to go to. That's not nothing.\" — a carpenter who rents on Dundas Street",
+    "communityQuote": "“I buy my bread at the same bakery my landlord’s mother used to go to. That’s not nothing.” — a carpenter who rents on Dundas Street",
     "attributes": {
       "walkability": 7,
       "transitScore": 7,
@@ -1397,13 +1397,13 @@
     "id": "rocky-point-port-moody",
     "name": "Rocky Point",
     "district": "Port Moody",
-    "tagline": "Burrard Inlet, craft beer, SkyTrain, and actual hiking trails",
+    "tagline": "Burrard Inlet, craft beer, SkyTrain and actual hiking trails",
     "heroImage": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80",
-    "personalityDescription": "Port Moody has more craft breweries per capita than almost anywhere in BC, and they sit along the inlet within walking distance of Rocky Point Park and the Evergreen SkyTrain. It's a small city that has figured out its identity — outdoorsy and a bit boisterous on Friday nights, considerably quieter on Tuesday mornings.\n\nPeople who want outdoor access and a social scene that doesn't require going into Vancouver. Cyclists, hikers, people who consider a Saturday trail run followed by a noon pint a complete weekend. Rocky Point suits people who want the city's amenities at the city's edge — not suburban, not urban, something in between that works.\n\nAt the end of the Evergreen Extension — commuting into downtown Vancouver takes 40-50 minutes by SkyTrain. If you work in the city daily, the commute is the negotiation you'll make with this neighbourhood every morning.",
+    "personalityDescription": "Port Moody has more craft breweries per capita than almost anywhere in BC and they sit along the inlet within walking distance of Rocky Point Park and the Evergreen SkyTrain. It’s a small city that has figured out its identity — outdoorsy during the week and a bit boisterous on Friday evenings, with the mountains and the water always in the frame.\n\nLiving here has a specific rhythm: trails before work, coffee at the local roaster, the occasional pint at the brewery end of Murray Street on a Thursday. It suits people who want outdoor access and a social scene that doesn’t require going into Vancouver — and who find the commute a fair trade for everything else. Families are well-represented and the community feel is genuine rather than aspirational.\n\nAt the end of the Evergreen Extension, commuting into downtown Vancouver takes 40-50 minutes by SkyTrain. If you’re in the city every day, that’s the negotiation you’ll make with this neighbourhood every morning — most people who’ve done it say it’s worth it.",
     "analogousComparisons": {
       "default": "A small city that found its identity in beer and mountains and has never looked back."
     },
-    "communityQuote": "\"I trail run before work three mornings a week and I'm at my Gastown office in 45 minutes. My friends think I live far away. I think I live perfectly.\" — an environmental engineer who bought a townhouse near Moody Centre",
+    "communityQuote": "“I trail run before work three mornings a week and I’m at my Gastown office in 45 minutes.” — an environmental engineer who bought a townhouse near Moody Centre",
     "attributes": {
       "walkability": 6,
       "transitScore": 7,
@@ -1481,11 +1481,11 @@
     "district": "Coquitlam",
     "tagline": "French-Canadian heritage west of the Rockies, and genuinely affordable",
     "heroImage": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
-    "personalityDescription": "Maillardville is the oldest French-Canadian settlement west of Manitoba — a fact that sounds like a tourism board line until you see the Maison Maillard heritage site and the Place Maillardville square. It's a quiet, working neighbourhood with Coquitlam Centre SkyTrain nearby and a sense of place that most Metro Vancouver suburbs conspicuously lack.\n\nPeople who care about neighbourhood history. Budget-conscious renters who want transit access without paying Vancouver prices. Anyone who finds Coquitlam's suburban sprawl alienating but likes the idea of a defined neighbourhood with an identity within it. Maillardville rewards people who look for the texture beneath the surface.\n\nLimited food and retail options beyond the basics. The French-Canadian heritage is present but subtle — this isn't a cultural quarter in an obvious sense. It's a neighbourhood you live in rather than visit, and the distinction matters if you need your surroundings to offer ongoing novelty.",
+    "personalityDescription": "The oldest French-Canadian settlement west of Manitoba — a fact that sounds like a tourism board line until you see the Place Maillardville square and the heritage buildings that survived suburban expansion by being genuinely worth keeping. It’s a quiet working neighbourhood with Coquitlam Centre SkyTrain nearby and a sense of place that most Metro Vancouver suburbs conspicuously lack.\n\nPeople who care about neighbourhood history and want somewhere that has an identity beyond its transit connections. Budget-conscious renters who want SkyTrain access without paying Vancouver prices. The pace here is calm and residential — yards are common and the community tends toward the long-established rather than the newly arrived.\n\nLimited food and retail options beyond the basics — this is a neighbourhood you live in rather than visit and the distinction matters if you need ongoing novelty from your surroundings. The French-Canadian heritage is present but subtle; it’s not a cultural quarter in any obvious sense.",
     "analogousComparisons": {
       "default": "A heritage neighbourhood that survived suburban expansion by having a story strong enough to hold onto."
     },
-    "communityQuote": "\"Most people in Coquitlam have never heard of Maillardville. I find that useful.\" — a librarian who's rented here for three years and shows no signs of leaving",
+    "communityQuote": "“Most people in Coquitlam have never heard of Maillardville. I find that useful.” — a librarian who’s rented here for three years",
     "attributes": {
       "walkability": 6,
       "transitScore": 7,
@@ -1561,13 +1561,13 @@
     "id": "steveston",
     "name": "Steveston",
     "district": "Richmond",
-    "tagline": "Historic fishing village, boardwalk, Japanese-Canadian heritage, far from everything else",
+    "tagline": "Historic fishing village, working harbour, a pace that gives you room to breathe",
     "heroImage": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80",
-    "personalityDescription": "Steveston is Richmond's anomaly — a historic fishing village with an actual working harbour, independent shops that predate the internet, and a Japanese-Canadian community whose history is embedded in the place in ways that the heritage signage only partially conveys. The Gulf of Georgia Cannery is a national historic site. The Saturday market is the real thing.\n\nPeople who want waterfront village life within Metro Vancouver. Families, quieter personalities, people for whom a Saturday fish-and-chips on the wharf is the specific thing they're looking for rather than a compromise. Steveston rewards people who have deliberately chosen less city rather than people who've been priced out of more.\n\nFar from downtown Vancouver — 45-60 minutes by transit, and transit is infrequent enough that a car is practically necessary. The village is small enough that you'll exhaust its options quickly if you're used to urban density. This is a feature for some people and a dealbreaker for others.",
+    "personalityDescription": "Steveston is Richmond’s anomaly — a working harbour with fishing boats that actually fish, independent shops that predate the internet and a Japanese-Canadian community whose history runs deep in the neighbourhood’s fabric. The waterfront path is used by locals as much as visitors and the Saturday market is the real kind.\n\nThe pace here is genuinely slow in the way that some people find liberating. Neighbours know each other, the community league is active and the week has the kind of unhurried rhythm that’s hard to find anywhere else at this price point in Metro Vancouver. Housing is predominantly single-family homes and townhouses with yards — space that’s rare this close to the water.\n\nFar from downtown Vancouver — 45-60 minutes by transit — and a car is practically necessary for daily life. The village is small enough that you’ll exhaust its options if you’re used to urban density. This is a feature if you’ve chosen it deliberately.",
     "analogousComparisons": {
       "default": "A fishing village that somehow survived inside a major metropolitan area — and has the cannery to prove it."
     },
-    "communityQuote": "\"I can walk to the harbour at 6am and watch the fishing boats come in. I've lived here four years and I still don't take it for granted.\" — a retired teacher who moved from East Vancouver",
+    "communityQuote": "“I can walk to the harbour at 6am and watch the fishing boats come in. I’ve lived here four years and I still don’t take it for granted.” — a retired teacher who moved from East Vancouver",
     "attributes": {
       "walkability": 7,
       "transitScore": 5,
@@ -1643,13 +1643,13 @@
     "id": "cloverdale",
     "name": "Cloverdale",
     "district": "Surrey",
-    "tagline": "Heritage town, rodeo history, and genuinely affordable",
+    "tagline": "A small town that survived becoming a suburb by staying itself",
     "heroImage": "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80",
-    "personalityDescription": "Cloverdale is the historic core of Surrey — a town that predates Surrey's expansion and still has a main street with brick facades from the 1800s, a rodeo ground, and a Country Christmas tradition that the rest of Metro Vancouver makes fun of and then quietly attends. It's genuinely different from anything else on this list.\n\nPeople who want space and affordability and aren't pretending to need the city. Families, tradespeople, people relocating from smaller BC cities who find Vancouver's density exhausting and its prices impossible. Cloverdale suits people who want to settle somewhere that already knows what it is.\n\nCar-essential. The transit runs but it's not the same proposition as a SkyTrain neighbourhood. If you're measuring distance to downtown Vancouver in commute minutes, Cloverdale is a long way out — plan on an hour each way.",
+    "personalityDescription": "Cloverdale is the historic heart of what became Surrey — brick storefronts from the 1800s, a rodeo ground and a main street that still functions as one. The municipal centre long since moved elsewhere, which means Cloverdale has been left to operate as its own distinct small town within a larger city. That’s not a consolation prize; it’s what gives it character that most of Surrey doesn’t have.\n\nThe pace is unhurried and the community is established — people here tend to know their neighbours, have yards and take the local seriously. It’s a good fit for people who want space and genuine affordability and aren’t measuring their life against the city.\n\nCar-essential for almost everything and the commute to downtown Vancouver is an hour each way. This is the honest trade-off and it’s a real one — Cloverdale makes sense for people who have made their peace with it.",
     "analogousComparisons": {
       "default": "A heritage town that survived becoming a suburb by staying exactly itself."
     },
-    "communityQuote": "\"I pay $1,750 for a two-bedroom. In Vancouver that doesn't exist. I drive 45 minutes to work. It's a fair trade.\" — an electrician who moved from New Westminster three years ago",
+    "communityQuote": "“I pay $1,750 for a two-bedroom. In Vancouver that doesn’t exist. I drive 45 minutes to work. It’s a fair trade.” — an electrician who moved from New Westminster",
     "attributes": {
       "walkability": 5,
       "transitScore": 6,
@@ -1727,11 +1727,11 @@
     "district": "Surrey",
     "tagline": "SkyTrain-adjacent, most affordable on the list, mid-transformation",
     "heroImage": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&q=80",
-    "personalityDescription": "Surrey City Centre is betting on itself. The King George SkyTrain station anchors a neighbourhood that city planners envision as Metro Vancouver's second downtown — towers going up, a new library, an arts centre, a university campus. Right now it's a place of intention more than arrival, which is either exciting or uncomfortable depending on your threshold for urban roughness.\n\nPeople for whom affordability is the primary variable. People who are early in careers, new to Canada, or willing to be patient with a neighbourhood still figuring itself out. Anyone who needs SkyTrain access and has a tight budget. Surrey City Centre is the most honest value proposition on this list.\n\nSafety perception is genuinely mixed and varies significantly street by street. This is the most direct disclaimer on the list: research specific blocks before committing. The neighbourhood's transformation is real but uneven, and the gap between its best and worst blocks is larger than anywhere else here.",
+    "personalityDescription": "Surrey City Centre is a neighbourhood investing in itself. The King George SkyTrain station anchors an area that city planners envision as Metro Vancouver’s second downtown — towers going up, a new library, an arts centre and a university campus already in place. Right now it sits somewhere between intention and arrival, which makes it genuinely interesting if you can tolerate a neighbourhood still finding its footing.\n\nDaily life here has the energy of somewhere mid-change: new businesses opening alongside established ones, a highly diverse population that makes the food scene punchy and unpredictable and a SkyTrain connection that makes the rest of the region accessible without a car. For the right person — early in a career, new to Canada or simply practical about budget — this neighbourhood offers real value that the more established areas can’t match.\n\nSafety perception varies significantly street by street and that’s worth taking seriously. Research specific blocks before committing — the gap between the neighbourhood’s best and most challenging areas is wider here than anywhere else on this list.",
     "analogousComparisons": {
       "default": "A city centre in the process of deciding what kind of city centre it wants to be."
     },
-    "communityQuote": "\"People act like I made a compromise moving here. I have a SkyTrain stop, a great Filipino restaurant, and I pay $1,750 a month. That's not a compromise.\" — a nursing student at SFU Surrey",
+    "communityQuote": "“People act like I made a compromise moving here. I have a SkyTrain stop, a great Filipino restaurant and I pay $1,750 a month. That’s not a compromise.” — a nursing student at SFU Surrey",
     "attributes": {
       "walkability": 7,
       "transitScore": 8,
@@ -1807,13 +1807,13 @@
     "id": "sapperton",
     "name": "Sapperton",
     "district": "New Westminster",
-    "tagline": "High transit score, low walk score — a commuter neighbourhood with heritage bones",
+    "tagline": "Heritage streets, big yards and the transit paradox that works in your favour",
     "heroImage": "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=800&q=80",
-    "personalityDescription": "Sapperton is the New Westminster neighbourhood built around the Royal Columbian Hospital, with a working-class heritage and a small craft beer district that arrived recently and fits surprisingly well. Its walk score is 26 — one of the lowest on this list — but its transit score is 75. That paradox defines it: you can commute easily, but daily errands require a car.\n\nCommuters who want a quieter base and don't mind driving for groceries. Healthcare workers at Royal Columbian. People who want New Westminster's affordability and heritage without the downtown New West bustle. Sapperton is a neighbourhood for people who come home to sleep and go out for other things.\n\nThe walk score is real — this is a car neighbourhood despite the transit access for commuting. The craft beer district on Braid Street is good but narrow. Not much else by way of evening options within walking distance.",
+    "personalityDescription": "Sapperton is a quiet, residential corner of New Westminster with a surprising amount of heritage housing stock — older character homes on generous lots, many with yards that would cost twice as much anywhere closer to Vancouver. The Royal Columbian Hospital anchors one end of the neighbourhood and a small but solid craft beer strip on Braid Street adds some evening life. The week here is calm and domestic in the best sense.\n\nThe curious thing about Sapperton is its transit paradox: a walk score of 26 (daily errands require a car) alongside a transit score of 75 (getting to downtown Vancouver by SkyTrain is genuinely easy). If you commute by transit and are happy to drive for groceries, this works well. If walkable errands matter as much as the commute, it’s a harder fit.\n\nNot much within walking distance beyond the immediate neighbourhood. The craft beer strip is worth knowing but narrow. Sapperton suits people who want a quiet residential base with a reliable commute more than an activated neighbourhood streetscape.",
     "analogousComparisons": {
       "default": "A working-class neighbourhood that commutes well but walks poorly — and is honest about that trade-off."
     },
-    "communityQuote": "\"I take the SkyTrain to downtown Vancouver in 25 minutes. Then I drive to the grocery store. That's Sapperton.\" — a lab technician at Royal Columbian who's rented here for two years",
+    "communityQuote": "“I take the SkyTrain to downtown Vancouver in 25 minutes. Then I drive to the grocery store. That’s Sapperton.” — a lab technician at Royal Columbian",
     "attributes": {
       "walkability": 3,
       "transitScore": 7,
@@ -1891,11 +1891,11 @@
     "district": "Langley Township",
     "tagline": "1800s heritage village, one of a kind, genuinely far from everything",
     "heroImage": "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&q=80",
-    "personalityDescription": "Fort Langley looks like what Vancouver neighbourhoods wish they could be — brick storefronts from the 1800s, a Hudson's Bay fort that's now a national historic site, a Saturday market that people drive an hour to attend, antique shops, a river trail that goes somewhere. It is the real thing, not a recreation of it.\n\nPeople who have genuinely decided to leave the city behind. Remote workers. Anyone for whom village is a goal rather than a compromise. People who drive to Costco on Saturdays and are entirely fine with that exchange. Fort Langley rewards people who have made a deliberate lifestyle choice, not people testing one.\n\n50-60 minutes to downtown Vancouver by car on a good day. Transit is minimal and not a serious commuting option. If you work in Vancouver or depend on city infrastructure regularly, this neighbourhood requires a real lifestyle adjustment that should be stress-tested before committing.",
+    "personalityDescription": "Fort Langley looks like what Vancouver neighbourhoods aspire to be — brick storefronts from the 1800s, a Hudson’s Bay fort that’s now a national historic site and a Saturday market that people drive an hour to attend. But what makes it worth considering as a place to live rather than just visit is what it feels like the rest of the week: quiet streets, real yards, a community league that functions and a river trail that goes somewhere meaningful.\n\nLife here runs on seasons and the village rhythm — the market fills up in summer, the trails are busy on autumn weekends and the community tends toward people who chose this deliberately and stayed. Residents have typically been here a long time. Housing is almost entirely detached homes and townhouses with proper outdoor space.\n\n50-60 minutes to downtown Vancouver by car on a reasonable day and transit is not a practical commuting option. This neighbourhood makes sense for remote workers and people who have genuinely decided the city is behind them — not people testing the idea.",
     "analogousComparisons": {
       "default": "A heritage village that the city hasn't reached yet — and the people who live there are actively grateful for that."
     },
-    "communityQuote": "\"I moved here from Yaletown five years ago. I have never once thought about going back.\" — a copywriter who works remotely and runs the river trail on weekday mornings",
+    "communityQuote": "“I moved here from Yaletown five years ago. I have never once thought about going back.” — a copywriter who works remotely and runs the river trail on weekday mornings",
     "attributes": {
       "walkability": 6,
       "transitScore": 4,
@@ -1973,11 +1973,11 @@
     "district": "White Rock",
     "tagline": "Beachfront promenade, seaside town scale, a long way south",
     "heroImage": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
-    "personalityDescription": "White Rock has a promenade, a pier, and a beach that gets genuinely warm in August. The town above the hill has its own rhythm — slower, more settled, more seasonal than anything in Metro Vancouver. In July it's full of day-trippers from the city. In February it's very quiet, and the people who are there chose to be.\n\nPeople who are drawn to the idea of living near the ocean more than the idea of living in a city. Retirees, people working remotely, anyone making a deliberate move away from urban density toward something quieter and more specific. White Rock is for people who have answered the city question and moved on to a different question.\n\nAn hour minimum to downtown Vancouver — plan on it and decide if it works before you sign a lease. The town is small and the social options reflect that. Winters are quieter than you expect; the summer crowds are larger than you'd like.",
+    "personalityDescription": "White Rock has a promenade, a pier and a beach that gets genuinely warm in August. The town above the hill operates at a pace that’s deliberately slower than the rest of Metro Vancouver — unhurried, neighbourly and oriented around the water and the week’s small rituals rather than the city’s agenda. The demographic skews toward people who have made their peace with slowing down: retirees, remote workers and families who want outdoor space and a community that actually shows up for each other.\n\nIf the idea of walking the pier on a Tuesday morning before work — or instead of it — resonates, White Rock is worth serious consideration. Housing here is predominantly detached homes and townhouses with yards. The town feels genuinely like a place rather than a suburb.\n\nAn hour minimum to downtown Vancouver — plan on it and decide if the trade-off works before you sign anything. Summers bring day-trippers to the waterfront and the town gets busier than its year-round character suggests. Winters are quiet in a way that suits some people and doesn’t suit others.",
     "analogousComparisons": {
       "default": "A seaside town that happens to be inside a metropolitan area — for people who need both sentences to be true."
     },
-    "communityQuote": "\"I walk the pier every morning at 7am. In eight years I've missed maybe twenty days. That's why I'm here.\" — a retired teacher who moved from Burnaby",
+    "communityQuote": "“I walk the pier every morning at 7am. In eight years I’ve missed maybe twenty days. That’s why I’m here.” — a retired teacher who moved from Burnaby",
     "attributes": {
       "walkability": 6,
       "transitScore": 5,

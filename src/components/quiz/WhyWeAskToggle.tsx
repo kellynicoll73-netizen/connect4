@@ -11,8 +11,13 @@ export function WhyWeAskToggle({ text, copy }: WhyWeAskToggleProps) {
 
   return (
     <div className="mt-6 pt-4 border-t border-neutral-200">
-      <p className="text-xs font-semibold uppercase tracking-widest text-neutral-400 mb-1">Why we ask</p>
-      <p className="text-sm text-neutral-500 leading-relaxed">{content}</p>
+      <p
+        className="text-xs uppercase tracking-widest text-neutral-700 mb-1.5"
+        style={{ fontWeight: 800 }}
+      >
+        Why we ask
+      </p>
+      <p className="text-sm font-medium text-neutral-600 leading-relaxed">{content}</p>
     </div>
   )
 }

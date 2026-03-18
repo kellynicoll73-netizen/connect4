@@ -1,18 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server'
 import OpenAI from 'openai'
+import neighbourhoodsData from '@/data/neighbourhoods.json'
 
-// Neighbourhood descriptions used for semantic matching
-// These are derived from personalityDescription in the neighbourhood data
-const NEIGHBOURHOOD_DESCRIPTIONS: Record<string, string> = {
-  kitsilano: 'Kitsilano sits between the mountains and the ocean. Active, health-conscious, outdoorsy. Coffee shops, yoga studios, beach volleyball. Expensive but beautiful.',
-  'mount-pleasant': 'Mount Pleasant is where artists, breweries, and bike lanes collide. Energetic, unpretentious, creative. Independent businesses, murals, patios.',
-  'commercial-drive': 'Commercial Drive has been Italian, Portuguese, countercultural — and still carries all of it. Cafes, second-hand shops, live music. Bohemian, community-minded, slightly chaotic.',
-  yaletown: 'Yaletown is Vancouver\'s most polished neighbourhood. Converted warehouses, cobblestone loading dock streets, high-end restaurants and boutiques. Sleek, professional, expensive.',
-  strathcona: 'Strathcona is the part of the city that hasn\'t been smoothed out. Victorian houses next to artist studios. The city\'s oldest neighbourhood, with genuine grit and community.',
-  'west-end': 'The West End is one of the most densely populated neighbourhoods in Canada. Beach access, tree-lined streets, diverse and walkable. Relaxed, inclusive, LGBTQ+ welcoming.',
-  'riley-park': 'Riley Park is quiet and residential — doesn\'t announce itself. Broad streets, good schools, farmers market. Families, community gardens, genuinely neighbourly.',
-  'east-vancouver': 'East Vancouver is the city\'s working neighbourhood. Vietnamese restaurants, Portuguese bakeries, Filipino community. Authentic, unpretentious, diverse, affordable.',
-}
+// Build description map dynamically from the neighbourhood dataset
+const NEIGHBOURHOOD_DESCRIPTIONS: Record<string, string> = Object.fromEntries(
+  (neighbourhoodsData as Array<{ id: string; personalityDescription: string }>).map(
+    ({ id, personalityDescription }) => [id, personalityDescription]
+  )
+)
 
 async function getEmbedding(client: OpenAI, text: string): Promise<number[]> {
   const response = await client.embeddings.create({
