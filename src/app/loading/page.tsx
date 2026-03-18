@@ -73,7 +73,7 @@ export default function LoadingPage() {
   const side = (
     <div className="flex flex-col justify-center h-full px-10 py-12">
       <p className="font-body text-xs font-semibold tracking-widest text-neutral-400 uppercase mb-6">
-        What we're doing
+        What we&apos;re doing
       </p>
       <div className="space-y-6">
         <div>
