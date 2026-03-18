@@ -13,7 +13,7 @@ import type {
   ListingObject,
   CardVersion,
 } from '@/types'
-import { computeMatch } from '@/lib/matching'
+import { computeTopMatches, computeDisplayScores } from '@/lib/matching'
 import neighbourhoodsData from '@/data/neighbourhoods.json'
 
 const neighbourhoods = neighbourhoodsData as unknown as Neighbourhood[]
@@ -29,6 +29,8 @@ function getInitialCardVersion(): CardVersion {
 const INITIAL_STATE: SessionState = {
   reasonForMoving:          null,
   reasonForMovingOther:     null,
+  workLocation:             null,
+  schoolLocation:           null,
   timeline:                 null,
   timelineOther:            null,
   household:                null,
@@ -51,8 +53,9 @@ const INITIAL_STATE: SessionState = {
   currentCity:              null,
   currentNeighbourhood:     null,
   currentDescription:       null,
-  favouriteCity:            null,
   favouriteNeighbourhood:   null,
+  favouriteCity:            null,
+  favouriteCountry:         null,
   favouriteDescription:     null,
   matchedNeighbourhoodId:   null,
   cardVersion:              getInitialCardVersion(),
@@ -63,12 +66,13 @@ const INITIAL_STATE: SessionState = {
 interface SessionContextValue {
   state:                SessionState
   setAnswer:            (field: keyof SessionState, value: unknown) => void
-  runMatching:          () => void
+  runMatching:          () => Promise<void>
   resetSession:         () => void
   // Derived
   isQuizComplete:       boolean
   matchedNeighbourhood: Neighbourhood | null
   selectedListing:      ListingObject | null
+  topMatches:           Array<{ neighbourhood: Neighbourhood; score: number }>
 }
 
 // ─── Context ──────────────────────────────────────────────────────────────────
@@ -84,9 +88,45 @@ export function SessionProvider({ children }: { children: ReactNode }) {
     setState((prev) => ({ ...prev, [field]: value }))
   }
 
-  const runMatching = () => {
-    const id = computeMatch(state, neighbourhoods)
-    setState((prev) => ({ ...prev, matchedNeighbourhoodId: id }))
+  const runMatching = async () => {
+    // Structural match (always works)
+    const structuralScores = computeDisplayScores(state, neighbourhoods)
+
+    // Try semantic match
+    const userText = [
+      state.favouriteDescription,
+      state.favouriteNeighbourhood,
+      state.favouriteCity,
+      state.favouriteCountry,
+      state.culturalCommunityText,
+    ].filter(Boolean).join('. ')
+
+    let semanticScores: Record<string, number> = {}
+    if (userText.trim()) {
+      try {
+        const res = await fetch('/api/match', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ text: userText }),
+        })
+        if (res.ok) {
+          const data = await res.json() as { semanticScores?: Record<string, number> }
+          semanticScores = data.semanticScores ?? {}
+        }
+      } catch { /* fallback to structural only */ }
+    }
+
+    // Blend scores (70% structural, 30% semantic)
+    const hasSemantic = Object.keys(semanticScores).length > 0
+    const blendedScores = neighbourhoods.map((n) => ({
+      id: n.id,
+      score: hasSemantic
+        ? (structuralScores[n.id] ?? 0) * 0.7 + (semanticScores[n.id] ?? 50) * 0.3
+        : (structuralScores[n.id] ?? 0),
+    }))
+
+    const best = blendedScores.reduce((a, b) => b.score > a.score ? b : a)
+    setState((prev) => ({ ...prev, matchedNeighbourhoodId: best.id }))
   }
 
   const resetSession = () => {
@@ -111,6 +151,12 @@ export function SessionProvider({ children }: { children: ReactNode }) {
     ? (neighbourhoods.find((n) => n.id === state.matchedNeighbourhoodId) ?? null)
     : null
 
+  const topMatches = useMemo(
+    () => state.matchedNeighbourhoodId ? computeTopMatches(state, neighbourhoods, 3) : [],
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [state]
+  )
+
   const selectedListing: ListingObject | null = (() => {
     if (!matchedNeighbourhood || !state.bedrooms) return null
     const key =
@@ -129,6 +175,7 @@ export function SessionProvider({ children }: { children: ReactNode }) {
       isQuizComplete,
       matchedNeighbourhood,
       selectedListing,
+      topMatches,
     }),
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [state]

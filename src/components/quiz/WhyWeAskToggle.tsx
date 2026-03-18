@@ -1,41 +1,23 @@
 'use client'
 
-import { useState, useRef, useEffect } from 'react'
-import { en } from '@/locales/en'
-
 interface WhyWeAskToggleProps {
-  copy: string
+  text?: string
+  copy?: string // legacy alias
 }
 
-export function WhyWeAskToggle({ copy }: WhyWeAskToggleProps) {
-  const [open, setOpen] = useState(false)
-  const contentRef = useRef<HTMLDivElement>(null)
-  const [height, setHeight] = useState(0)
-
-  useEffect(() => {
-    if (contentRef.current) {
-      setHeight(open ? contentRef.current.scrollHeight : 0)
-    }
-  }, [open])
+export function WhyWeAskToggle({ text, copy }: WhyWeAskToggleProps) {
+  const content = text ?? copy
+  if (!content) return null
 
   return (
-    <div className="mt-2">
-      <button
-        type="button"
-        onClick={() => setOpen((v) => !v)}
-        className="text-primary-500 text-sm font-body hover:text-primary-700 transition-colors"
-        aria-expanded={open}
+    <div className="mt-6 pt-4 border-t border-neutral-200">
+      <p
+        className="text-xs uppercase tracking-widest text-neutral-700 mb-1.5"
+        style={{ fontWeight: 800 }}
       >
-        {open ? en.quiz.shared.whyWeAskOpen : en.quiz.shared.whyWeAskClosed}
-      </button>
-      <div
-        style={{ height, overflow: 'hidden', transition: 'height 200ms ease' }}
-        aria-hidden={!open}
-      >
-        <div ref={contentRef} className="pt-2 pb-1">
-          <p className="text-sm font-body text-neutral-600">{copy}</p>
-        </div>
-      </div>
+        Why we ask
+      </p>
+      <p className="text-sm font-medium text-neutral-600 leading-relaxed">{content}</p>
     </div>
   )
 }

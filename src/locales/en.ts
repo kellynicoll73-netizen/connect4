@@ -1,6 +1,6 @@
 export const en = {
   landing: {
-    productLabel: 'NEIGHBOURHOOD FIT TOOL · VANCOUVER',
+    productLabel: 'Apt · Neighbourhood Fit Tool · Vancouver',
     headline1: 'Find the neighbourhood',
     headline2: 'that fits who you are.',
     body: "Tell us who you are. We'll help you find somewhere that feels like it was waiting for you.",
@@ -24,10 +24,10 @@ export const en = {
       whyWeAsk: 'Why we ask',
       whyWeAskOpen: '− Why we ask',
       whyWeAskClosed: '+ Why we ask',
-      phase1Label: 'PHASE 1 — PRACTICALITIES',
-      phase2Label: 'PHASE 2 — YOUR LIFESTYLE',
-      phase3Label: 'PHASE 3 — WHERE YOU\'RE FROM',
-      phase4Label: 'PHASE 4 — YOUR FAVOURITE PLACE',
+      phase1Label: 'Practicalities',
+      phase2Label: 'Your Lifestyle',
+      phase3Label: 'Place Memory',
+      phase4Label: 'Your Match',
     },
     q1: {
       question: "What's bringing you to Vancouver?",
@@ -95,6 +95,7 @@ export const en = {
       },
       whyWeAsk:
         "Transport mode fundamentally changes which neighbourhoods work for you. If you're on transit, SkyTrain proximity is critical. If you're walking, walkability scores dominate. Car users have more flexibility.",
+      phase2Card: "Now we want to understand how you actually live. Your daily patterns tell us more about neighbourhood fit than any checklist.",
     },
     q6: {
       question: 'Picture a free day.',
@@ -151,6 +152,7 @@ export const en = {
         'community-feel': 'Community feel — neighbours who look out for each other',
         'quiet-decompress': 'Quiet and low-key — I need to decompress at home',
         'diversity-inclusion': 'Diversity and inclusion — I want to feel welcome as I am',
+        grit: "Character over polish — I'm drawn to real, lived-in neighbourhoods",
       },
       whyWeAsk:
         "Comfort means different things to different people. For some it's personal safety, for others it's knowing your neighbours, for others it's feeling seen. Your answer adjusts how we weight safety, quietness, and cultural diversity.",
@@ -176,7 +178,9 @@ export const en = {
     },
     q13: {
       phase4Card:
-        "One more set of questions. This one's about a place you love — anywhere in the world. It doesn't have to be where you live now.",
+        "Now tell us about a place you've loved — anywhere in the world. This tells us what home feels like to you.",
+      phase3Card:
+        "Last question. Tell us about a neighbourhood anywhere in the world that just felt right — this is the most interesting thing you can tell us.",
       question: 'Is there a neighbourhood anywhere in the world that just felt right — like it was made for you?',
       cityLabel: 'City',
       cityOptional: '(optional)',
@@ -188,6 +192,7 @@ export const en = {
     },
     q14: {
       question: "What makes it your favourite? What does it have that other places don't?",
+      descriptionLabel: 'What makes it feel right?',
       placeholder:
         "e.g. The energy. Everyone's out on the street. Takes itself seriously without being precious. Good food everywhere.",
     },
@@ -205,17 +210,20 @@ export const en = {
   },
 
   result: {
-    matchLabel: 'YOUR MATCH',
+    matchLabel: 'Your match',
+    matchPillsLabel: 'Where it matches',
+    gapPillsLabel: "Where it doesn't quite fit",
+    alsoConsider: 'Also worth exploring',
     worthKnowing:
       'This is a match, not a certainty. No algorithm replaces walking the streets on a Tuesday morning. Shortlist two or three and visit each before you commit.',
     saveButton: 'Save my results',
     startAgain: 'Start again',
     rentalEntry: "See what's available in {neighbourhood} right now →",
-    comingNext: 'COMING NEXT',
-    howItCompares: 'HOW IT COMPARES TO WHAT YOU KNOW',
-    whatItsLike: 'WHAT THIS NEIGHBOURHOOD IS ACTUALLY LIKE',
-    communityVoice: 'FROM SOMEONE WHO LIVES HERE',
-    worthKnowingLabel: 'WORTH KNOWING',
+    comingNext: 'Coming next',
+    howItCompares: 'How it compares to what you know',
+    whatItsLike: 'What this neighbourhood is actually like',
+    communityVoice: 'From someone who lives here',
+    worthKnowingLabel: 'Worth knowing',
     dataSources: {
       walkscore: 'Walkscore',
       cmhc: 'CMHC vacancy',
@@ -265,7 +273,7 @@ export const en = {
   },
 
   meta: {
-    title: 'Connect4 — Neighbourhood Fit Tool',
+    title: 'Apt — Find your Vancouver neighbourhood',
     description: 'Find the Vancouver neighbourhood that fits who you are.',
   },
 

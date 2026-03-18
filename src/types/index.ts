@@ -43,7 +43,7 @@ export interface Neighbourhood {
   heroImage:              string
   personalityDescription: string
   analogousComparisons:   Record<string, string> // must include "default" key
-  communityQuote:         CommunityQuote | null
+  communityQuote:         CommunityQuote | string | null
   attributes:             NeighbourhoodAttributes
   medianRent: {
     oneBed:   number
@@ -133,6 +133,8 @@ export type ComfortPriority =
   | 'community-feel'
   | 'quiet-decompress'
   | 'diversity-inclusion'
+  | 'grit-character'
+  | 'grit'
   | 'other'
 
 export type CardVersion = 'A' | 'B' | 'C'
@@ -143,6 +145,8 @@ export interface SessionState {
   // Phase 1 — Practicalities
   reasonForMoving:          ReasonForMoving | null
   reasonForMovingOther:     string | null
+  workLocation:             string | null
+  schoolLocation:           string | null
   timeline:                 Timeline | null
   timelineOther:            string | null
   household:                Household | null
@@ -168,8 +172,9 @@ export interface SessionState {
   currentNeighbourhood:     string | null
   currentDescription:       string | null
   // Phase 4 — Your favourite place
-  favouriteCity:            string | null
   favouriteNeighbourhood:   string | null
+  favouriteCity:            string | null
+  favouriteCountry:         string | null
   favouriteDescription:     string | null
   // Output
   matchedNeighbourhoodId:   string | null

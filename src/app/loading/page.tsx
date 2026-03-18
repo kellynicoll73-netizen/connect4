@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { useSession } from '@/context/SessionContext'
 import { SidePanelLayout } from '@/components/layout/SidePanelLayout'
+import { AptLogoHorizontal } from '@/components/ui/AptLogoHorizontal'
 import { en } from '@/locales/en'
 
 const CHIPS = [
@@ -38,6 +39,9 @@ export default function LoadingPage() {
   const main = (
     <div className="min-h-screen bg-neutral-50 flex flex-col items-center justify-center px-5">
       <div className="max-w-lg w-full">
+        <div className="mb-8">
+          <AptLogoHorizontal scheme="light" size="sm" />
+        </div>
         <h1 className="font-display text-3xl font-bold text-neutral-900 mb-2">
           {en.loading.headline}
         </h1>
