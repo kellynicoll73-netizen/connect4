@@ -13,7 +13,7 @@ import { en } from '@/locales/en'
 import type { Household, Transport, Bedrooms } from '@/types'
 
 // ─── Routing config ───────────────────────────────────────────────────────────
-// 11 steps: Phase 1 = 1–4 | Phase 2 = 5–10 | Phase 3 = 11
+// 11 steps: Phase 1 = 1–5 (incl. transport) | Phase 2 = 6–10 | Phase 3 = 11
 // Phase intro cards live at /quiz/phase/2 and /quiz/phase/3 (own pages).
 
 // ─── Why we ask — pinned above Continue in QuizLayout ─────────────────────────
@@ -351,7 +351,7 @@ export default function QuizStepPage() {
       // ── Step 11: Loved neighbourhood (Phase 3) ───────────────────────────
       case 11:
         return (
-          <QuizQuestion headline="Tell us about a neighbourhood that's felt like home. Anywhere in the world — any point in your life.">
+          <QuizQuestion headline="Tell us about a neighbourhood that\u2019s felt like home. Anywhere in the world \u2014 any point in your life.">
             <div className="space-y-4">
               <TextInput
                 label="Neighbourhood"

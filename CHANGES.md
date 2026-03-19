@@ -88,6 +88,74 @@
 
 ---
 
+## Visual Polish & Component Architecture — March 2026
+
+> **Scope note:** This commit covers visual, typographic, and component architecture changes only. The OpenAI API call and semantic/blended scoring are scaffolded but not yet active — those changes will follow in a separate PR.
+
+### Phase icons (`src/components/icons/PhaseIcons.tsx`) — new file
+- New shared icon component file containing SVG icons for all three quiz phases
+- Phase 1 (Practicalities): coffee cup doodle — `CoffeeCupIcon` (intro cards), `CoffeeCupIconSmall` (phase pill)
+- Phase 2 (Your Lifestyle): compass doodle — `NewCompassIcon` (intro cards), `NewCompassIconSmall` (phase pill)
+- Phase 3 (Place Memory): star doodle — `StarIcon` (intro cards), `StarIconSmall` (phase pill)
+- All icons sourced from noun-doodles set; viewBox preserved as-is (non-square: 1027×1076) to maintain authentic proportions
+- Small variants have heavier stroke weights, optimised for legibility at 20px (phase pill scale)
+- Large variants use finer strokes, appropriate for 184px (phase intro card scale)
+- Single source of truth — updating an icon here propagates to all usages automatically
+
+### PhasePill component (`src/components/quiz/PhasePill.tsx`) — new file
+- Extracted from `QuizLayout` into a standalone component
+- Renders a full-width terracotta banner with phase icon (small variant, `w-5 h-5`) and label text
+- Phase numbering corrected to X/3 (results is not a phase)
+- Used in both `QuizLayout` and the dev page — one component, consistent output
+
+### PhaseIntroCard component (`src/components/quiz/PhaseIntroCard.tsx`) — new file
+- Extracted from the phase `[num]` page into a reusable component
+- Accepts: `phaseLabel`, `Icon`, `title`, `body`, `onBack`, `onContinue` as props
+- Phase 2 and Phase 3 intro screens both render via this component; layout changes apply to both simultaneously
+- Icon rendered at 184px on a terracotta background
+- Back button: cream circle with terracotta arrow (reversed from quiz layout)
+- Continue button: cream background, dark text
+
+### Phase intro content (`src/app/quiz/phase/[num]/page.tsx`)
+- Rewritten to use `PhaseIntroCard` component — page is now a thin data/routing layer
+- Phase 2 headline updated to: "Now, let's get to know you!"
+- Phase 3 headline: "This last one's our favourite."
+- Phase 3 body revised to frame the Place Memory step as a reference point for finding a Vancouver match
+
+### NeighbourhoodMatchCard component (`src/components/result/NeighbourhoodMatchCard.tsx`)
+- Rewritten as the single source of truth for the primary match card layout
+- Added "Your match" eyebrow label above the neighbourhood name
+- Personality description now supports expand/collapse: truncated at 200 characters with "Read more →" / "Read less ↑" toggle
+- "See what's available" CTA button moved inside this component (just above "Also worth exploring"), received via `onCta` prop
+- Accepts: `neighbourhood`, `score`, `matches`, `gaps`, `analogousText`, `bedroomKey`, `onCta`
+
+### Results page (`src/app/result/page.tsx`)
+- Refactored to use `NeighbourhoodMatchCard` as the sole renderer for the primary match — no duplicated layout logic
+- CTA handler passed in via `onCta` prop; page handles routing, component handles display
+- Secondary match percentage display updated to match the typography weight of the primary score
+
+### CommunityVoiceBlock (`src/components/result/CommunityVoiceBlock.tsx`)
+- Quote font size reduced from `text-base` to `text-sm` to visually align with surrounding body copy weight (Lora italic reads larger than Figtree at the same size)
+
+### Design tokens (`src/tokens.ts`) — new file
+- Colour tokens extracted into a standalone JS/TS file
+- Imported by both `tailwind.config.ts` and the dev page (`src/app/dev/page.tsx`)
+- Ensures the dev page colour swatches remain automatically in sync with Tailwind config — no manual duplication
+
+### Dev page (`src/app/dev/page.tsx`)
+- Rebuilt to reflect the current component library: `PhasePill`, `ProgressBar`, `AptLogoHorizontal`, `NeighbourhoodMatchCard`, `AnalogousComparisonBlock`, `CommunityVoiceBlock`, `SecondaryMatchCard`, `MatchSignalPills`, `Button`, `TextInput`, `TextArea`
+- Colour tokens auto-synced from `src/tokens.ts`
+- Shortcut buttons added for navigating directly to Q1–Q11, phase intro screens, and results
+- Removed PhaseIntroCard preview section (use phase intro shortcuts instead)
+- Typography section updated to reflect current fonts (Figtree body, Lora display); mono label removed
+
+### Typography & copy
+- All user-facing contractions and apostrophes updated to typographic curly quotes throughout `src/locales/en.ts`, `src/app/quiz/phase/[num]/page.tsx`, `src/app/quiz/[step]/page.tsx`, and `src/app/dev/page.tsx`
+- Affects: We'll, it's, don't, isn't, I'll, who's, I've, I'm, you're, that's, doesn't, won't, and all other contractions in display strings
+- String delimiters (TypeScript syntax) are unchanged — only visible display text was modified
+
+---
+
 ## Matching Architecture — Current & Planned
 
 ### How matching works today (structural scoring)

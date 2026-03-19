@@ -2,11 +2,11 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
-import { AlertTriangle, X } from 'lucide-react'
+import { AlertTriangle } from 'lucide-react'
 import type { ListingObject } from '@/types'
 import { Button } from '@/components/ui/Button'
 import { ScamFlagItem } from '@/components/listing/ScamFlagItem'
-import { en, t } from '@/locales/en'
+import { en } from '@/locales/en'
 
 interface ScamShieldModalProps {
   isOpen:  boolean
