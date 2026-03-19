@@ -67,13 +67,11 @@ export function QuizLayout({
         </div>
       </div>
 
-      {/* Content */}
-      <div className="flex-1 px-5 py-4 max-w-lg md:max-w-xl w-full mx-auto">
-        {children}
-      </div>
-
-      {/* Why we ask + Continue button */}
-      <div className="px-5 pb-8 max-w-lg md:max-w-xl w-full mx-auto">
+      {/* Content + Why we ask + Continue button */}
+      <div className="px-5 pt-4 pb-8 max-w-lg md:max-w-xl w-full mx-auto">
+        <div className="mb-6">
+          {children}
+        </div>
         {whyWeAsk && (
           <div className="mb-4">
             <WhyWeAskToggle copy={whyWeAsk} />
