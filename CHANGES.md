@@ -5,6 +5,34 @@
 
 ---
 
+## Semantic Matching & Personalisation — March 2026
+
+> **Scope:** API integration only. No visual or layout changes. Activates the Voyage AI semantic matching layer and adds Claude-generated personalised analogous comparison text to the results page.
+
+### Semantic matching — Voyage AI (`src/app/api/match/route.ts`)
+- Replaced OpenAI `text-embedding-3-small` with Voyage AI `voyage-3` as the embeddings provider
+- Removed the `openai` npm package dependency entirely; Voyage API called via plain `fetch` — no SDK needed
+- All 25 neighbourhood descriptions plus the user's free text are sent in a single batch request, replacing the previous approach of one API call per text input
+- Requires `VOYAGE_API_KEY` in `.env.local` to activate; falls back silently to structural-only scoring if the key is absent or the call fails
+
+### Personalised analogous comparison (`src/app/api/personalise/route.ts`) — new file
+- New API endpoint that generates a personalised "How it compares to what you know" paragraph using Claude (`claude-haiku-4-5`)
+- Receives: the user's Place Memory free text, the place they described (neighbourhood + city + country), and the matched neighbourhood's name and personality description
+- Returns 2–3 sentences in Apt's voice connecting what the user loved about their place to what they will find in their Vancouver match — grounded in the specific details they provided
+- Minimum description threshold: 30 characters. Descriptions below this return `null` and the static fallback is used
+- Requires `ANTHROPIC_API_KEY` in `.env.local`; returns `null` gracefully on any failure
+
+### Results page (`src/app/result/page.tsx`)
+- On mount, fires a call to `/api/personalise` if the user provided a meaningful Place Memory description
+- Dynamic text replaces the static analogous comparison when available; static text remains the fallback if the API returns `null` or fails
+- The call runs after the match is displayed — no added latency to the initial results render
+
+### Unicode curly quotes fix (`src/app/quiz/[step]/page.tsx`, `src/app/dev/page.tsx`)
+- Corrected literal `\u` escape sequences in JSX attribute strings that were rendering as plain text
+- JSX attribute strings do not process `\u` escapes at runtime; replaced with actual Unicode characters
+
+---
+
 ## Visual & Brand Changes
 
 ### AptLogoHorizontal component (`src/components/ui/AptLogoHorizontal.tsx`)

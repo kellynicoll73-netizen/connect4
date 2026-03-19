@@ -351,7 +351,7 @@ export default function QuizStepPage() {
       // ── Step 11: Loved neighbourhood (Phase 3) ───────────────────────────
       case 11:
         return (
-          <QuizQuestion headline="Tell us about a neighbourhood that\u2019s felt like home. Anywhere in the world \u2014 any point in your life.">
+          <QuizQuestion headline="Tell us about a neighbourhood that’s felt like home. Anywhere in the world — any point in your life.">
             <div className="space-y-4">
               <TextInput
                 label="Neighbourhood"

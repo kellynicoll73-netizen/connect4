@@ -456,7 +456,7 @@ export default function DevPage() {
           <TextArea
             value={textareaVal}
             onChange={setTextareaVal}
-            placeholder="e.g. It\u2019s loud and a bit chaotic but in a good way. Old buildings, cheap food, artists moving in\u2026"
+            placeholder="e.g. It’s loud and a bit chaotic but in a good way. Old buildings, cheap food, artists moving in…"
           />
         </section>
 

@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server'
-import OpenAI from 'openai'
 import neighbourhoodsData from '@/data/neighbourhoods.json'
 
 // Build description map dynamically from the neighbourhood dataset
@@ -9,13 +8,33 @@ const NEIGHBOURHOOD_DESCRIPTIONS: Record<string, string> = Object.fromEntries(
   )
 )
 
-async function getEmbedding(client: OpenAI, text: string): Promise<number[]> {
-  const response = await client.embeddings.create({
-    model: 'text-embedding-3-small',
-    input: text,
+// ─── Voyage AI embeddings ─────────────────────────────────────────────────────
+// Voyage accepts a batch of inputs in one call — more efficient than one-at-a-time.
+// Model: voyage-3 (flagship general-purpose model, best quality)
+
+async function getEmbeddings(apiKey: string, inputs: string[]): Promise<number[][]> {
+  const response = await fetch('https://api.voyageai.com/v1/embeddings', {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${apiKey}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: 'voyage-3',
+      input: inputs,
+    }),
   })
-  return response.data[0].embedding
+
+  if (!response.ok) {
+    const error = await response.text()
+    throw new Error(`Voyage AI error ${response.status}: ${error}`)
+  }
+
+  const data = await response.json() as { data: Array<{ embedding: number[] }> }
+  return data.data.map(d => d.embedding)
 }
+
+// ─── Cosine similarity ────────────────────────────────────────────────────────
 
 function cosineSimilarity(a: number[], b: number[]): number {
   let dot = 0, normA = 0, normB = 0
@@ -27,9 +46,11 @@ function cosineSimilarity(a: number[], b: number[]): number {
   return dot / (Math.sqrt(normA) * Math.sqrt(normB))
 }
 
+// ─── Route ────────────────────────────────────────────────────────────────────
+
 export async function POST(req: NextRequest) {
-  const apiKey = process.env.OPENAI_API_KEY
-  if (!apiKey || apiKey === 'your_key_here') {
+  const apiKey = process.env.VOYAGE_API_KEY
+  if (!apiKey) {
     return NextResponse.json({ error: 'No API key configured' }, { status: 503 })
   }
 
@@ -39,16 +60,14 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ semanticScores: {} })
     }
 
-    const client = new OpenAI({ apiKey })
-
-    // Embed the user's description
-    const userEmbedding = await getEmbedding(client, text)
-
-    // Embed all neighbourhood descriptions in parallel
     const entries = Object.entries(NEIGHBOURHOOD_DESCRIPTIONS)
-    const neighbourhoodEmbeddings = await Promise.all(
-      entries.map(([, desc]) => getEmbedding(client, desc))
-    )
+
+    // Single batch call: user text first, then all neighbourhood descriptions
+    const allTexts = [text, ...entries.map(([, desc]) => desc)]
+    const allEmbeddings = await getEmbeddings(apiKey, allTexts)
+
+    const userEmbedding = allEmbeddings[0]
+    const neighbourhoodEmbeddings = allEmbeddings.slice(1)
 
     // Compute cosine similarity for each neighbourhood
     const semanticScores: Record<string, number> = {}
