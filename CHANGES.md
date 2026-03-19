@@ -1,5 +1,5 @@
 # Apt — Branch Changes Overview
-**Branch:** `apt-product-review`
+**Branch:** `apt-semantic-matching`
 **Base:** `28b15de8` (Data: expand neighbourhood dataset)
 **Date:** March 2026
 
@@ -202,13 +202,13 @@ All 25 neighbourhoods are scored, sorted, and the top result is surfaced as the 
 
 Match signal pills on the results page derive from the same weights: attributes where the user's weight is ≥ 3 and the neighbourhood scores ≥ 7 appear as green "Where it matches" pills; the same threshold with a score ≤ 5 produces terracotta "Where it doesn't quite fit" pills.
 
-### Blended scoring — semantic layer (scaffolded, not yet active)
+### Blended scoring — semantic layer (active)
 
-The API route at `src/app/api/match/route.ts` adds a semantic similarity layer using OpenAI embeddings (`text-embedding-3-small`). When activated, it works as follows:
+The API route at `src/app/api/match/route.ts` adds a semantic similarity layer using Voyage AI embeddings (`voyage-3`). It works as follows:
 
 1. **User text is assembled** from the Place Memory step: the neighbourhood they love, the city, the country, and their free-text description — plus any cultural community text entered in step 9. This is the most expressive, unstructured signal the user provides.
 
-2. **Embeddings are generated** in parallel for the user's text and for all 25 neighbourhood `personalityDescription` fields (the editorial prose descriptions in `neighbourhoods.json`).
+2. **Embeddings are generated** in a single batch call for the user's text and all 25 neighbourhood `personalityDescription` fields (the editorial prose descriptions in `neighbourhoods.json`).
 
 3. **Cosine similarity** is computed between the user vector and each neighbourhood vector, producing a 0–100 semantic score per neighbourhood.
 
@@ -217,7 +217,7 @@ The API route at `src/app/api/match/route.ts` adds a semantic similarity layer u
    - Semantic score: **30% weight**
    - The blend rewards neighbourhoods that match both the user's stated preferences *and* the feel of a place they already love
 
-**To activate:** add `OPENAI_API_KEY=<key>` to `.env.local`. The UI and API wiring are already in place; the structural-only fallback remains active when no key is present.
+**To activate:** add `VOYAGE_API_KEY=<key>` to `.env.local`. The structural-only fallback remains active when no key is present or the call fails.
 
 ### Why this approach
 
