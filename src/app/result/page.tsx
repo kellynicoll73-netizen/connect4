@@ -3,15 +3,13 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { useSession } from '@/context/SessionContext'
-import { MatchSignalPills } from '@/components/result/MatchSignalPills'
-import { AnalogousComparisonBlock } from '@/components/result/AnalogousComparisonBlock'
-import { CommunityVoiceBlock } from '@/components/result/CommunityVoiceBlock'
+import { NeighbourhoodMatchCard } from '@/components/result/NeighbourhoodMatchCard'
 import { SecondaryMatchCard } from '@/components/result/SecondaryMatchCard'
 import { SaveBottomSheet } from '@/components/modals/SaveBottomSheet'
 import { Button } from '@/components/ui/Button'
 import { AptLogoHorizontal } from '@/components/ui/AptLogoHorizontal'
 import { computeMatchSignals } from '@/lib/matching'
-import { en, t } from '@/locales/en'
+import { en } from '@/locales/en'
 import type { Neighbourhood } from '@/types'
 
 function getAnalogousText(
@@ -38,7 +36,6 @@ export default function ResultPage() {
   const router = useRouter()
   const { matchedNeighbourhood, state, resetSession, topMatches } = useSession()
   const [saveOpen, setSaveOpen] = useState(false)
-  const [showFullDescription, setShowFullDescription] = useState(false)
 
   if (!matchedNeighbourhood) {
     if (typeof window !== 'undefined') router.replace('/quiz/1')
@@ -55,22 +52,9 @@ export default function ResultPage() {
     state.favouriteCity ?? state.currentCity,
     state.favouriteNeighbourhood ?? state.currentNeighbourhood
   )
-
-  // Personality description with truncation
-  const desc = matchedNeighbourhood.personalityDescription
-  const isLong = desc.length > 200
-  const displayDesc = showFullDescription || !isLong ? desc : desc.slice(0, 200) + '…'
-
-  // Key facts
-  const bedroomKey =
+  const bedroomKey: 'oneBed' | 'twoBed' | 'threeBed' =
     state.bedrooms === 2 ? 'twoBed' :
     state.bedrooms === 3 ? 'threeBed' : 'oneBed'
-  const medianRent = matchedNeighbourhood.medianRent[bedroomKey]
-  const bedroomLabel =
-    state.bedrooms === 2 ? '2 bed' :
-    state.bedrooms === 3 ? '3 bed' : '1 bed'
-  const walkabilityScore = matchedNeighbourhood.attributes.walkability
-
   const showAnalogous = !!state.favouriteNeighbourhood
 
   return (
@@ -83,84 +67,20 @@ export default function ResultPage() {
             <AptLogoHorizontal scheme="light" size="sm" />
           </div>
 
-          {/* 1. Neighbourhood name */}
-          <h1 className="font-display text-4xl font-bold text-apt-dark leading-tight mb-1">
-            {matchedNeighbourhood.name}
-          </h1>
-
-          {/* 2. Score */}
-          <p className="font-body text-sm text-apt-terra font-semibold mb-1">
-            <span>{winnerScore}% match</span>
-          </p>
-
-          {/* 3. Tagline */}
-          <p className="font-display text-apt-terra text-base mb-5">
-            {matchedNeighbourhood.tagline}
-          </p>
-
-          {/* 4. Match/gap pills */}
-          <MatchSignalPills
-            matches={winnerSignals.matches}
-            gaps={winnerSignals.gaps}
-          />
-
-          {/* 5. Key facts row — just under pills */}
-          <div className="flex gap-4 mt-5 mb-5">
-            <div className="flex-1 bg-white rounded-md border border-neutral-200 px-4 py-3">
-              <p className="text-xs font-body font-semibold uppercase tracking-widest text-neutral-400 mb-1">Walkability</p>
-              <p className="font-body text-sm font-semibold text-neutral-900">{walkabilityScore}/10</p>
-            </div>
-            <div className="flex-1 bg-white rounded-md border border-neutral-200 px-4 py-3">
-              <p className="text-xs font-body font-semibold uppercase tracking-widest text-neutral-400 mb-1">Median rent ({bedroomLabel})</p>
-              <p className="font-body text-sm font-semibold text-neutral-900">${medianRent.toLocaleString()}/mo</p>
-            </div>
-          </div>
-
-          {/* 6. Divider */}
-          <hr className="mb-6 border-neutral-200" />
-
-          {/* 7. Personality description with show more */}
-          <div className="mb-5">
-            <p className="text-xs font-body font-semibold uppercase tracking-widest text-neutral-400 mb-2">
-              {en.result.whatItsLike}
-            </p>
-            <p className="font-body text-sm text-neutral-700 leading-relaxed">{displayDesc}</p>
-            {isLong && (
-              <button
-                onClick={() => setShowFullDescription(v => !v)}
-                className="text-xs text-neutral-400 hover:text-neutral-600 mt-1"
-              >
-                {showFullDescription ? 'Read less ↑' : 'Read more →'}
-              </button>
-            )}
-          </div>
-
-          {/* 8. Analogous comparison */}
-          {showAnalogous && analogousText && (
-            <div className="mb-6">
-              <AnalogousComparisonBlock text={analogousText} />
-            </div>
-          )}
-
-          {/* 9. Community voice quote */}
-          {matchedNeighbourhood.communityQuote && (
-            <div className="mb-6">
-              <CommunityVoiceBlock quote={matchedNeighbourhood.communityQuote} />
-            </div>
-          )}
-
-          {/* 10. CTA — just above "Also worth exploring" */}
+          {/* Primary match card */}
           <div className="mb-6">
-            <Button
-              variant="primary"
-              fullWidth
-              onClick={() => router.push('/result/listing')}
-            >
-              {t('result.rentalEntry', { neighbourhood: matchedNeighbourhood.name })}
-            </Button>
+            <NeighbourhoodMatchCard
+              neighbourhood={matchedNeighbourhood}
+              score={winnerScore}
+              matches={winnerSignals.matches}
+              gaps={winnerSignals.gaps}
+              analogousText={showAnalogous ? analogousText : undefined}
+              bedroomKey={bedroomKey}
+              onCta={() => router.push('/result/listing')}
+            />
           </div>
 
-          {/* 11. Divider */}
+          {/* Divider */}
           <hr className="my-6 border-neutral-200" />
 
           {/* 12. Secondary match cards */}

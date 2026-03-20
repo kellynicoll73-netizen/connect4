@@ -18,7 +18,7 @@ export function CommunityVoiceBlock({ quote }: CommunityVoiceBlockProps) {
         <p className="text-xs font-body font-semibold tracking-widest text-neutral-400 uppercase mb-3">
           {en.result.communityVoice}
         </p>
-        <p className="font-display italic text-neutral-900 text-base leading-relaxed">
+        <p className="font-display italic text-neutral-900 text-sm leading-relaxed">
           {text}
         </p>
         {attribution && (

@@ -1,61 +1,121 @@
-import type { Neighbourhood, CardVersion } from '@/types'
-import { en } from '@/locales/en'
-import { MatchScoreBadge } from './MatchScoreBadge'
+'use client'
+
+import { useState } from 'react'
+import type { Neighbourhood } from '@/types'
+import { MatchSignalPills } from './MatchSignalPills'
 import { AnalogousComparisonBlock } from './AnalogousComparisonBlock'
-import { PersonalityDescriptionBlock } from './PersonalityDescriptionBlock'
-import { DataSourcePills } from './DataSourcePills'
 import { CommunityVoiceBlock } from './CommunityVoiceBlock'
-import { WorthKnowingBlock } from './WorthKnowingBlock'
+import { Button } from '@/components/ui/Button'
+import { en } from '@/locales/en'
 
 interface NeighbourhoodMatchCardProps {
-  neighbourhood: Neighbourhood
-  score:         number       // normalised 0–100
-  version:       CardVersion
-  analogousText: string       // resolved from analogousComparisons lookup
+  neighbourhood:  Neighbourhood
+  score:          number
+  matches:        string[]
+  gaps:           string[]
+  analogousText?: string
+  bedroomKey?:    'oneBed' | 'twoBed' | 'threeBed'
+  onCta?:         () => void
 }
 
 export function NeighbourhoodMatchCard({
   neighbourhood,
   score,
-  version,
+  matches,
+  gaps,
   analogousText,
+  bedroomKey = 'oneBed',
+  onCta,
 }: NeighbourhoodMatchCardProps) {
-  const showBAndC = version === 'B' || version === 'C'
+  const [showFull, setShowFull] = useState(false)
+
+  const desc        = neighbourhood.personalityDescription
+  const isLong      = desc.length > 200
+  const displayDesc = showFull || !isLong ? desc : desc.slice(0, 200) + '…'
+
+  const medianRent     = neighbourhood.medianRent[bedroomKey]
+  const bedroomLabel   = bedroomKey === 'twoBed' ? '2 bed' : bedroomKey === 'threeBed' ? '3 bed' : '1 bed'
+  const walkabilityScore = neighbourhood.attributes.walkability
 
   return (
-    <div className="flex flex-col gap-6">
-      {/* Header */}
-      <div>
-        <p className="text-xs font-body font-semibold tracking-widest text-neutral-400 uppercase mb-1">
-          {en.result.matchLabel}
-        </p>
-        <h1 className="font-display text-4xl font-bold text-neutral-900 leading-tight">
-          {neighbourhood.name}
-        </h1>
-        <p className="font-display italic text-primary-500 text-lg mt-1">
-          {neighbourhood.tagline}
-        </p>
-      </div>
+    <div className="flex flex-col">
+
+      {/* Eyebrow */}
+      <p className="font-body text-xs font-semibold uppercase tracking-widest text-neutral-400 mb-2">
+        Your match
+      </p>
+
+      {/* Name */}
+      <h1 className="font-display text-4xl font-bold text-apt-dark leading-tight mb-1">
+        {neighbourhood.name}
+      </h1>
 
       {/* Score */}
-      <MatchScoreBadge score={score} />
+      <p className="font-body text-sm text-apt-terra font-semibold mb-1">
+        {score}% match
+      </p>
 
-      {/* Version B + C blocks */}
-      {showBAndC && (
-        <>
+      {/* Tagline */}
+      <p className="font-display text-apt-terra text-base mb-5">
+        {neighbourhood.tagline}
+      </p>
+
+      {/* Match / gap pills */}
+      <MatchSignalPills matches={matches} gaps={gaps} />
+
+      {/* Key facts */}
+      <div className="flex gap-4 mt-5 mb-5">
+        <div className="flex-1 bg-white rounded-md border border-neutral-200 px-4 py-3">
+          <p className="text-xs font-body font-semibold uppercase tracking-widest text-neutral-400 mb-1">Walkability</p>
+          <p className="font-body text-sm font-semibold text-neutral-900">{walkabilityScore}/10</p>
+        </div>
+        <div className="flex-1 bg-white rounded-md border border-neutral-200 px-4 py-3">
+          <p className="text-xs font-body font-semibold uppercase tracking-widest text-neutral-400 mb-1">Median rent ({bedroomLabel})</p>
+          <p className="font-body text-sm font-semibold text-neutral-900">${medianRent.toLocaleString()}/mo</p>
+        </div>
+      </div>
+
+      {/* Divider */}
+      <hr className="mb-6 border-neutral-200" />
+
+      {/* Personality description */}
+      <div className="mb-5">
+        <p className="text-xs font-body font-semibold uppercase tracking-widest text-neutral-400 mb-2">
+          {en.result.whatItsLike}
+        </p>
+        <p className="font-body text-sm text-neutral-700 leading-relaxed">{displayDesc}</p>
+        {isLong && (
+          <button
+            onClick={() => setShowFull(v => !v)}
+            className="text-xs text-neutral-400 hover:text-neutral-600 mt-1"
+          >
+            {showFull ? 'Read less ↑' : 'Read more →'}
+          </button>
+        )}
+      </div>
+
+      {/* Analogous comparison */}
+      {analogousText && (
+        <div className="mb-6">
           <AnalogousComparisonBlock text={analogousText} />
-          <PersonalityDescriptionBlock text={neighbourhood.personalityDescription} />
-          <DataSourcePills />
-        </>
+        </div>
       )}
 
-      {/* Version C only — silent if null */}
-      {version === 'C' && (
-        <CommunityVoiceBlock quote={neighbourhood.communityQuote} />
+      {/* Community voice */}
+      {neighbourhood.communityQuote && (
+        <div className="mb-6">
+          <CommunityVoiceBlock quote={neighbourhood.communityQuote} />
+        </div>
       )}
 
-      {/* Worth knowing — B + C only */}
-      {showBAndC && <WorthKnowingBlock />}
+      {/* CTA */}
+      {onCta && (
+        <div className="mb-2">
+          <Button variant="primary" fullWidth onClick={onCta}>
+            See what&apos;s available in {neighbourhood.name} →
+          </Button>
+        </div>
+      )}
     </div>
   )
 }
