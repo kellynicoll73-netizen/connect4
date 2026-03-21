@@ -20,11 +20,13 @@ export function TextArea({
   return (
     <div className={`flex flex-col gap-1 ${className}`}>
       {label && (
-        <label className="text-sm font-body font-semibold text-neutral-900">
+        <label htmlFor={label.toLowerCase().replace(/\s+/g, '-')} className="text-sm font-body font-semibold text-neutral-900">
           {label}
         </label>
       )}
       <textarea
+        id={label ? label.toLowerCase().replace(/\s+/g, '-') : 'textarea'}
+        name={label ? label.toLowerCase().replace(/\s+/g, '-') : 'textarea'}
         value={value}
         rows={rows}
         placeholder={placeholder}

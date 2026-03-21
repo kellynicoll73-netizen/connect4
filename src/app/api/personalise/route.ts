@@ -31,7 +31,7 @@ export async function POST(req: NextRequest) {
         'content-type':       'application/json',
       },
       body: JSON.stringify({
-        model:      'claude-haiku-4-5',
+        model:      'claude-haiku-4-5-20251001',
         max_tokens: 160,
         system: `You write for Apt, a Vancouver neighbourhood matching tool. Your voice is warm, observational, and specific — like a knowledgeable friend who knows both cities well, not a travel brochure. Short sentences. No hype. No superlatives. Write in the present tense.`,
         messages: [{
