@@ -155,6 +155,16 @@ function applyWeightAdjustments(session: SessionState): AttributeWeights {
       w.culturalDiversity += 2
       w.safetyPerception += 1
       break
+    case 'grit-character':
+      w.safetyPerception -= 1
+      w.culturalDiversity += 1
+      w.socialEnergy += 1
+      break
+    case 'grit':
+      w.safetyPerception -= 2
+      w.socialEnergy += 1
+      w.culturalDiversity += 1
+      break
     // 'other': no adjustment
   }
 
@@ -211,9 +221,14 @@ function applyRawBonuses(
 ): number {
   let bonus = 0
 
-  // Q7 edges-emerging: +10 to Strathcona and East Vancouver
+  // Q7 edges-emerging: +10 to Strathcona, Chinatown, Surrey City Centre, and Maillardville
   if (session.neighbourhoodEnergy === 'edges-emerging') {
-    if (neighbourhood.id === 'strathcona' || neighbourhood.id === 'east-vancouver') {
+    if (
+      neighbourhood.id === 'strathcona' ||
+      neighbourhood.id === 'chinatown' ||
+      neighbourhood.id === 'surrey-city-centre' ||
+      neighbourhood.id === 'maillardville'
+    ) {
       bonus += 10
     }
   }
@@ -226,6 +241,20 @@ function applyRawBonuses(
   }
 
   return bonus
+}
+
+// ─── Attribute labels (for match/gap pills) ───────────────────────────────────
+
+const ATTRIBUTE_LABELS: Record<keyof NeighbourhoodAttributes, string> = {
+  walkability:       'Walkable',
+  transitScore:      'Great transit',
+  cyclingScore:      'Cycling',
+  outdoorsAccess:    'Nature access',
+  culturalDiversity: 'Cultural diversity',
+  safetyPerception:  'Safety',
+  socialEnergy:      'Social energy',
+  fitnessAccess:     'Fitness access',
+  quietness:         'Quiet',
 }
 
 // ─── Public API ───────────────────────────────────────────────────────────────
@@ -268,12 +297,70 @@ export function computeDisplayScores(
            + applyRawBonuses(n, session),
   }))
 
-  const maxScore = Math.max(...rawScores.map((s) => s.score))
-
+  const maxRaw = Math.max(...rawScores.map((s) => s.score), 1)
   return Object.fromEntries(
     rawScores.map(({ id, score }) => [
       id,
-      Math.round((score / maxScore) * 100),
+      Math.round(50 + (score / maxRaw) * 38),
     ])
   )
+}
+
+/**
+ * Returns top N neighbourhoods ranked by score, with normalised display scores.
+ * Winner always scores 100; others are relative to the winner.
+ */
+export function computeTopMatches(
+  session: SessionState,
+  neighbourhoods: Neighbourhood[],
+  n = 3
+): Array<{ neighbourhood: Neighbourhood; score: number }> {
+  const weights = applyWeightAdjustments(session)
+
+  const scored = neighbourhoods
+    .map((neighbourhood) => ({
+      neighbourhood,
+      raw: computeRawScore(neighbourhood, weights)
+           + applyBudgetPenalty(neighbourhood, session)
+           + applyRawBonuses(neighbourhood, session),
+    }))
+    .sort((a, b) => b.raw - a.raw)
+
+  const maxRaw = scored.length > 0 ? Math.max(scored[0].raw, 1) : 1
+  return scored.slice(0, n).map(({ neighbourhood, raw }) => ({
+    neighbourhood,
+    score: Math.round(50 + (raw / maxRaw) * 38),
+  }))
+}
+
+/**
+ * Returns match and gap pill labels for a neighbourhood given the user's session.
+ * Matches: dimensions the user weights highly (≥3) where the neighbourhood scores well (≥7).
+ * Gaps:    dimensions the user weights highly (≥3) where the neighbourhood scores poorly (≤5).
+ */
+export function computeMatchSignals(
+  session: SessionState,
+  neighbourhood: Neighbourhood
+): { matches: string[]; gaps: string[] } {
+  const weights = applyWeightAdjustments(session)
+  const attrs   = neighbourhood.attributes
+
+  const sorted = (Object.keys(weights) as (keyof NeighbourhoodAttributes)[])
+    .sort((a, b) => weights[b] - weights[a])
+
+  const matches: string[] = []
+  const gaps:    string[] = []
+
+  for (const attr of sorted) {
+    if (weights[attr] < 3) break
+    const score = attrs[attr]
+    if (score >= 7) {
+      matches.push(ATTRIBUTE_LABELS[attr])
+    } else if (score <= 5) {
+      gaps.push(ATTRIBUTE_LABELS[attr])
+    }
+    if (matches.length >= 4 && gaps.length >= 3) break
+  }
+
+  return { matches: matches.slice(0, 4), gaps: gaps.slice(0, 3) }
 }

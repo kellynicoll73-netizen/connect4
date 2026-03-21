@@ -2,19 +2,14 @@
   {
     "id": "kitsilano",
     "name": "Kitsilano",
-    "district": "West Side",
+    "district": "West Side Vancouver",
     "tagline": "Beach town meets bookshop city",
     "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
-    "personalityDescription": "Kitsilano sits between the mountains and the ocean, and the neighbourhood knows it. It's active and self-assured — farmers markets, trail runners, coffee shops that take their beans seriously. There's money here, but it doesn't feel cold. People actually live on the street.",
+    "personalityDescription": "Kitsilano runs along the water and knows exactly what it is. The seawall is the spine of daily life here — runners, cyclists, people walking dogs at 7am with coffee in hand. The beach is real and used, the farmers market is genuinely shopped at, and the coffee is taken seriously. There’s money here, but it doesn’t feel cold.\n\nIf your ideal week includes a swim at Kits Pool, a good flat white and a Saturday morning market you actually shop at rather than photograph, this neighbourhood will suit you immediately. It rewards people who want the ocean and the city in the same breath and are willing to pay for the combination.\n\nThe trade-off is cost and transit. Kitsilano is expensive relative to square footage and the bus network is adequate but thin. You’ll want a bike, a car or a high tolerance for the 99 B-Line.",
     "analogousComparisons": {
-      "default": "Think of it as a place that has already figured out what it wants to be — and is comfortable with that answer.",
-      "Dublin_Ranelagh": "Think of it as a version of Ranelagh — but sunnier, more outdoorsy, and with the ocean two blocks away.",
-      "London_Notting Hill": "Think of it as a version of Notting Hill — but less self-conscious, more athletic, and with actual beach access.",
-      "New York_Brooklyn Heights": "Think of it as a version of Brooklyn Heights — but with mountains behind it and a seawall in front.",
-      "Melbourne_Fitzroy": "Think of it as a version of Fitzroy — but quieter at night, and far easier to get to the water.",
-      "Toronto_The Beaches": "Think of it as a version of The Beaches — but with better coffee, more hills, and a proper cycle path along the shore."
+      "default": "A place that has figured out what it wants to be — and is entirely comfortable with that answer."
     },
-    "communityQuote": null,
+    "communityQuote": "“I moved here from Toronto thinking I’d stay two years. That was eleven years ago. The seawall gets me every time.” — a physiotherapist who runs the Kits beach loop most mornings",
     "attributes": {
       "walkability": 9,
       "transitScore": 7,
@@ -35,576 +30,2022 @@
     "listings": {
       "oneBed": {
         "headline": "Bright 1BR in Kitsilano — renovated, steps from the beach",
-        "price": 2100,
+        "price": 2000,
         "bedroomCount": 1,
-        "bodyText": "Renovated one-bedroom in a quiet low-rise, two blocks from Kits Beach. Updated kitchen, in-suite laundry, hardwood throughout. The unit gets good light all afternoon. Utilities included — heat, water, electricity — which keeps your monthly costs predictable. Available immediately, or sooner if you're the right fit. Landlord is local, responsive, and easy to deal with. This is priced to move — competitive for the area and won't last.",
+        "bodyText": "Renovated one-bedroom in a quiet low-rise, two blocks from Kits Beach. Updated kitchen, in-suite laundry, hardwood throughout. Good afternoon light. Utilities included. Available immediately.",
         "photos": [
           "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80",
           "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&q=80",
           "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80"
         ],
         "postedAt": "2 hours ago",
-        "scamFlags": ["belowMedian", "immediateAvailability", "utilitiesIncluded"]
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
       },
       "twoBed": {
         "headline": "2BR Kits apartment — fully updated, available now",
-        "price": 2850,
+        "price": 2720,
         "bedroomCount": 2,
-        "bodyText": "Two-bedroom apartment in central Kitsilano, fully updated with new appliances and bathroom fixtures. Second bedroom works as an office or guest room. Steps to transit and the seawall. All utilities included in the rent. Available immediately — previous tenant relocated for work. Landlord responds same day. Priced well below what comparable units are asking right now.",
+        "bodyText": "Two-bedroom in central Kitsilano, fully updated. Second bedroom works as an office. Steps to transit and the seawall. All utilities included. Previous tenant relocated for work — available immediately.",
         "photos": [
           "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80",
           "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&q=80",
           "https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=600&q=80"
         ],
         "postedAt": "5 hours ago",
-        "scamFlags": ["belowMedian", "immediateAvailability", "utilitiesIncluded"]
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
       },
       "threeBed": {
         "headline": "3BR family home in Kits — renovated, quiet street",
-        "price": 3650,
+        "price": 3485,
         "bedroomCount": 3,
-        "bodyText": "Renovated three-bedroom on a quiet residential street in Kitsilano. Updated kitchen, new flooring, two full bathrooms. Good backyard, easy street parking. Utilities included. This is the most space you'll find at this price in the neighbourhood — we're not asking market rate. Available immediately. Landlord lives nearby and is very responsive to maintenance requests.",
+        "bodyText": "Renovated three-bedroom on a quiet residential street. Updated kitchen, new flooring, two full bathrooms. Good backyard. Utilities included. Priced below market — available immediately.",
         "photos": [
           "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80",
           "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80",
           "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80"
         ],
         "postedAt": "1 hour ago",
-        "scamFlags": ["belowMedian", "immediateAvailability", "utilitiesIncluded"]
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
       }
     }
   },
   {
     "id": "mount-pleasant",
     "name": "Mount Pleasant",
-    "district": "East Side",
-    "tagline": "Where the city is still being made",
-    "heroImage": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&q=80",
-    "personalityDescription": "Mount Pleasant is what happens when artists, breweries, and bike lanes collide. It's energetic and unpretentious — studios next to roasters next to fabrication shops. The density of creative work happening here gives it a hum that other neighbourhoods don't have. Weekends have a specific texture: market, brunch, ride.",
+    "district": "East Side Vancouver",
+    "tagline": "Breweries, murals, and a main street that still means something",
+    "heroImage": "https://images.unsplash.com/photo-1514924013411-cbf25faa35bb?w=800&q=80",
+    "personalityDescription": "Main Street has pulled off something most commercial corridors can’t manage: it stays useful on a Tuesday. Small restaurants that last more than a season, record shops, studios above garages, a hardware store that hasn’t been converted to condos yet. Mount Pleasant earns its reputation without trying, which is the thing that makes it worth the price.\n\nCreative professionals, people who bike to work, anyone who wants neighbourhood life without the performance of it. The kind of place where the coffee shop remembers your order and the person next to you at the bar is a ceramicist or a sound engineer.\n\nRents have caught up to the reputation. The undiscovered period is definitively over and what’s left is a neighbourhood that’s excellent but no longer cheap.",
     "analogousComparisons": {
-      "default": "Think of it as a neighbourhood that's in the middle of becoming something — and that process is the most interesting thing about it.",
-      "Dublin_The Liberties": "Think of it as a version of The Liberties — but with more bikes, better coffee, and a lot less history bearing down on it.",
-      "London_Hackney": "Think of it as a version of Hackney — but smaller, more navigable, and with mountains visible at the end of every east-west street.",
-      "New York_Bushwick": "Think of it as a version of Bushwick — but cleaner, more outdoorsy, and with craft breweries that don't take themselves too seriously.",
-      "Melbourne_Collingwood": "Think of it as a version of Collingwood — similar creative density, similar industrial bones, but with a very different climate in your favour.",
-      "Toronto_Leslieville": "Think of it as a version of Leslieville — but earlier in its arc, and with better cycling infrastructure already in place."
+      "default": "A neighbourhood that earned its identity the slow way — and still wears it without thinking about it."
     },
-    "communityQuote": {
-      "text": "I moved here thinking I'd stay two years. That was four years ago. The neighbourhood keeps pulling you back in.",
-      "attribution": "UX designer · Bike commuter · Arrived January 2022"
-    },
+    "communityQuote": "“Main Street on a Tuesday afternoon is still the best version of this city I’ve found.” — a graphic designer who’s lived on Quebec Street for six years",
     "attributes": {
-      "walkability": 8,
-      "transitScore": 8,
+      "walkability": 9,
+      "transitScore": 7,
       "cyclingScore": 9,
-      "outdoorsAccess": 5,
+      "outdoorsAccess": 6,
       "culturalDiversity": 7,
       "safetyPerception": 7,
       "socialEnergy": 8,
       "fitnessAccess": 7,
-      "quietness": 3
-    },
-    "medianRent": {
-      "oneBed": 2200,
-      "twoBed": 3000,
-      "threeBed": 3900
-    },
-    "vacancyRate": 2.1,
-    "listings": {
-      "oneBed": {
-        "headline": "1BR in Mount Pleasant — updated unit, available immediately",
-        "price": 1950,
-        "bedroomCount": 1,
-        "bodyText": "Updated one-bedroom in a well-maintained building on the edge of Mount Pleasant. New kitchen appliances, renovated bathroom, good storage. Walking distance to Main Street and the brewery district. Utilities included — no surprises on your monthly bill. Available immediately, sooner for the right person. Landlord is hands-on and responsive. This is below what comparable units are listing for right now — serious inquiries only.",
-        "photos": [
-          "https://images.unsplash.com/photo-1536376072261-38c75010e6c9?w=600&q=80",
-          "https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=600&q=80",
-          "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?w=600&q=80"
-        ],
-        "postedAt": "3 hours ago",
-        "scamFlags": ["belowMedian", "immediateAvailability", "utilitiesIncluded"]
-      },
-      "twoBed": {
-        "headline": "2BR Mount Pleasant — renovated, great light, move in now",
-        "price": 2700,
-        "bedroomCount": 2,
-        "bodyText": "Renovated two-bedroom in the heart of Mount Pleasant. Exposed brick, updated kitchen, proper dining area. Second room easily fits a bed and desk. All utilities included. The previous tenant just gave us notice for a job move — unit is available immediately, or sooner if you can commit this week. Landlord replies within hours. This rent is well below current market for a two-bed in this area.",
-        "photos": [
-          "https://images.unsplash.com/photo-1554995207-c18c203602cb?w=600&q=80",
-          "https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=600&q=80",
-          "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=600&q=80"
-        ],
-        "postedAt": "4 hours ago",
-        "scamFlags": ["belowMedian", "immediateAvailability", "utilitiesIncluded"]
-      },
-      "threeBed": {
-        "headline": "3BR in Mount Pleasant — renovated heritage house, all utilities in",
-        "price": 3500,
-        "bedroomCount": 3,
-        "bodyText": "Three-bedroom heritage house, fully renovated interior. Original character details preserved — fir floors, bay windows, good ceiling height. Modern kitchen and two updated bathrooms. Utilities included. Available immediately; previous tenants purchased a place. Landlord is local, easy to reach, and handles maintenance properly. Price reflects a genuine desire to get good long-term tenants rather than to extract maximum rent.",
-        "photos": [
-          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80",
-          "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80",
-          "https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?w=600&q=80"
-        ],
-        "postedAt": "6 hours ago",
-        "scamFlags": ["belowMedian", "immediateAvailability", "utilitiesIncluded"]
-      }
-    }
-  },
-  {
-    "id": "commercial-drive",
-    "name": "Commercial Drive",
-    "district": "East Side",
-    "tagline": "The city's living room",
-    "heroImage": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&q=80",
-    "personalityDescription": "Commercial Drive has been many things — Italian, Portuguese, countercultural — and it still carries all of them at once. It's one of the few places in Vancouver where the street is the point. People linger. Conversations happen between strangers. The café you walk into on a Tuesday afternoon will have an argument about something happening in it, and that is the right kind of neighbourhood energy.",
-    "analogousComparisons": {
-      "default": "Think of it as a neighbourhood where the street itself is the main event — noisy, warm, and entirely itself.",
-      "Dublin_Phibsborough": "Think of it as a version of Phibsborough — more multicultural, livelier on the weekends, and with much better coffee.",
-      "London_Stoke Newington": "Think of it as a version of Stoke Newington — the same mix of independent shops, left-leaning energy, and genuine community feel.",
-      "New York_Astoria": "Think of it as a version of Astoria — that same layered immigrant history, still legible in the food and the faces on the street.",
-      "Melbourne_Brunswick": "Think of it as a version of Brunswick — very similar community texture, slightly less hipster density, more actual diversity.",
-      "Toronto_Little Italy": "Think of it as a version of Little Italy — but still actually Italian in parts, and considerably more relaxed in pace."
-    },
-    "communityQuote": {
-      "text": "I've lived on the Drive for six years. I know my neighbours. I know the person who makes my coffee. That doesn't happen everywhere.",
-      "attribution": "Nurse · Transit commuter · Arrived March 2019"
-    },
-    "attributes": {
-      "walkability": 8,
-      "transitScore": 8,
-      "cyclingScore": 7,
-      "outdoorsAccess": 4,
-      "culturalDiversity": 9,
-      "safetyPerception": 7,
-      "socialEnergy": 8,
-      "fitnessAccess": 5,
-      "quietness": 3
-    },
-    "medianRent": {
-      "oneBed": 2100,
-      "twoBed": 2900,
-      "threeBed": 3700
-    },
-    "vacancyRate": 2.4,
-    "listings": {
-      "oneBed": {
-        "headline": "1BR on Commercial Drive — renovated, utilities in, available now",
-        "price": 1850,
-        "bedroomCount": 1,
-        "bodyText": "Renovated one-bedroom half a block from The Drive. Updated kitchen, new flooring, good light. The building is well-managed and quiet at night. All utilities included — heat, hot water, electricity. Available immediately. The previous tenant was an international student who had to return home unexpectedly. Landlord is local and responds same day. This is competitive pricing for the area and we expect it to go quickly.",
-        "photos": [
-          "https://images.unsplash.com/photo-1540518614846-7eded433c457?w=600&q=80",
-          "https://images.unsplash.com/photo-1565183997392-2f6f122e5912?w=600&q=80",
-          "https://images.unsplash.com/photo-1558882224-dda166733046?w=600&q=80"
-        ],
-        "postedAt": "1 hour ago",
-        "scamFlags": ["belowMedian", "immediateAvailability", "utilitiesIncluded"]
-      },
-      "twoBed": {
-        "headline": "2BR Commercial Drive — renovated character suite, move-in ready",
-        "price": 2600,
-        "bedroomCount": 2,
-        "bodyText": "Renovated two-bedroom character suite in a 1940s house on the east side of The Drive. Original fir floors, updated kitchen and bath, in-suite laundry. Second bedroom works as an office or proper guest room. All utilities included. Available immediately — previous tenants bought a place of their own. Landlord is hands-on and genuinely responsive. We're pricing below what other units are asking because we want tenants who plan to stay.",
-        "photos": [
-          "https://images.unsplash.com/photo-1630699144867-37acec97df5a?w=600&q=80",
-          "https://images.unsplash.com/photo-1617806118233-18e1de247200?w=600&q=80",
-          "https://images.unsplash.com/photo-1615873968403-89e068629265?w=600&q=80"
-        ],
-        "postedAt": "3 hours ago",
-        "scamFlags": ["belowMedian", "immediateAvailability", "utilitiesIncluded"]
-      },
-      "threeBed": {
-        "headline": "3BR house near Commercial Drive — renovated, available immediately",
-        "price": 3300,
-        "bedroomCount": 3,
-        "bodyText": "Three-bedroom house one block off Commercial Drive, fully renovated throughout. New kitchen, updated bathrooms, back deck, small garden. Excellent transit access. Utilities included. Available immediately. Previous tenants relocated for work. This is a real listing at a below-market price from a landlord who has owned the property for over a decade and prefers reliable long-term tenants to higher rents.",
-        "photos": [
-          "https://images.unsplash.com/photo-1576941089067-2de3c901e126?w=600&q=80",
-          "https://images.unsplash.com/photo-1598228723793-52759bba239c?w=600&q=80",
-          "https://images.unsplash.com/photo-1592595896616-c37162298647?w=600&q=80"
-        ],
-        "postedAt": "2 hours ago",
-        "scamFlags": ["belowMedian", "immediateAvailability", "utilitiesIncluded"]
-      }
-    }
-  },
-  {
-    "id": "yaletown",
-    "name": "Yaletown",
-    "district": "Downtown",
-    "tagline": "Warehouse bones, waterfront finish",
-    "heroImage": "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80",
-    "personalityDescription": "Yaletown is Vancouver's most polished neighbourhood — converted warehouses, cobblestone loading docks repurposed into restaurant patios, and a seawall that connects you to everything. It rewards people who want city living to feel effortless. Everything you need is within a ten-minute walk, and the things you can't walk to are a two-stop SkyTrain ride away.",
-    "analogousComparisons": {
-      "default": "Think of it as a neighbourhood where the city's infrastructure is working completely in your favour — dense, walkable, and finished.",
-      "Dublin_Docklands": "Think of it as a version of the Docklands — but warmer, better established, and with actual character in the buildings.",
-      "London_Shoreditch": "Think of it as a version of Shoreditch — but quieter at night, more residential, and with a seawall instead of a roundabout.",
-      "New York_Tribeca": "Think of it as a version of Tribeca — the same industrial-to-residential transformation, but on a more human scale and much easier to navigate.",
-      "Melbourne_South Yarra": "Think of it as a version of South Yarra — similar polish, similar energy, but with mountains on the horizon instead of flat suburbs.",
-      "Toronto_Distillery District": "Think of it as a version of the Distillery District — but fully integrated into the city rather than a curated enclave."
-    },
-    "communityQuote": null,
-    "attributes": {
-      "walkability": 10,
-      "transitScore": 9,
-      "cyclingScore": 6,
-      "outdoorsAccess": 6,
-      "culturalDiversity": 4,
-      "safetyPerception": 9,
-      "socialEnergy": 8,
-      "fitnessAccess": 9,
       "quietness": 4
     },
     "medianRent": {
-      "oneBed": 2700,
-      "twoBed": 3700,
-      "threeBed": 4800
-    },
-    "vacancyRate": 1.4,
-    "listings": {
-      "oneBed": {
-        "headline": "1BR Yaletown — renovated loft-style, available immediately",
-        "price": 2400,
-        "bedroomCount": 1,
-        "bodyText": "Renovated one-bedroom in a converted warehouse building in the heart of Yaletown. Exposed concrete, high ceilings, updated kitchen and bath. Steps to the seawall and two SkyTrain stations. Utilities included — this is not standard for a unit of this quality in this location. Available immediately. Previous tenant transferred to Toronto for work. Landlord is professional, responsive, and easy to deal with. Priced below what comparable units in the building have recently listed for.",
-        "photos": [
-          "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=600&q=80",
-          "https://images.unsplash.com/photo-1556020685-ae41abfc9365?w=600&q=80",
-          "https://images.unsplash.com/photo-1532372576444-dda954194ad0?w=600&q=80"
-        ],
-        "postedAt": "30 minutes ago",
-        "scamFlags": ["belowMedian", "immediateAvailability", "utilitiesIncluded"]
-      },
-      "twoBed": {
-        "headline": "2BR Yaletown warehouse conversion — renovated, all-in rent",
-        "price": 3300,
-        "bedroomCount": 2,
-        "bodyText": "Two-bedroom in a landmark Yaletown warehouse conversion. Renovated kitchen, original exposed brick, two full bathrooms, in-suite laundry. One of the best-located buildings in the neighbourhood. All utilities included. Available immediately — previous tenants departed for family reasons. This is priced well below the building's current comparables. Landlord has owned the unit since 2008 and is known for responsive maintenance.",
-        "photos": [
-          "https://images.unsplash.com/photo-1600210492493-0946911123ea?w=600&q=80",
-          "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=600&q=80",
-          "https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?w=600&q=80"
-        ],
-        "postedAt": "45 minutes ago",
-        "scamFlags": ["belowMedian", "immediateAvailability", "utilitiesIncluded"]
-      },
-      "threeBed": {
-        "headline": "3BR penthouse-level in Yaletown — renovated, move in this week",
-        "price": 4300,
-        "bedroomCount": 3,
-        "bodyText": "Three-bedroom unit on the upper floors of a Yaletown warehouse conversion. City views, renovated throughout, three bathrooms, private storage. This is exceptional space in one of Vancouver's most sought-after addresses. All utilities included. Available immediately — this unit has not been on the market in six years. Landlord is a private investor, very responsive, no agency fees. Priced below current market to attract the right long-term tenants.",
-        "photos": [
-          "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=600&q=80",
-          "https://images.unsplash.com/photo-1613977257592-4871e5fcd7c4?w=600&q=80",
-          "https://images.unsplash.com/photo-1574643156929-51fa098b0394?w=600&q=80"
-        ],
-        "postedAt": "1 hour ago",
-        "scamFlags": ["belowMedian", "immediateAvailability", "utilitiesIncluded"]
-      }
-    }
-  },
-  {
-    "id": "strathcona",
-    "name": "Strathcona",
-    "district": "East Side",
-    "tagline": "Vancouver's oldest neighbourhood, still finding its edge",
-    "heroImage": "https://images.unsplash.com/photo-1514565131-fce0801e6975?w=800&q=80",
-    "personalityDescription": "Strathcona is the part of the city that hasn't been smoothed out yet. Victorian houses next to artist studios next to community gardens. The residents are a genuinely mixed group — longtime families, newcomers, artists, activists — and that mixture produces something you can feel when you walk its streets. Unpolished and alive in equal measure.",
-    "analogousComparisons": {
-      "default": "Think of it as a neighbourhood that is still in the process of deciding what it will become — and that indecision is the interesting part.",
-      "Dublin_The Liberties": "Think of it as a version of The Liberties at an earlier stage — the same working-class bones, the same influx of artists, before the gentrification finishes its work.",
-      "London_Bermondsey": "Think of it as a version of Bermondsey ten years ago — industrial, patchy, with pockets of real creativity before the restaurants moved in.",
-      "New York_Red Hook": "Think of it as a version of Red Hook — isolated from the main grid, resistant to easy categorisation, and more interesting for it.",
-      "Melbourne_Fitzroy North": "Think of it as a version of Fitzroy North in the mid-2000s — before the smoothing-out happened, when the rough edges were still the point.",
-      "Toronto_Parkdale": "Think of it as a version of Parkdale — similar mixture of long-term residents and new arrivals, similar sense of being in flux."
-    },
-    "communityQuote": null,
-    "attributes": {
-      "walkability": 7,
-      "transitScore": 7,
-      "cyclingScore": 8,
-      "outdoorsAccess": 3,
-      "culturalDiversity": 8,
-      "safetyPerception": 5,
-      "socialEnergy": 6,
-      "fitnessAccess": 4,
-      "quietness": 5
-    },
-    "medianRent": {
-      "oneBed": 1950,
-      "twoBed": 2700,
-      "threeBed": 3400
-    },
-    "vacancyRate": 3.1,
-    "listings": {
-      "oneBed": {
-        "headline": "1BR Strathcona — renovated character suite, available now",
-        "price": 1750,
-        "bedroomCount": 1,
-        "bodyText": "Renovated one-bedroom in a character house in Strathcona. Original fir floors, updated kitchen, exposed brick in the living room. The building is quiet and well-maintained. All utilities included — heat, hot water, electricity. Available immediately. This is priced below what renovated suites in the area are currently asking, from a landlord who has owned the property for fifteen years and wants reliable long-term tenants.",
-        "photos": [
-          "https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=600&q=80",
-          "https://images.unsplash.com/photo-1560185127-6a8e004e4e77?w=600&q=80",
-          "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80"
-        ],
-        "postedAt": "4 hours ago",
-        "scamFlags": ["belowMedian", "immediateAvailability", "utilitiesIncluded"]
-      },
-      "twoBed": {
-        "headline": "2BR in Strathcona — renovated, utilities included, move in this week",
-        "price": 2400,
-        "bedroomCount": 2,
-        "bodyText": "Two-bedroom suite in a renovated Victorian house in Strathcona. Good room sizes, updated kitchen and bathroom, in-suite laundry, small back garden. All utilities included. Available immediately — sooner if needed. This is one of the best-value two-bedrooms in the east side right now. Landlord is accessible and manages the property professionally. Serious inquiries only.",
-        "photos": [
-          "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=600&q=80",
-          "https://images.unsplash.com/photo-1600047509358-9dc75507daeb?w=600&q=80",
-          "https://images.unsplash.com/photo-1599327286062-1413a97e2a81?w=600&q=80"
-        ],
-        "postedAt": "2 hours ago",
-        "scamFlags": ["belowMedian", "immediateAvailability", "utilitiesIncluded"]
-      },
-      "threeBed": {
-        "headline": "3BR Strathcona Victorian — renovated throughout, all utilities in",
-        "price": 3050,
-        "bedroomCount": 3,
-        "bodyText": "Three-bedroom Victorian house in Strathcona, renovated throughout while preserving the original character. Three good-sized bedrooms, updated kitchen, two bathrooms, back lane access. Utilities included. Available immediately — previous tenants were a family who relocated out of province. This is the most space-per-dollar you will find in Vancouver proper. Landlord is a long-term owner, easy to reach, and takes care of maintenance promptly.",
-        "photos": [
-          "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=600&q=80",
-          "https://images.unsplash.com/photo-1572120360610-d971b9d7767c?w=600&q=80",
-          "https://images.unsplash.com/photo-1571939228382-b2f2b585ce15?w=600&q=80"
-        ],
-        "postedAt": "3 hours ago",
-        "scamFlags": ["belowMedian", "immediateAvailability", "utilitiesIncluded"]
-      }
-    }
-  },
-  {
-    "id": "west-end",
-    "name": "West End",
-    "district": "Downtown",
-    "tagline": "Dense, walkable, surprisingly human",
-    "heroImage": "https://images.unsplash.com/photo-1499933374835-cd4f3cee8f12?w=800&q=80",
-    "personalityDescription": "The West End is one of the most densely populated neighbourhoods in Canada, and somehow it doesn't feel like it. Stanley Park is at one end, English Bay at the other. The streets are lined with towers but the neighbourhood operates at a remarkably human scale — independent restaurants, a farmers market, Davie Street's particular energy. It's a place where a lot of different kinds of people have found a way to live alongside each other.",
-    "analogousComparisons": {
-      "default": "Think of it as a neighbourhood that packs an enormous amount of city into a small area — and somehow manages to feel liveable rather than compressed.",
-      "Dublin_Portobello": "Think of it as a version of Portobello — similar density, similar mix of people, but with a much larger park right at the end of the street.",
-      "London_Soho": "Think of it as a version of Soho — the same density and diversity, but residential rather than commercial, and with the Pacific Ocean at the bottom of it.",
-      "New York_Hell's Kitchen": "Think of it as a version of Hell's Kitchen — dense, diverse, a lot happening — but quieter, greener, and with significantly better air.",
-      "Melbourne_St Kilda": "Think of it as a version of St Kilda — similar beachside energy, similar mix of residents, but with mountains rather than suburbs behind it.",
-      "Toronto_Church-Wellesley": "Think of it as a version of Church-Wellesley — similar community feel and diversity, but with immediate access to one of the world's great urban parks."
-    },
-    "communityQuote": {
-      "text": "I came here not knowing anyone. The West End is the kind of place where that stops being true pretty quickly.",
-      "attribution": "Teacher · No car · Arrived September 2023"
-    },
-    "attributes": {
-      "walkability": 10,
-      "transitScore": 8,
-      "cyclingScore": 7,
-      "outdoorsAccess": 8,
-      "culturalDiversity": 7,
-      "safetyPerception": 8,
-      "socialEnergy": 7,
-      "fitnessAccess": 7,
-      "quietness": 5
-    },
-    "medianRent": {
-      "oneBed": 2450,
+      "oneBed": 2468,
       "twoBed": 3300,
       "threeBed": 4300
     },
     "vacancyRate": 1.6,
     "listings": {
       "oneBed": {
-        "headline": "1BR West End — renovated, English Bay views, available now",
-        "price": 2200,
+        "headline": "1BR on Main Street — top floor, lots of light",
+        "price": 2098,
         "bedroomCount": 1,
-        "bodyText": "Renovated one-bedroom in the West End, two blocks from English Bay. Updated kitchen, new bathroom, hardwood floors. The building is well-managed and in a great location for walking everywhere. Utilities included. Available immediately — previous tenant moved back home after a family situation. Landlord is local, very responsive, and manages the building personally. This is priced significantly below what comparable units near the beach are currently asking.",
+        "bodyText": "Top-floor one-bedroom above a quiet stretch of Main. Good light, updated kitchen, in-suite laundry. Walk to everything. Utilities included. Available immediately.",
         "photos": [
-          "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80",
-          "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?w=600&q=80",
-          "https://images.unsplash.com/photo-1536100096148-c0e3d6bab19a?w=600&q=80"
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80",
+          "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&q=80",
+          "https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=600&q=80"
         ],
-        "postedAt": "2 hours ago",
-        "scamFlags": ["belowMedian", "immediateAvailability", "utilitiesIncluded"]
+        "postedAt": "3 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
       },
       "twoBed": {
-        "headline": "2BR West End — renovated corner unit, Stanley Park steps away",
-        "price": 2950,
+        "headline": "2BR Mount Pleasant — character building, private entrance",
+        "price": 2805,
         "bedroomCount": 2,
-        "bodyText": "Renovated two-bedroom corner unit in the West End. Excellent natural light, updated throughout, in-suite laundry. Two blocks from the Stanley Park entrance. All utilities included. Available immediately — lease ended and previous tenants did not renew. This is exceptional value for the area. Landlord has owned the property for over a decade and is known for being responsive and fair.",
+        "bodyText": "Two-bedroom in a character building with private entrance. Hardwood floors, updated bath, good storage. All utilities included. Available now.",
         "photos": [
-          "https://images.unsplash.com/photo-1565182999561-18d7dc61c393?w=600&q=80",
-          "https://images.unsplash.com/photo-1565182999220-a8a8c3d5b3dd?w=600&q=80",
-          "https://images.unsplash.com/photo-1558442074-3c19857bc1dc?w=600&q=80"
+          "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80",
+          "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80"
         ],
-        "postedAt": "5 hours ago",
-        "scamFlags": ["belowMedian", "immediateAvailability", "utilitiesIncluded"]
+        "postedAt": "6 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
       },
       "threeBed": {
-        "headline": "3BR West End — renovated high-floor unit, all utilities in",
-        "price": 3850,
+        "headline": "3BR East Vancouver — spacious, renovated kitchen",
+        "price": 3655,
         "bedroomCount": 3,
-        "bodyText": "Three-bedroom on a high floor in the West End, fully renovated with city and water views. Three bedrooms, two bathrooms, updated kitchen, in-suite laundry. You are walking distance from everything in this city. Utilities included. Available immediately — this unit has not been available for four years. Landlord is a private owner, serious inquiries only. Priced below what this floor and location should command because we want stability over maximum return.",
+        "bodyText": "Three-bedroom on a tree-lined street in Mount Pleasant. Renovated kitchen, two bathrooms, backyard access. Utilities included. Immediate availability.",
         "photos": [
-          "https://images.unsplash.com/photo-1560448075-cbc16bb4af8e?w=600&q=80",
-          "https://images.unsplash.com/photo-1560448204-603b3fc33ddc?w=600&q=80",
-          "https://images.unsplash.com/photo-1560449017-85e73e14b9a0?w=600&q=80"
+          "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80",
+          "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&q=80",
+          "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80"
+        ],
+        "postedAt": "4 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      }
+    }
+  },
+  {
+    "id": "commercial-drive",
+    "name": "Commercial Drive",
+    "district": "East Side Vancouver",
+    "tagline": "Three waves of immigration and counting — still the most itself",
+    "heroImage": "https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=800&q=80",
+    "personalityDescription": "The Drive has had at least three identities — Italian, countercultural and whatever it is now — and none of them fully left. Old espresso bars sit three doors from natural wine shops. The street accumulates history rather than curating it, and the result is a texture that newer neighbourhoods simply can’t manufacture.\n\nSomeone who wants to feel like they live in a city. Who doesn’t mind noise, street chaos or the occasional political leaflet under their wiper. The Drive rewards people who want texture and are happy to be part of it, not just observe it.\n\nNot quiet. Not polished. Parking is essentially impossible and transit is adequate without being excellent. If serenity is what you’re after, look elsewhere.",
+    "analogousComparisons": {
+      "default": "The kind of street that accumulates history rather than curating it."
+    },
+    "communityQuote": "“I’ve lived on the Drive for fourteen years. I’ve thought about leaving exactly once, and I came back in the same afternoon.” — a retired teacher who runs a small zine distro out of her apartment",
+    "attributes": {
+      "walkability": 8,
+      "transitScore": 7,
+      "cyclingScore": 8,
+      "outdoorsAccess": 5,
+      "culturalDiversity": 9,
+      "safetyPerception": 6,
+      "socialEnergy": 9,
+      "fitnessAccess": 6,
+      "quietness": 3
+    },
+    "medianRent": {
+      "oneBed": 2200,
+      "twoBed": 2950,
+      "threeBed": 3950
+    },
+    "vacancyRate": 2.1,
+    "listings": {
+      "oneBed": {
+        "headline": "1BR on the Drive — character suite, quiet building",
+        "price": 1870,
+        "bedroomCount": 1,
+        "bodyText": "One-bedroom in a well-kept character building half a block off Commercial. Hardwood floors, good kitchen, coin laundry in building. Utilities included. Available immediately.",
+        "photos": [
+          "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80",
+          "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80"
         ],
         "postedAt": "1 hour ago",
-        "scamFlags": ["belowMedian", "immediateAvailability", "utilitiesIncluded"]
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      },
+      "twoBed": {
+        "headline": "2BR Commercial Drive — bright corner unit",
+        "price": 2508,
+        "bedroomCount": 2,
+        "bodyText": "Corner two-bedroom with windows on two sides. Renovated bathroom, updated kitchen. Walk to everything on the Drive. All utilities included. Available now.",
+        "photos": [
+          "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80",
+          "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&q=80",
+          "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80"
+        ],
+        "postedAt": "7 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      },
+      "threeBed": {
+        "headline": "3BR family suite — The Drive, private backyard",
+        "price": 3358,
+        "bedroomCount": 3,
+        "bodyText": "Three-bedroom lower suite with private backyard access. Two full bathrooms, updated throughout. Quiet street one block off Commercial. Utilities included. Immediate availability.",
+        "photos": [
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80",
+          "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&q=80",
+          "https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=600&q=80"
+        ],
+        "postedAt": "2 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      }
+    }
+  },
+  {
+    "id": "yaletown",
+    "name": "Yaletown",
+    "district": "Downtown Vancouver",
+    "tagline": "Converted warehouses, cobblestones, very good restaurants",
+    "heroImage": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&q=80",
+    "personalityDescription": "Yaletown pulled off something rare — industrial bones turned into a neighbourhood that actually works as a neighbourhood. The cobblestone lanes, the loading docks converted to restaurant patios, the seawall two minutes from anywhere. It has the texture that most downtown Vancouver neighbourhoods lack.\n\nPeople who want the city version of low-maintenance. Everything is walkable, everything is available and the streets are clean. Yaletown suits people who work long hours and want their neighbourhood to handle the rest.\n\nExpensive and somewhat homogeneous. You can feel the condo-ness of it after a while. The demographic skews young professional in a way that can feel uniform.",
+    "analogousComparisons": {
+      "default": "What happens when a city decides to do warehouse conversion right — and then charges accordingly."
+    },
+    "communityQuote": "“I chose Yaletown because I wanted to be able to walk to work and not think about anything else. Three years later, that’s still exactly what I have.” — a UX director at a Gastown agency",
+    "attributes": {
+      "walkability": 10,
+      "transitScore": 8,
+      "cyclingScore": 7,
+      "outdoorsAccess": 7,
+      "culturalDiversity": 5,
+      "safetyPerception": 9,
+      "socialEnergy": 8,
+      "fitnessAccess": 9,
+      "quietness": 4
+    },
+    "medianRent": {
+      "oneBed": 2600,
+      "twoBed": 3600,
+      "threeBed": 5000
+    },
+    "vacancyRate": 1.4,
+    "listings": {
+      "oneBed": {
+        "headline": "1BR Yaletown condo — high floor, city views",
+        "price": 2210,
+        "bedroomCount": 1,
+        "bodyText": "High-floor one-bedroom in a well-managed Yaletown building. City views, in-suite laundry, concierge. Steps to the seawall. Utilities included. Available immediately — owner relocated.",
+        "photos": [
+          "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80",
+          "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&q=80",
+          "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80"
+        ],
+        "postedAt": "3 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      },
+      "twoBed": {
+        "headline": "2BR Yaletown — updated, parking included",
+        "price": 3060,
+        "bedroomCount": 2,
+        "bodyText": "Two-bedroom condo with one parking stall included. Updated kitchen, spa bathroom, in-suite laundry. All utilities included. Available now.",
+        "photos": [
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80",
+          "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&q=80",
+          "https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=600&q=80"
+        ],
+        "postedAt": "5 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      },
+      "threeBed": {
+        "headline": "3BR downtown Vancouver — rare large floor plan",
+        "price": 4250,
+        "bedroomCount": 3,
+        "bodyText": "Large three-bedroom in a boutique Yaletown building. Two full bathrooms, private storage locker, one parking. Utilities included. Priced to move — available immediately.",
+        "photos": [
+          "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80",
+          "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80"
+        ],
+        "postedAt": "2 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      }
+    }
+  },
+  {
+    "id": "strathcona",
+    "name": "Strathcona",
+    "district": "East Side Vancouver",
+    "tagline": "Vancouver’s oldest neighbourhood — still figuring out what comes next",
+    "heroImage": "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&q=80",
+    "personalityDescription": "Victorian houses painted unexpected colours, community gardens tucked into vacant lots, and a social infrastructure built by people who chose to stay when staying wasn’t fashionable. Strathcona is Vancouver’s oldest neighbourhood and it carries that layered history visibly — the Japanese-Canadian block, the Chinese-Canadian block, the artists who arrived in the eighties and never left. Living here feels like being part of something that has actual stakes.\n\nIf you want a neighbourhood with character that took decades to accumulate rather than weeks to brand, this is it. The housing stock is a mix of heritage character homes and newer infill — many with small yards or garden space, which is rare this close to downtown. The streets are genuinely walked and genuinely used.\n\nThe blocks immediately adjacent to the Downtown Eastside require a comfort with complexity that not everyone has. Safety perception is lower than most of Vancouver and that’s worth taking seriously — research specific streets before committing.",
+    "analogousComparisons": {
+      "default": "A neighbourhood where the history is visible in the architecture and the people, not just on heritage plaques."
+    },
+    "communityQuote": "“My house has been in three different hands since 1910. I think about that a lot when I’m in the garden.” — a furniture maker who bought on Prior Street eight years ago",
+    "attributes": {
+      "walkability": 9,
+      "transitScore": 9,
+      "cyclingScore": 8,
+      "outdoorsAccess": 5,
+      "culturalDiversity": 8,
+      "safetyPerception": 5,
+      "socialEnergy": 7,
+      "fitnessAccess": 6,
+      "quietness": 4
+    },
+    "medianRent": {
+      "oneBed": 2200,
+      "twoBed": 2950,
+      "threeBed": 3950
+    },
+    "vacancyRate": 2.4,
+    "listings": {
+      "oneBed": {
+        "headline": "1BR Strathcona — heritage building, updated suite",
+        "price": 1870,
+        "bedroomCount": 1,
+        "bodyText": "One-bedroom in a heritage building on a quiet Strathcona street. Original fir floors, updated kitchen and bath. In-suite laundry. Utilities included. Available immediately.",
+        "photos": [
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80",
+          "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&q=80",
+          "https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=600&q=80"
+        ],
+        "postedAt": "4 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      },
+      "twoBed": {
+        "headline": "2BR character suite — Strathcona, private entrance",
+        "price": 2508,
+        "bedroomCount": 2,
+        "bodyText": "Two-bedroom character suite with private entrance and small deck. Hardwood throughout, good storage, quiet street. All utilities included. Available now.",
+        "photos": [
+          "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80",
+          "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80"
+        ],
+        "postedAt": "6 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      },
+      "threeBed": {
+        "headline": "3BR Strathcona house — renovated, yard access",
+        "price": 3358,
+        "bedroomCount": 3,
+        "bodyText": "Three-bedroom in a renovated Victorian. Two bathrooms, updated kitchen, shared yard. Quiet street. Utilities included. Immediate availability.",
+        "photos": [
+          "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80",
+          "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&q=80",
+          "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80"
+        ],
+        "postedAt": "1 hour ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      }
+    }
+  },
+  {
+    "id": "west-end",
+    "name": "West End",
+    "district": "Downtown Vancouver",
+    "tagline": "Dense, walkable, and consistently the most welcoming place in the city",
+    "heroImage": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80",
+    "personalityDescription": "Robson, Davie and Denman — three distinct commercial strips within walking distance of each other and Stanley Park. English Bay beach is at the end of Davie Street, genuinely walkable from anywhere in the neighbourhood. The stretch around Robson and Denman is one of the best concentrations of Asian restaurants in the city — Japanese, Korean, Chinese and Vietnamese spots that have been earning their regulars for decades. The West End is where the city shows its density working.\n\nPeople who want street life, proximity to everything and don’t need a backyard. The West End has been welcoming to LGBTQ+ residents for decades in a way that feels embedded in the neighbourhood’s identity, not marketed. You’ll feel at home here faster than almost anywhere else on this list.\n\nThe most expensive neighbourhood here for rent and apartments are often older and on the smaller side. Noise from Davie Street on weekends is real — the further from Davie, the quieter. You’re paying for location and density and the square footage reflects that honestly.",
+    "analogousComparisons": {
+      "default": "What a dense, walkable, genuinely inclusive city neighbourhood looks like when it's been doing it long enough to mean it."
+    },
+    "communityQuote": "“I’ve lived in six cities and I’ve never felt at home as fast as I did in the West End. That’s not a small thing.” — a nurse who moved from Halifax three years ago",
+    "attributes": {
+      "walkability": 9,
+      "transitScore": 9,
+      "cyclingScore": 7,
+      "outdoorsAccess": 8,
+      "culturalDiversity": 8,
+      "safetyPerception": 7,
+      "socialEnergy": 9,
+      "fitnessAccess": 8,
+      "quietness": 3
+    },
+    "medianRent": {
+      "oneBed": 2911,
+      "twoBed": 3850,
+      "threeBed": 5200
+    },
+    "vacancyRate": 1.3,
+    "listings": {
+      "oneBed": {
+        "headline": "1BR West End — updated, steps from Davie Street",
+        "price": 2474,
+        "bedroomCount": 1,
+        "bodyText": "Updated one-bedroom in a well-maintained West End building. In-suite laundry, renovated kitchen, good storage. Steps to everything. Utilities included. Available immediately.",
+        "photos": [
+          "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80",
+          "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80"
+        ],
+        "postedAt": "2 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      },
+      "twoBed": {
+        "headline": "2BR West End — quiet building, Stanley Park nearby",
+        "price": 3273,
+        "bedroomCount": 2,
+        "bodyText": "Two-bedroom in a quiet West End building three blocks from Stanley Park. Updated throughout, in-suite laundry. All utilities included. Available now.",
+        "photos": [
+          "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80",
+          "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&q=80",
+          "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80"
+        ],
+        "postedAt": "8 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      },
+      "threeBed": {
+        "headline": "3BR West End — rare find, immediate availability",
+        "price": 4420,
+        "bedroomCount": 3,
+        "bodyText": "Large three-bedroom in a boutique West End building. Two bathrooms, updated kitchen, in-suite laundry. Utilities included. Available immediately — below market for the area.",
+        "photos": [
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80",
+          "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&q=80",
+          "https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=600&q=80"
+        ],
+        "postedAt": "3 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
       }
     }
   },
   {
     "id": "riley-park",
     "name": "Riley Park",
-    "district": "East Side",
-    "tagline": "Quiet streets, real neighbourhood",
-    "heroImage": "https://images.unsplash.com/photo-1505761671935-60b3a7427bad?w=800&q=80",
-    "personalityDescription": "Riley Park is the kind of neighbourhood that doesn't announce itself. Broad residential streets, good parks, a farmers market that actually feeds people rather than performing the idea of food. Families have been here for decades. The pace is deliberately slower. You come home to Riley Park — it doesn't come to you.",
+    "district": "East Side Vancouver",
+    "tagline": "Farmers market Saturdays, character homes, genuinely neighbourly",
+    "heroImage": "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80",
+    "personalityDescription": "Riley Park is the neighbourhood that people describe when they say they fell in love with Vancouver. Craftsman houses on leafy streets, the Nat Bailey Stadium on a summer evening, the Hillcrest Community Centre as a genuine social hub. The week here has a rhythm — morning coffee on the porch, school drop-off, a stop at the farmers market on the way home on Saturday. It’s one of those rare urban neighbourhoods where people actually know their neighbours’ names.\n\nFamilies, people who want stability without sacrificing access to the rest of the city and anyone for whom a backyard matters. The housing stock is predominantly character homes — many with yards — and the streets are quiet enough to feel residential without feeling remote. People tend to stay here a long time, which tells you something.\n\nQuieter than most. If you want the city’s energy on a Wednesday night, you’ll have to travel to it.",
     "analogousComparisons": {
-      "default": "Think of it as a neighbourhood that prioritises liveability over buzz — and does that very well.",
-      "Dublin_Terenure": "Think of it as a version of Terenure — residential, steady, the kind of place where people stay once they find it.",
-      "London_East Dulwich": "Think of it as a version of East Dulwich — similar mixture of young families and long-term residents, good parks, quieter than you'd expect for how central it is.",
-      "New York_Sunnyside": "Think of it as a version of Sunnyside — unhurried, genuinely residential, the kind of place people move to when they stop wanting to be near the action all the time.",
-      "Melbourne_Northcote": "Think of it as a version of Northcote — similar community orientation, similar street character, but with less café density.",
-      "Toronto_Roncesvalles": "Think of it as a version of Roncesvalles — the same family-oriented, village-within-a-city feel, but sunnier and with better park access."
+      "default": "A neighbourhood that has always known what it is — and never needed to announce it."
     },
-    "communityQuote": null,
+    "communityQuote": "“We moved here for the schools. We stayed because of the block. I didn’t expect that second part.” — a landscape architect who’s lived on Guelph Street for nine years",
+    "attributes": {
+      "walkability": 7,
+      "transitScore": 7,
+      "cyclingScore": 7,
+      "outdoorsAccess": 7,
+      "culturalDiversity": 7,
+      "safetyPerception": 8,
+      "socialEnergy": 6,
+      "fitnessAccess": 6,
+      "quietness": 7
+    },
+    "medianRent": {
+      "oneBed": 2100,
+      "twoBed": 2800,
+      "threeBed": 3700
+    },
+    "vacancyRate": 2.0,
+    "listings": {
+      "oneBed": {
+        "headline": "1BR Riley Park — quiet street, character building",
+        "price": 1785,
+        "bedroomCount": 1,
+        "bodyText": "One-bedroom in a well-kept character building on a quiet Riley Park street. Hardwood floors, updated bath, good storage. Utilities included. Available immediately.",
+        "photos": [
+          "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80",
+          "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&q=80",
+          "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80"
+        ],
+        "postedAt": "5 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      },
+      "twoBed": {
+        "headline": "2BR near Nat Bailey Stadium — private entrance",
+        "price": 2380,
+        "bedroomCount": 2,
+        "bodyText": "Two-bedroom suite with private entrance and small yard. Updated kitchen, hardwood floors. Quiet street. All utilities included. Available now.",
+        "photos": [
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80",
+          "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&q=80",
+          "https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=600&q=80"
+        ],
+        "postedAt": "1 day ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      },
+      "threeBed": {
+        "headline": "3BR Riley Park family home — renovated",
+        "price": 3145,
+        "bedroomCount": 3,
+        "bodyText": "Three-bedroom renovated home on a tree-lined street. Two full bathrooms, updated kitchen, good backyard. Utilities included. Available immediately.",
+        "photos": [
+          "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80",
+          "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80"
+        ],
+        "postedAt": "6 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      }
+    }
+  },
+  {
+    "id": "chinatown",
+    "name": "Chinatown",
+    "district": "East Side Vancouver",
+    "tagline": "A hundred years of history, a neighbourhood still negotiating its future",
+    "heroImage": "https://images.unsplash.com/photo-1583422409516-2895a77efded?w=800&q=80",
+    "personalityDescription": "The Dr. Sun Yat-Sen Classical Chinese Garden sits behind a wall on Carrall Street, completely still. Half a block away, a new speakeasy opens in a space that was a dry goods shop for fifty years. Chinatown holds both of those things simultaneously — the century-old herbalist and the cocktail bar with no sign on the door — and the tension between them is what makes it genuinely interesting to live in right now.\n\nPeople who can tolerate a neighbourhood in flux and find that interesting rather than unsettling. The nightlife and restaurant scene here is more adventurous than most newcomers expect — low-lit rooms, interesting menus, a mix of regulars who know the neighbourhood across its different chapters. Proximity to Strathcona, Main Street and downtown without the cost of any of them.\n\nGrocery options are genuinely limited — this is a practical consideration worth planning for, not just an atmosphere note. Safety perception is mixed. Gentrification is active and contested here and if that political dimension matters to you in either direction, it’s worth knowing before you arrive.",
+    "analogousComparisons": {
+      "default": "A neighbourhood where history and displacement are happening simultaneously, and neither is winning yet."
+    },
+    "communityQuote": "“My family has had a business on Pender Street for forty years. I’ve watched three versions of this neighbourhood. I’m not sure what the fourth one will be.” — a second-generation herbalist on East Pender",
+    "attributes": {
+      "walkability": 9,
+      "transitScore": 9,
+      "cyclingScore": 7,
+      "outdoorsAccess": 5,
+      "culturalDiversity": 10,
+      "safetyPerception": 5,
+      "socialEnergy": 7,
+      "fitnessAccess": 5,
+      "quietness": 5
+    },
+    "medianRent": {
+      "oneBed": 2100,
+      "twoBed": 2800,
+      "threeBed": 3700
+    },
+    "vacancyRate": 2.6,
+    "listings": {
+      "oneBed": {
+        "headline": "1BR Chinatown — renovated loft-style, high ceilings",
+        "price": 1785,
+        "bedroomCount": 1,
+        "bodyText": "Renovated one-bedroom with high ceilings and industrial details in a heritage Chinatown building. Updated kitchen, in-suite laundry. Utilities included. Available immediately.",
+        "photos": [
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80",
+          "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&q=80",
+          "https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=600&q=80"
+        ],
+        "postedAt": "3 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      },
+      "twoBed": {
+        "headline": "2BR Chinatown — quiet street, updated suite",
+        "price": 2380,
+        "bedroomCount": 2,
+        "bodyText": "Two-bedroom on a quieter Chinatown street. Hardwood floors, updated bath and kitchen. All utilities included. Available now.",
+        "photos": [
+          "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80",
+          "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80"
+        ],
+        "postedAt": "4 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      },
+      "threeBed": {
+        "headline": "3BR near Chinatown — spacious, private entrance",
+        "price": 3145,
+        "bedroomCount": 3,
+        "bodyText": "Three-bedroom with private entrance on a quiet block near Chinatown. Two bathrooms, good storage, small outdoor space. Utilities included. Available immediately.",
+        "photos": [
+          "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80",
+          "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&q=80",
+          "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80"
+        ],
+        "postedAt": "2 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      }
+    }
+  },
+  {
+    "id": "kerrisdale",
+    "name": "Kerrisdale",
+    "district": "West Side Vancouver",
+    "tagline": "Village scale, quiet streets, and very good schools nearby",
+    "heroImage": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
+    "personalityDescription": "Kerrisdale’s commercial strip on 41st Avenue has the feel of a small-town main street that happens to be in a major city — family-owned shops that have been there for decades, a reliable bakery, a hardware store that hasn’t been bought out. The residential streets are quiet in a way that takes genuine effort to maintain at this proximity to the city.\n\nFamilies with school-age children, people who have moved through noisier neighbourhoods and want something calmer. Anyone who finds the West End or Commercial Drive exhausting will feel immediately at ease here. Kerrisdale suits people who want to settle, not circulate.\n\nCar-dependent for anything beyond the village strip. Transit runs but infrequently. Low energy — if you want buzz, you’ll drive to it.",
+    "analogousComparisons": {
+      "default": "A neighbourhood where the ambition is stability, and it delivers on that without apology."
+    },
+    "communityQuote": "“I used to think Kerrisdale was boring. Now I have two kids and I understand that I was the problem.” — a former advertising creative director, now a stay-at-home parent on West Boulevard",
     "attributes": {
       "walkability": 6,
       "transitScore": 6,
       "cyclingScore": 5,
       "outdoorsAccess": 7,
       "culturalDiversity": 5,
+      "safetyPerception": 9,
+      "socialEnergy": 5,
+      "fitnessAccess": 6,
+      "quietness": 8
+    },
+    "medianRent": {
+      "oneBed": 2100,
+      "twoBed": 2900,
+      "threeBed": 4000
+    },
+    "vacancyRate": 1.9,
+    "listings": {
+      "oneBed": {
+        "headline": "1BR Kerrisdale — quiet street, updated suite",
+        "price": 1785,
+        "bedroomCount": 1,
+        "bodyText": "One-bedroom in a well-kept low-rise on a quiet Kerrisdale street. Updated kitchen and bath, good storage. Utilities included. Available immediately.",
+        "photos": [
+          "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80",
+          "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80"
+        ],
+        "postedAt": "6 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      },
+      "twoBed": {
+        "headline": "2BR Kerrisdale — character home, private garden",
+        "price": 2465,
+        "bedroomCount": 2,
+        "bodyText": "Two-bedroom suite in a character home with private garden access. Hardwood floors, updated kitchen. All utilities included. Available now.",
+        "photos": [
+          "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80",
+          "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&q=80",
+          "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80"
+        ],
+        "postedAt": "1 day ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      },
+      "threeBed": {
+        "headline": "3BR West Side family home — renovated, near schools",
+        "price": 3400,
+        "bedroomCount": 3,
+        "bodyText": "Renovated three-bedroom near top-rated schools. Two bathrooms, updated throughout, good yard. Utilities included. Available immediately.",
+        "photos": [
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80",
+          "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&q=80",
+          "https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=600&q=80"
+        ],
+        "postedAt": "3 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      }
+    }
+  },
+  {
+    "id": "marpole",
+    "name": "Marpole",
+    "district": "West Side Vancouver",
+    "tagline": "Affordable West Side with a Punjabi-Canadian heartbeat",
+    "heroImage": "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=800&q=80",
+    "personalityDescription": "Marpole sits at the south end of Granville Street and operates on its own logic — more working-class than the neighbourhoods above it, more culturally mixed, more honest about what it is. The Punjabi community has been here for decades and the food reflects it: the best dahl on Granville is not in Yaletown.\n\nPeople priced out of Kerrisdale or Kitsilano who still want West Side access and good transit on the 98 B-Line. Anyone who cares more about the neighbourhood than the postcode. Marpole is for people who want to live well without paying for a name.\n\nLess polished than its neighbours to the north. The Granville corridor gets loud on weekends. Not much evening street life beyond a few strips.",
+    "analogousComparisons": {
+      "default": "The affordable end of a desirable corridor — unpretentious, functional, and better than its reputation."
+    },
+    "communityQuote": "“I pay half what my friends in Kits pay and I’m a twelve-minute bus ride from downtown. I don’t know what they’re buying that I’m not.” — a dental hygienist who’s rented on Ash Street for four years",
+    "attributes": {
+      "walkability": 7,
+      "transitScore": 6,
+      "cyclingScore": 6,
+      "outdoorsAccess": 7,
+      "culturalDiversity": 8,
+      "safetyPerception": 7,
+      "socialEnergy": 5,
+      "fitnessAccess": 5,
+      "quietness": 7
+    },
+    "medianRent": {
+      "oneBed": 2000,
+      "twoBed": 2700,
+      "threeBed": 3600
+    },
+    "vacancyRate": 2.3,
+    "listings": {
+      "oneBed": {
+        "headline": "1BR Marpole — bright, updated, transit nearby",
+        "price": 1700,
+        "bedroomCount": 1,
+        "bodyText": "Bright one-bedroom in a well-maintained building. Updated kitchen and bath, in-suite laundry. Steps to the 98 B-Line. Utilities included. Available immediately.",
+        "photos": [
+          "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80",
+          "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&q=80",
+          "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80"
+        ],
+        "postedAt": "4 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      },
+      "twoBed": {
+        "headline": "2BR Marpole — quiet residential street",
+        "price": 2295,
+        "bedroomCount": 2,
+        "bodyText": "Two-bedroom in a quiet low-rise. Hardwood floors, updated bathroom, good storage. All utilities included. Available now.",
+        "photos": [
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80",
+          "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&q=80",
+          "https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=600&q=80"
+        ],
+        "postedAt": "7 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      },
+      "threeBed": {
+        "headline": "3BR Marpole — family suite, private yard",
+        "price": 3060,
+        "bedroomCount": 3,
+        "bodyText": "Three-bedroom suite with private yard access. Updated kitchen, two bathrooms. Utilities included. Available immediately.",
+        "photos": [
+          "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80",
+          "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80"
+        ],
+        "postedAt": "2 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      }
+    }
+  },
+  {
+    "id": "oakridge",
+    "name": "Oakridge",
+    "district": "West Side Vancouver",
+    "tagline": "Canada Line access, quiet streets, a neighbourhood mid-transformation",
+    "heroImage": "https://images.unsplash.com/photo-1462275646964-a0e3386b89fa?w=800&q=80",
+    "personalityDescription": "Oakridge is changing. The Oakridge Centre redevelopment is bringing towers, a new park and a retail centre that will reshape the area over the next several years. Right now it’s a quiet, Canada Line-connected neighbourhood with Langara College nearby and a residential character that hasn’t fully resolved what it’s becoming.\n\nStudents, young professionals who want Canada Line access without paying downtown prices and people comfortable in a neighbourhood actively in transition. The upside of arriving mid-change is that the neighbourhood’s best chapter is still ahead.\n\nThe redevelopment means construction noise and disruption for the foreseeable future. If you need a settled feel immediately, this isn’t the right moment.",
+    "analogousComparisons": {
+      "default": "A neighbourhood betting on itself — mid-construction, mid-identity, and worth watching."
+    },
+    "communityQuote": "“I moved here for the Canada Line and I stayed because it’s actually pleasant when you get off the main road. The construction will end eventually.” — a Langara College instructor who rents on West 49th",
+    "attributes": {
+      "walkability": 6,
+      "transitScore": 7,
+      "cyclingScore": 6,
+      "outdoorsAccess": 6,
+      "culturalDiversity": 8,
       "safetyPerception": 8,
+      "socialEnergy": 5,
+      "fitnessAccess": 6,
+      "quietness": 7
+    },
+    "medianRent": {
+      "oneBed": 2000,
+      "twoBed": 2700,
+      "threeBed": 3600
+    },
+    "vacancyRate": 2.0,
+    "listings": {
+      "oneBed": {
+        "headline": "1BR Oakridge — Canada Line nearby, updated suite",
+        "price": 1700,
+        "bedroomCount": 1,
+        "bodyText": "One-bedroom in a quiet Oakridge building, five-minute walk to Canada Line. Updated kitchen, good light. Utilities included. Available immediately.",
+        "photos": [
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80",
+          "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&q=80",
+          "https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=600&q=80"
+        ],
+        "postedAt": "5 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      },
+      "twoBed": {
+        "headline": "2BR Oakridge — quiet street, good transit",
+        "price": 2295,
+        "bedroomCount": 2,
+        "bodyText": "Two-bedroom in a well-kept low-rise. Hardwood floors, updated bath. Canada Line nearby. All utilities included. Available now.",
+        "photos": [
+          "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80",
+          "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80"
+        ],
+        "postedAt": "1 day ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      },
+      "threeBed": {
+        "headline": "3BR West Side — Oakridge, immediate availability",
+        "price": 3060,
+        "bedroomCount": 3,
+        "bodyText": "Three-bedroom suite near Oakridge Centre. Two bathrooms, updated kitchen, good storage. Utilities included. Available immediately.",
+        "photos": [
+          "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80",
+          "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&q=80",
+          "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80"
+        ],
+        "postedAt": "3 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      }
+    }
+  },
+  {
+    "id": "renfrew-collingwood",
+    "name": "Renfrew-Collingwood",
+    "district": "East Side Vancouver",
+    "tagline": "Vancouver’s most affordable neighbourhood — and genuinely liveable",
+    "heroImage": "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=800&q=80",
+    "personalityDescription": "The Millennium Line SkyTrain runs through it, rents are the lowest in the city proper and the mix of Vietnamese, Chinese and South Asian communities gives the food scene a breadth you won’t find in posher parts of town. This is the neighbourhood that budget-conscious renters find by accident and then stay in.\n\nPeople who need good transit without paying for it twice. Families who need space and aren’t attached to a postcode. The housing here is a mix of older apartments and character homes — many with yards — and you get considerably more space for your money than anywhere else in Vancouver.\n\nNo obvious commercial hub and not much street life. It takes time to find the good spots — they’re not announced. If you need your neighbourhood to have an immediately readable identity, this one takes a few weeks to reveal itself.",
+    "analogousComparisons": {
+      "default": "The part of the city that works without needing to be noticed."
+    },
+    "communityQuote": "“I pay $1,980 for my one-bedroom and I’m on the Millennium Line. My friends in Kits don’t believe me.” — a hospital administrator who moved from New Westminster two years ago",
+    "attributes": {
+      "walkability": 6,
+      "transitScore": 8,
+      "cyclingScore": 6,
+      "outdoorsAccess": 5,
+      "culturalDiversity": 9,
+      "safetyPerception": 7,
+      "socialEnergy": 5,
+      "fitnessAccess": 5,
+      "quietness": 7
+    },
+    "medianRent": {
+      "oneBed": 1980,
+      "twoBed": 2650,
+      "threeBed": 3500
+    },
+    "vacancyRate": 2.8,
+    "listings": {
+      "oneBed": {
+        "headline": "1BR Renfrew — SkyTrain nearby, updated suite",
+        "price": 1683,
+        "bedroomCount": 1,
+        "bodyText": "One-bedroom suite near Renfrew SkyTrain station. Updated kitchen, in-suite laundry. Utilities included. Available immediately — best value in the city for transit access.",
+        "photos": [
+          "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80",
+          "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80"
+        ],
+        "postedAt": "2 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      },
+      "twoBed": {
+        "headline": "2BR Collingwood — bright, quiet street",
+        "price": 2253,
+        "bedroomCount": 2,
+        "bodyText": "Two-bedroom in a quiet low-rise. Good light, updated bath, good storage. All utilities included. SkyTrain nearby. Available now.",
+        "photos": [
+          "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80",
+          "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&q=80",
+          "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80"
+        ],
+        "postedAt": "6 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      },
+      "threeBed": {
+        "headline": "3BR east Vancouver — family suite, good schools nearby",
+        "price": 2975,
+        "bedroomCount": 3,
+        "bodyText": "Three-bedroom family suite on a quiet street. Updated kitchen, two bathrooms, good yard. Utilities included. Available immediately.",
+        "photos": [
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80",
+          "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&q=80",
+          "https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=600&q=80"
+        ],
+        "postedAt": "4 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      }
+    }
+  },
+  {
+    "id": "dunbar",
+    "name": "Dunbar",
+    "district": "West Side Vancouver",
+    "tagline": "Pacific Spirit Park on the doorstep, quiet enough to hear it",
+    "heroImage": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80",
+    "personalityDescription": "Dunbar is where people go when they want the city to leave them alone for a bit. Pacific Spirit Regional Park is walkable — not a five-minute drive and a parking situation, but genuinely walkable from most Dunbar streets. The commercial strip has been anchored by the same independent businesses for decades.\n\nPeople who work from home and need the walk more than the commute. Families. Anyone for whom silence is a non-negotiable feature of where they live. Most homes here are detached or semi-detached with yards — space that’s genuinely rare at this price point on the West Side.\n\nGenuinely car-dependent for most things beyond the Dunbar strip. Transit runs, but slowly. The lowest social energy neighbourhood on the Vancouver list — and that’s the point.",
+    "analogousComparisons": {
+      "default": "A neighbourhood where the forest is closer than the freeway, and that's the entire point."
+    },
+    "communityQuote": "“I run in Pacific Spirit every morning. I’ve done it for seven years. I still don’t take it for granted.” — a freelance translator who lives on Dunbar Street",
+    "attributes": {
+      "walkability": 7,
+      "transitScore": 5,
+      "cyclingScore": 6,
+      "outdoorsAccess": 8,
+      "culturalDiversity": 4,
+      "safetyPerception": 9,
+      "socialEnergy": 4,
+      "fitnessAccess": 5,
+      "quietness": 9
+    },
+    "medianRent": {
+      "oneBed": 1966,
+      "twoBed": 2650,
+      "threeBed": 3500
+    },
+    "vacancyRate": 1.7,
+    "listings": {
+      "oneBed": {
+        "headline": "1BR Dunbar — quiet street, steps from the park",
+        "price": 1671,
+        "bedroomCount": 1,
+        "bodyText": "One-bedroom suite one block from Pacific Spirit Park. Hardwood floors, updated kitchen, quiet building. Utilities included. Available immediately.",
+        "photos": [
+          "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80",
+          "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&q=80",
+          "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80"
+        ],
+        "postedAt": "7 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      },
+      "twoBed": {
+        "headline": "2BR Dunbar — character suite, private garden",
+        "price": 2253,
+        "bedroomCount": 2,
+        "bodyText": "Two-bedroom in a character home with private garden. Good light, hardwood floors, updated bath. All utilities included. Available now.",
+        "photos": [
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80",
+          "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&q=80",
+          "https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=600&q=80"
+        ],
+        "postedAt": "1 day ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      },
+      "threeBed": {
+        "headline": "3BR Dunbar — family home, near UBC",
+        "price": 2975,
+        "bedroomCount": 3,
+        "bodyText": "Three-bedroom on a quiet Dunbar street, walking distance to UBC and Pacific Spirit. Updated throughout. Utilities included. Available immediately.",
+        "photos": [
+          "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80",
+          "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80"
+        ],
+        "postedAt": "5 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      }
+    }
+  },
+  {
+    "id": "lower-lonsdale",
+    "name": "Lower Lonsdale",
+    "district": "North Vancouver",
+    "tagline": "SeaBus to downtown, mountains at your back, a waterfront village that earns it",
+    "heroImage": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
+    "personalityDescription": "The Lonsdale Quay sits at the SeaBus terminal and the view across the water to downtown is genuinely one of the better urban vistas in Metro Vancouver — visible from the waterfront promenade at any level. The mountains aren’t a backdrop here; they’re accessible. Lower Lonsdale has a thriving craft brewery scene along the waterfront and the Polygon Gallery adds genuine cultural weight to the neighbourhood. It manages to feel like a village and a city at the same time.\n\nPeople who want outdoor access without giving up urban infrastructure. Commuters who don’t mind the SeaBus as a daily ritual tend to say they prefer it to the SkyTrain — fifteen minutes on the water is a different kind of commute. The North Shore trails and mountains are close in a way that actually changes how you spend your weekends.\n\nThe most expensive GVRD neighbourhood on this list. Once you’re on the North Shore, you’re committed to the crossing — getting to Vancouver’s east side requires either the SeaBus plus transit or a bridge in traffic. It rewards people who’ve decided the North Shore is home rather than those still testing it.",
+    "analogousComparisons": {
+      "default": "What Vancouver proper could look like if the mountains were closer and the ferry was part of the commute."
+    },
+    "communityQuote": "“The SeaBus ride home is the best fifteen minutes of my day. I read, I look at the water, I decompress.” — a project manager at a downtown architecture firm",
+    "attributes": {
+      "walkability": 8,
+      "transitScore": 8,
+      "cyclingScore": 6,
+      "outdoorsAccess": 9,
+      "culturalDiversity": 6,
+      "safetyPerception": 8,
+      "socialEnergy": 7,
+      "fitnessAccess": 7,
+      "quietness": 5
+    },
+    "medianRent": {
+      "oneBed": 2710,
+      "twoBed": 3600,
+      "threeBed": 4800
+    },
+    "vacancyRate": 1.5,
+    "listings": {
+      "oneBed": {
+        "headline": "1BR Lower Lonsdale — SeaBus walkable, mountain views",
+        "price": 2304,
+        "bedroomCount": 1,
+        "bodyText": "One-bedroom in a well-managed Lower Lonsdale building. Mountain views, updated throughout, in-suite laundry. SeaBus terminal walkable. Utilities included. Available immediately.",
+        "photos": [
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80",
+          "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&q=80",
+          "https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=600&q=80"
+        ],
+        "postedAt": "3 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      },
+      "twoBed": {
+        "headline": "2BR Lonsdale Quay area — updated, parking included",
+        "price": 3060,
+        "bedroomCount": 2,
+        "bodyText": "Two-bedroom with one parking stall. Updated kitchen and bath, in-suite laundry. Walk to Lonsdale Quay. All utilities included. Available now.",
+        "photos": [
+          "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80",
+          "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80"
+        ],
+        "postedAt": "5 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      },
+      "threeBed": {
+        "headline": "3BR North Vancouver — waterfront area, rare availability",
+        "price": 4080,
+        "bedroomCount": 3,
+        "bodyText": "Three-bedroom in a boutique Lower Lonsdale building. Two bathrooms, mountain views, parking. Utilities included. Available immediately — below market.",
+        "photos": [
+          "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80",
+          "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&q=80",
+          "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80"
+        ],
+        "postedAt": "1 hour ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      }
+    }
+  },
+  {
+    "id": "deep-cove",
+    "name": "Deep Cove",
+    "district": "North Vancouver District",
+    "tagline": "End-of-the-road village, a long bus ride from everything",
+    "heroImage": "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&q=80",
+    "personalityDescription": "Deep Cove is a village at the end of a road into Indian Arm fjord. Kayaks on the water in the morning, Quarry Rock trail above the treeline in the afternoon, and a genuinely unhurried pace that is either exactly what you’re looking for or the clearest possible sign this isn’t your place. It is the least city-like neighbourhood on this list and wears that distinction without apology.\n\nSomeone for whom nature access is the primary reason for living somewhere — not a priority among several, but the actual reason. Remote workers who genuinely don’t commute. Housing here is predominantly detached houses and townhouses with yards; this isn’t a neighbourhood for someone looking for apartment living. People who live here tend to have made a deliberate choice to slow down and mean it.\n\nA bus does run to Deep Cove but it’s infrequent and the ride is long — a car is effectively essential for daily life. The village has a handful of cafés, a bakery and a kayak rental. If you need more than that within walking distance, this is the wrong fit.",
+    "analogousComparisons": {
+      "default": "A fjord village that happens to be forty minutes from a major city — for the people who need both things to be true simultaneously."
+    },
+    "communityQuote": "“I moved here from Yaletown. People thought I was having a breakdown. I’ve never been more okay.” — a software developer who kayaks before every morning standup",
+    "attributes": {
+      "walkability": 4,
+      "transitScore": 3,
+      "cyclingScore": 5,
+      "outdoorsAccess": 10,
+      "culturalDiversity": 3,
+      "safetyPerception": 9,
+      "socialEnergy": 4,
+      "fitnessAccess": 5,
+      "quietness": 9
+    },
+    "medianRent": {
+      "oneBed": 2400,
+      "twoBed": 3200,
+      "threeBed": 4400
+    },
+    "vacancyRate": 1.6,
+    "listings": {
+      "oneBed": {
+        "headline": "1BR Deep Cove — walk to the water, updated suite",
+        "price": 2040,
+        "bedroomCount": 1,
+        "bodyText": "One-bedroom suite a short walk from the cove. Quiet building, updated kitchen, good storage. Utilities included. Available immediately.",
+        "photos": [
+          "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80",
+          "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80"
+        ],
+        "postedAt": "4 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      },
+      "twoBed": {
+        "headline": "2BR Deep Cove — private entrance, mountain views",
+        "price": 2720,
+        "bedroomCount": 2,
+        "bodyText": "Two-bedroom with private entrance and mountain views. Hardwood floors, good natural light. All utilities included. Available now.",
+        "photos": [
+          "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80",
+          "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&q=80",
+          "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80"
+        ],
+        "postedAt": "1 day ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      },
+      "threeBed": {
+        "headline": "3BR Deep Cove — family home, kayak launch nearby",
+        "price": 3740,
+        "bedroomCount": 3,
+        "bodyText": "Three-bedroom home with two bathrooms near the kayak launch. Updated kitchen, good yard. Utilities included. Available immediately.",
+        "photos": [
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80",
+          "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&q=80",
+          "https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=600&q=80"
+        ],
+        "postedAt": "6 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      }
+    }
+  },
+  {
+    "id": "metrotown",
+    "name": "Metrotown",
+    "district": "Burnaby",
+    "tagline": "The most efficient address in Metro Vancouver — and genuinely international",
+    "heroImage": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&q=80",
+    "personalityDescription": "Metrotown scores a 97 walk score — higher than most of Vancouver proper — and the Expo Line SkyTrain is four minutes from almost anywhere in the neighbourhood. But the more interesting thing about Metrotown is what that walkability actually connects you to: Korean grocery stores with ingredients you won’t find elsewhere in the region, Filipino bakeries that have been feeding the same families for thirty years, South Asian sweet shops and Japanese izakayas on the same block. This is one of the most genuinely international neighbourhoods in Metro Vancouver and the food reflects that without making a fuss about it.\n\nPeople who want maximum city function at below-Vancouver prices and are comfortable in a dense, tower-heavy environment. The daily rhythm here is efficient — transit is fast, errands are walkable and the variety of food and retail within a ten-minute walk is genuinely hard to beat. If you find that kind of density energising rather than overwhelming, Metrotown delivers.\n\nHigh-rise tower living is the dominant housing form and green space is limited. Noise and traffic are constants. This is a neighbourhood built around infrastructure and if that’s not your idea of home, it’ll feel like it from the first week.",
+    "analogousComparisons": {
+      "default": "What happens when a suburb decides to become a real city — and mostly succeeds."
+    },
+    "communityQuote": "“I have three Korean grocery stores, two Filipino bakeries and a SkyTrain stop within a five-minute walk. I do not miss paying Vancouver rent.” — an accountant who moved from Kitsilano two years ago",
+    "attributes": {
+      "walkability": 10,
+      "transitScore": 9,
+      "cyclingScore": 6,
+      "outdoorsAccess": 5,
+      "culturalDiversity": 9,
+      "safetyPerception": 7,
+      "socialEnergy": 8,
+      "fitnessAccess": 8,
+      "quietness": 3
+    },
+    "medianRent": {
+      "oneBed": 2164,
+      "twoBed": 2900,
+      "threeBed": 3900
+    },
+    "vacancyRate": 1.9,
+    "listings": {
+      "oneBed": {
+        "headline": "1BR Metrotown — high floor, SkyTrain walkable",
+        "price": 1839,
+        "bedroomCount": 1,
+        "bodyText": "High-floor one-bedroom four minutes from Metrotown SkyTrain. City views, in-suite laundry, updated throughout. Utilities included. Available immediately.",
+        "photos": [
+          "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80",
+          "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&q=80",
+          "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80"
+        ],
+        "postedAt": "2 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      },
+      "twoBed": {
+        "headline": "2BR Burnaby — Metrotown, updated, parking included",
+        "price": 2465,
+        "bedroomCount": 2,
+        "bodyText": "Two-bedroom with one parking stall near Metrotown SkyTrain. Updated kitchen and bath. All utilities included. Available now.",
+        "photos": [
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80",
+          "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&q=80",
+          "https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=600&q=80"
+        ],
+        "postedAt": "4 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      },
+      "threeBed": {
+        "headline": "3BR Metrotown — spacious, immediate availability",
+        "price": 3315,
+        "bedroomCount": 3,
+        "bodyText": "Large three-bedroom in a well-managed Burnaby tower. Two bathrooms, in-suite laundry, parking. Utilities included. Available immediately.",
+        "photos": [
+          "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80",
+          "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80"
+        ],
+        "postedAt": "3 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      }
+    }
+  },
+  {
+    "id": "burnaby-heights",
+    "name": "Burnaby Heights",
+    "district": "Burnaby",
+    "tagline": "Italian heritage, leafy streets, and a strip that predates the word ‘curated’",
+    "heroImage": "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=800&q=80",
+    "personalityDescription": "The commercial strip on Hastings Street has an Italian-heritage backbone — bakeries, a deli, a Portuguese chicken spot — alongside the kind of hardware store and dry cleaner that disappeared from most Vancouver neighbourhoods a decade ago. Behind the strip, the residential streets are quiet and tree-lined, with a mix of older apartments and character homes that give the neighbourhood a genuinely settled feel.\n\nPeople who want neighbourhood character without paying to be fashionable. Families who need space. The pace here is unhurried in the best way — locals know each other, the strip is genuinely used rather than photographed and the week has a comfortable rhythm that doesn’t require the city to perform for you.\n\nThe Hastings strip is reliable but not extensive — you’ll know everything it offers within the first month. Transit runs but it’s not SkyTrain-convenient for downtown commutes.",
+    "analogousComparisons": {
+      "default": "An Italian-heritage commercial strip that survived several waves of urban change by being exactly what it is."
+    },
+    "communityQuote": "“I buy my bread at the same bakery my landlord’s mother used to go to. That’s not nothing.” — a carpenter who rents on Dundas Street",
+    "attributes": {
+      "walkability": 7,
+      "transitScore": 7,
+      "cyclingScore": 6,
+      "outdoorsAccess": 6,
+      "culturalDiversity": 7,
+      "safetyPerception": 8,
+      "socialEnergy": 6,
+      "fitnessAccess": 6,
+      "quietness": 7
+    },
+    "medianRent": {
+      "oneBed": 2050,
+      "twoBed": 2750,
+      "threeBed": 3700
+    },
+    "vacancyRate": 2.2,
+    "listings": {
+      "oneBed": {
+        "headline": "1BR Burnaby Heights — character building, Hastings nearby",
+        "price": 1743,
+        "bedroomCount": 1,
+        "bodyText": "One-bedroom in a character building a block from the Hastings strip. Hardwood floors, updated bath, good storage. Utilities included. Available immediately.",
+        "photos": [
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80",
+          "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&q=80",
+          "https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=600&q=80"
+        ],
+        "postedAt": "5 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      },
+      "twoBed": {
+        "headline": "2BR Burnaby Heights — quiet street, private entrance",
+        "price": 2338,
+        "bedroomCount": 2,
+        "bodyText": "Two-bedroom suite with private entrance on a quiet residential street. Updated kitchen, good light. All utilities included. Available now.",
+        "photos": [
+          "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80",
+          "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80"
+        ],
+        "postedAt": "7 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      },
+      "threeBed": {
+        "headline": "3BR Burnaby Heights — family home, backyard",
+        "price": 3145,
+        "bedroomCount": 3,
+        "bodyText": "Three-bedroom on a tree-lined street near Confederation Park. Two bathrooms, updated kitchen, good backyard. Utilities included. Available immediately.",
+        "photos": [
+          "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80",
+          "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&q=80",
+          "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80"
+        ],
+        "postedAt": "4 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      }
+    }
+  },
+  {
+    "id": "rocky-point-port-moody",
+    "name": "Rocky Point",
+    "district": "Port Moody",
+    "tagline": "Burrard Inlet, craft beer, SkyTrain and actual hiking trails",
+    "heroImage": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80",
+    "personalityDescription": "Port Moody has more craft breweries per capita than almost anywhere in BC and they sit along the inlet within walking distance of Rocky Point Park and the Evergreen SkyTrain. It’s a small city that has figured out its identity — outdoorsy during the week and a bit boisterous on Friday evenings, with the mountains and the water always in the frame.\n\nLiving here has a specific rhythm: trails before work, coffee at the local roaster, the occasional pint at the brewery end of Murray Street on a Thursday. It suits people who want outdoor access and a social scene that doesn’t require going into Vancouver — and who find the commute a fair trade for everything else. Families are well-represented and the community feel is genuine rather than aspirational.\n\nAt the end of the Evergreen Extension, commuting into downtown Vancouver takes 40-50 minutes by SkyTrain. If you’re in the city every day, that’s the negotiation you’ll make with this neighbourhood every morning — most people who’ve done it say it’s worth it.",
+    "analogousComparisons": {
+      "default": "A small city that found its identity in beer and mountains and has never looked back."
+    },
+    "communityQuote": "“I trail run before work three mornings a week and I’m at my Gastown office in 45 minutes.” — an environmental engineer who bought a townhouse near Moody Centre",
+    "attributes": {
+      "walkability": 6,
+      "transitScore": 7,
+      "cyclingScore": 7,
+      "outdoorsAccess": 9,
+      "culturalDiversity": 5,
+      "safetyPerception": 8,
+      "socialEnergy": 7,
+      "fitnessAccess": 7,
+      "quietness": 6
+    },
+    "medianRent": {
+      "oneBed": 2300,
+      "twoBed": 3000,
+      "threeBed": 4000
+    },
+    "vacancyRate": 1.8,
+    "listings": {
+      "oneBed": {
+        "headline": "1BR Port Moody — walk to Rocky Point Park",
+        "price": 1955,
+        "bedroomCount": 1,
+        "bodyText": "One-bedroom suite walkable to Rocky Point Park and SkyTrain. Updated kitchen, in-suite laundry. Utilities included. Available immediately.",
+        "photos": [
+          "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80",
+          "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80"
+        ],
+        "postedAt": "3 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      },
+      "twoBed": {
+        "headline": "2BR Port Moody — near Inlet Centre SkyTrain",
+        "price": 2550,
+        "bedroomCount": 2,
+        "bodyText": "Two-bedroom near Inlet Centre station. Updated throughout, in-suite laundry, good storage. All utilities included. Available now.",
+        "photos": [
+          "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80",
+          "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&q=80",
+          "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80"
+        ],
+        "postedAt": "6 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      },
+      "threeBed": {
+        "headline": "3BR Port Moody — townhouse style, yard access",
+        "price": 3400,
+        "bedroomCount": 3,
+        "bodyText": "Three-bedroom townhouse-style unit with yard access. Two bathrooms, good storage, near trails and SkyTrain. Utilities included. Available immediately.",
+        "photos": [
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80",
+          "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&q=80",
+          "https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=600&q=80"
+        ],
+        "postedAt": "2 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      }
+    }
+  },
+  {
+    "id": "maillardville",
+    "name": "Maillardville",
+    "district": "Coquitlam",
+    "tagline": "French-Canadian heritage west of the Rockies, and genuinely affordable",
+    "heroImage": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
+    "personalityDescription": "The oldest French-Canadian settlement west of Manitoba — a fact that sounds like a tourism board line until you see the Place Maillardville square and the heritage buildings that survived suburban expansion by being genuinely worth keeping. It’s a quiet working neighbourhood with Coquitlam Centre SkyTrain nearby and a sense of place that most Metro Vancouver suburbs conspicuously lack.\n\nPeople who care about neighbourhood history and want somewhere that has an identity beyond its transit connections. Budget-conscious renters who want SkyTrain access without paying Vancouver prices. The pace here is calm and residential — yards are common and the community tends toward the long-established rather than the newly arrived.\n\nLimited food and retail options beyond the basics — this is a neighbourhood you live in rather than visit and the distinction matters if you need ongoing novelty from your surroundings. The French-Canadian heritage is present but subtle; it’s not a cultural quarter in any obvious sense.",
+    "analogousComparisons": {
+      "default": "A heritage neighbourhood that survived suburban expansion by having a story strong enough to hold onto."
+    },
+    "communityQuote": "“Most people in Coquitlam have never heard of Maillardville. I find that useful.” — a librarian who’s rented here for three years",
+    "attributes": {
+      "walkability": 6,
+      "transitScore": 7,
+      "cyclingScore": 5,
+      "outdoorsAccess": 6,
+      "culturalDiversity": 7,
+      "safetyPerception": 7,
+      "socialEnergy": 5,
+      "fitnessAccess": 5,
+      "quietness": 7
+    },
+    "medianRent": {
+      "oneBed": 2100,
+      "twoBed": 2800,
+      "threeBed": 3700
+    },
+    "vacancyRate": 2.5,
+    "listings": {
+      "oneBed": {
+        "headline": "1BR Maillardville — quiet, SkyTrain nearby",
+        "price": 1785,
+        "bedroomCount": 1,
+        "bodyText": "One-bedroom in a quiet Maillardville building near Lincoln SkyTrain. Updated kitchen, good storage. Utilities included. Available immediately.",
+        "photos": [
+          "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80",
+          "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&q=80",
+          "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80"
+        ],
+        "postedAt": "4 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      },
+      "twoBed": {
+        "headline": "2BR Coquitlam — Maillardville, private entrance",
+        "price": 2380,
+        "bedroomCount": 2,
+        "bodyText": "Two-bedroom with private entrance in a character building. Hardwood floors, updated bath. All utilities included. Available now.",
+        "photos": [
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80",
+          "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&q=80",
+          "https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=600&q=80"
+        ],
+        "postedAt": "1 day ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      },
+      "threeBed": {
+        "headline": "3BR Maillardville — family suite, yard access",
+        "price": 3145,
+        "bedroomCount": 3,
+        "bodyText": "Three-bedroom family suite with yard access near Maillardville heritage area. Two bathrooms. Utilities included. Available immediately.",
+        "photos": [
+          "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80",
+          "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80"
+        ],
+        "postedAt": "5 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      }
+    }
+  },
+  {
+    "id": "steveston",
+    "name": "Steveston",
+    "district": "Richmond",
+    "tagline": "Historic fishing village, working harbour, a pace that gives you room to breathe",
+    "heroImage": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80",
+    "personalityDescription": "Steveston is Richmond’s anomaly — a working harbour with fishing boats that actually fish, independent shops that predate the internet and a Japanese-Canadian community whose history runs deep in the neighbourhood’s fabric. The waterfront path is used by locals as much as visitors and the Saturday market is the real kind.\n\nThe pace here is genuinely slow in the way that some people find liberating. Neighbours know each other, the community league is active and the week has the kind of unhurried rhythm that’s hard to find anywhere else at this price point in Metro Vancouver. Housing is predominantly single-family homes and townhouses with yards — space that’s rare this close to the water.\n\nFar from downtown Vancouver — 45-60 minutes by transit — and a car is practically necessary for daily life. The village is small enough that you’ll exhaust its options if you’re used to urban density. This is a feature if you’ve chosen it deliberately.",
+    "analogousComparisons": {
+      "default": "A fishing village that somehow survived inside a major metropolitan area — and has the cannery to prove it."
+    },
+    "communityQuote": "“I can walk to the harbour at 6am and watch the fishing boats come in. I’ve lived here four years and I still don’t take it for granted.” — a retired teacher who moved from East Vancouver",
+    "attributes": {
+      "walkability": 7,
+      "transitScore": 5,
+      "cyclingScore": 7,
+      "outdoorsAccess": 8,
+      "culturalDiversity": 7,
+      "safetyPerception": 9,
+      "socialEnergy": 5,
+      "fitnessAccess": 5,
+      "quietness": 7
+    },
+    "medianRent": {
+      "oneBed": 1910,
+      "twoBed": 2550,
+      "threeBed": 3400
+    },
+    "vacancyRate": 2.0,
+    "listings": {
+      "oneBed": {
+        "headline": "1BR Steveston — steps from the boardwalk",
+        "price": 1624,
+        "bedroomCount": 1,
+        "bodyText": "One-bedroom a short walk from the Steveston boardwalk. Updated kitchen, good light, quiet building. Utilities included. Available immediately.",
+        "photos": [
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80",
+          "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&q=80",
+          "https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=600&q=80"
+        ],
+        "postedAt": "3 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      },
+      "twoBed": {
+        "headline": "2BR Steveston Village — updated, parking included",
+        "price": 2168,
+        "bedroomCount": 2,
+        "bodyText": "Two-bedroom near the village centre. Updated throughout, parking included. All utilities included. Available now.",
+        "photos": [
+          "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80",
+          "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80"
+        ],
+        "postedAt": "7 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      },
+      "threeBed": {
+        "headline": "3BR Steveston — family home, near harbour",
+        "price": 2890,
+        "bedroomCount": 3,
+        "bodyText": "Three-bedroom near Steveston harbour. Two bathrooms, good yard, updated kitchen. Utilities included. Available immediately.",
+        "photos": [
+          "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80",
+          "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&q=80",
+          "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80"
+        ],
+        "postedAt": "1 hour ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      }
+    }
+  },
+  {
+    "id": "cloverdale",
+    "name": "Cloverdale",
+    "district": "Surrey",
+    "tagline": "A small town that survived becoming a suburb by staying itself",
+    "heroImage": "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80",
+    "personalityDescription": "Cloverdale is the historic heart of what became Surrey — brick storefronts from the 1800s, a rodeo ground and a main street that still functions as one. The municipal centre long since moved elsewhere, which means Cloverdale has been left to operate as its own distinct small town within a larger city. That’s not a consolation prize; it’s what gives it character that most of Surrey doesn’t have.\n\nThe pace is unhurried and the community is established — people here tend to know their neighbours, have yards and take the local seriously. It’s a good fit for people who want space and genuine affordability and aren’t measuring their life against the city.\n\nCar-essential for almost everything and the commute to downtown Vancouver is an hour each way. This is the honest trade-off and it’s a real one — Cloverdale makes sense for people who have made their peace with it.",
+    "analogousComparisons": {
+      "default": "A heritage town that survived becoming a suburb by staying exactly itself."
+    },
+    "communityQuote": "“I pay $1,750 for a two-bedroom. In Vancouver that doesn’t exist. I drive 45 minutes to work. It’s a fair trade.” — an electrician who moved from New Westminster",
+    "attributes": {
+      "walkability": 5,
+      "transitScore": 6,
+      "cyclingScore": 4,
+      "outdoorsAccess": 6,
+      "culturalDiversity": 7,
+      "safetyPerception": 7,
       "socialEnergy": 4,
       "fitnessAccess": 4,
       "quietness": 8
     },
     "medianRent": {
-      "oneBed": 2150,
-      "twoBed": 2950,
-      "threeBed": 3750
+      "oneBed": 1750,
+      "twoBed": 2350,
+      "threeBed": 3100
     },
-    "vacancyRate": 2.7,
+    "vacancyRate": 3.0,
     "listings": {
       "oneBed": {
-        "headline": "1BR Riley Park — renovated basement suite, quiet street",
-        "price": 1900,
+        "headline": "1BR Cloverdale — quiet, updated, parking included",
+        "price": 1488,
         "bedroomCount": 1,
-        "bodyText": "Renovated one-bedroom basement suite in a well-maintained house on a quiet street in Riley Park. Good ceiling height, updated kitchen and bathroom, separate entrance, private laundry. All utilities included. Available immediately. Previous tenant bought a condo and moved out last week. Landlord lives upstairs and is easy to reach. This is priced below current asking prices for renovated suites in the area — we want someone who will look after the place.",
+        "bodyText": "One-bedroom in a well-kept Cloverdale building. Updated kitchen, parking included. Utilities included. Available immediately.",
         "photos": [
-          "https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=600&q=80",
-          "https://images.unsplash.com/photo-1556909190-d1b3b21e64e3?w=600&q=80",
-          "https://images.unsplash.com/photo-1556908048-ade3d5de48d1?w=600&q=80"
+          "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80",
+          "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80"
         ],
-        "postedAt": "6 hours ago",
-        "scamFlags": ["belowMedian", "immediateAvailability", "utilitiesIncluded"]
+        "postedAt": "5 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
       },
       "twoBed": {
-        "headline": "2BR in Riley Park — renovated house suite, utilities in, available now",
-        "price": 2650,
+        "headline": "2BR Cloverdale — spacious, quiet street",
+        "price": 1998,
         "bedroomCount": 2,
-        "bodyText": "Two-bedroom suite in a renovated Riley Park house. Full floor of a character home, updated kitchen, two bedrooms with good closet space, shared backyard. Utilities included. Available immediately. This neighbourhood is genuinely one of the best places to raise children or simply decompress in Vancouver. Landlord is a longtime resident of the area, responsive and fair. Priced below comparable listings because the right tenant matters more than maximum rent.",
+        "bodyText": "Two-bedroom on a quiet residential street. Good space, updated bath, parking. All utilities included. Available now.",
         "photos": [
-          "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=600&q=80",
-          "https://images.unsplash.com/photo-1597218868981-1b68e15f0065?w=600&q=80",
-          "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=600&q=80"
+          "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80",
+          "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&q=80",
+          "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80"
         ],
-        "postedAt": "4 hours ago",
-        "scamFlags": ["belowMedian", "immediateAvailability", "utilitiesIncluded"]
+        "postedAt": "1 day ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
       },
       "threeBed": {
-        "headline": "3BR Riley Park house — renovated, large yard, available immediately",
-        "price": 3350,
+        "headline": "3BR Cloverdale — family home, large yard",
+        "price": 2635,
         "bedroomCount": 3,
-        "bodyText": "Three-bedroom house on a quiet street in Riley Park, fully renovated. Good-sized bedrooms, updated kitchen and two bathrooms, large back garden, lane access for parking. Utilities included. Available immediately — family that rented this property for five years just bought a place. This is the best three-bedroom rental value in the neighbourhood right now. Landlord is local, easy to reach, and has maintained the property to a high standard.",
+        "bodyText": "Three-bedroom with large yard in a quiet Cloverdale street. Two bathrooms, good storage. Utilities included. Available immediately.",
         "photos": [
-          "https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=600&q=80",
-          "https://images.unsplash.com/photo-1558981359-219d6364c9c8?w=600&q=80",
-          "https://images.unsplash.com/photo-1558981852-426c349548ab?w=600&q=80"
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80",
+          "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&q=80",
+          "https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=600&q=80"
         ],
         "postedAt": "3 hours ago",
-        "scamFlags": ["belowMedian", "immediateAvailability", "utilitiesIncluded"]
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
       }
     }
   },
   {
-    "id": "east-vancouver",
-    "name": "East Vancouver",
-    "district": "East Side",
-    "tagline": "More city than you think, less polished than you might want",
-    "heroImage": "https://images.unsplash.com/photo-1425913397330-cf8af2ff40a1?w=800&q=80",
-    "personalityDescription": "East Vancouver is the city's working neighbourhood — Vietnamese restaurants that have been there for thirty years, Filipino bakeries, murals on every second building. It's not trying to be anything other than what it is. That honesty is actually its most appealing quality. The rents reflect where things are, not where Instagram suggests they might be going.",
+    "id": "surrey-city-centre",
+    "name": "Surrey City Centre",
+    "district": "Surrey",
+    "tagline": "SkyTrain-adjacent, most affordable on the list, mid-transformation",
+    "heroImage": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&q=80",
+    "personalityDescription": "Surrey City Centre is a neighbourhood investing in itself. The King George SkyTrain station anchors an area that city planners envision as Metro Vancouver’s second downtown — towers going up, a new library, an arts centre and a university campus already in place. Right now it sits somewhere between intention and arrival, which makes it genuinely interesting if you can tolerate a neighbourhood still finding its footing.\n\nDaily life here has the energy of somewhere mid-change: new businesses opening alongside established ones, a highly diverse population that makes the food scene punchy and unpredictable and a SkyTrain connection that makes the rest of the region accessible without a car. For the right person — early in a career, new to Canada or simply practical about budget — this neighbourhood offers real value that the more established areas can’t match.\n\nSafety perception varies significantly street by street and that’s worth taking seriously. Research specific blocks before committing — the gap between the neighbourhood’s best and most challenging areas is wider here than anywhere else on this list.",
     "analogousComparisons": {
-      "default": "Think of it as a neighbourhood that is genuinely multicultural in the lived sense — not the branding sense — and where that shows up in the food, the streets, and the people.",
-      "Dublin_Ballymun": "Think of it as a version of Ballymun in transition — the same mixture of community investment and unfinished business, the same sense of an area figuring out its next chapter.",
-      "London_Tottenham": "Think of it as a version of Tottenham — similar cultural density, similar sense of being underestimated, similar feeling that things are happening before the reviews catch up.",
-      "New York_Jackson Heights": "Think of it as a version of Jackson Heights — that same genuine multiculturalism, the same density of immigrant-run food businesses, the same energy of a place that doesn't need to perform itself.",
-      "Melbourne_Footscray": "Think of it as a version of Footscray — one of Melbourne's most culturally rich neighbourhoods, before the gentrification wave hits fully.",
-      "Toronto_Scarborough": "Think of it as a version of Scarborough — real diversity, real food, real community — without the distance from the centre."
+      "default": "A city centre in the process of deciding what kind of city centre it wants to be."
     },
-    "communityQuote": null,
+    "communityQuote": "“People act like I made a compromise moving here. I have a SkyTrain stop, a great Filipino restaurant and I pay $1,750 a month. That’s not a compromise.” — a nursing student at SFU Surrey",
     "attributes": {
-      "walkability": 6,
-      "transitScore": 7,
-      "cyclingScore": 6,
-      "outdoorsAccess": 4,
+      "walkability": 7,
+      "transitScore": 8,
+      "cyclingScore": 5,
+      "outdoorsAccess": 5,
       "culturalDiversity": 9,
-      "safetyPerception": 6,
-      "socialEnergy": 6,
-      "fitnessAccess": 4,
-      "quietness": 6
+      "safetyPerception": 5,
+      "socialEnergy": 7,
+      "fitnessAccess": 6,
+      "quietness": 4
     },
     "medianRent": {
-      "oneBed": 1900,
-      "twoBed": 2650,
-      "threeBed": 3350
+      "oneBed": 1756,
+      "twoBed": 2350,
+      "threeBed": 3100
     },
-    "vacancyRate": 3.4,
+    "vacancyRate": 3.2,
     "listings": {
       "oneBed": {
-        "headline": "1BR East Van — renovated suite, all utilities included, available now",
-        "price": 1700,
+        "headline": "1BR Surrey City Centre — SkyTrain walkable",
+        "price": 1493,
         "bedroomCount": 1,
-        "bodyText": "Renovated one-bedroom in a solid East Vancouver building. Updated kitchen and bathroom, good storage, transit nearby. All utilities included — the total cost per month is what you see here. Available immediately. Previous tenant was relocated for work. Landlord is straightforward, responsive, and has owned the building for over a decade. This is priced below market for a renovated suite in this area — we are looking for good tenants, not maximum rent.",
+        "bodyText": "One-bedroom a short walk from King George SkyTrain. Updated kitchen, in-suite laundry. Utilities included. Available immediately.",
         "photos": [
-          "https://images.unsplash.com/photo-1515263487990-61b07816b324?w=600&q=80",
-          "https://images.unsplash.com/photo-1516455207990-7a41ce80f7ee?w=600&q=80",
-          "https://images.unsplash.com/photo-1523217582562-09d0def993a6?w=600&q=80"
-        ],
-        "postedAt": "5 hours ago",
-        "scamFlags": ["belowMedian", "immediateAvailability", "utilitiesIncluded"]
-      },
-      "twoBed": {
-        "headline": "2BR East Vancouver — renovated, available immediately, utilities in",
-        "price": 2350,
-        "bedroomCount": 2,
-        "bodyText": "Two-bedroom apartment in East Vancouver, fully renovated. Two proper bedrooms, updated kitchen, in-suite laundry. Good transit connections, close to Commercial Drive. All utilities included. Available immediately — or sooner if you're ready. This is one of the best-value two-bedrooms available in the east side right now. Landlord is a private owner who replies the same day. No agency.",
-        "photos": [
-          "https://images.unsplash.com/photo-1574643156929-51fa098b0394?w=600&q=80",
-          "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&q=80",
-          "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=80"
+          "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80",
+          "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&q=80",
+          "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80"
         ],
         "postedAt": "2 hours ago",
-        "scamFlags": ["belowMedian", "immediateAvailability", "utilitiesIncluded"]
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      },
+      "twoBed": {
+        "headline": "2BR Surrey Central — updated, good transit",
+        "price": 1998,
+        "bedroomCount": 2,
+        "bodyText": "Two-bedroom near Surrey Central SkyTrain. Updated throughout, good storage. All utilities included. Available now.",
+        "photos": [
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80",
+          "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&q=80",
+          "https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=600&q=80"
+        ],
+        "postedAt": "4 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
       },
       "threeBed": {
-        "headline": "3BR East Van house — renovated, large rooms, all utilities included",
-        "price": 3000,
+        "headline": "3BR Surrey City Centre — spacious, immediate availability",
+        "price": 2635,
         "bedroomCount": 3,
-        "bodyText": "Three-bedroom house in East Vancouver, renovated throughout. Three large bedrooms, updated kitchen and bathrooms, back garden, off-street parking. All utilities included. Available immediately. The family who lived here for three years has just left for a bigger place. This is the most affordable three-bedroom house rental you will find in Vancouver proper. Landlord has owned the property since 2005, is very responsive, and takes maintenance seriously.",
+        "bodyText": "Three-bedroom near SkyTrain. Two bathrooms, updated kitchen, parking. Utilities included. Available immediately.",
         "photos": [
-          "https://images.unsplash.com/photo-1555636222-cae831e670b3?w=600&q=80",
-          "https://images.unsplash.com/photo-1554995207-c18c203602cb?w=600&q=80",
-          "https://images.unsplash.com/photo-1556020685-ae41abfc9365?w=600&q=80"
+          "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80",
+          "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80"
         ],
         "postedAt": "1 hour ago",
-        "scamFlags": ["belowMedian", "immediateAvailability", "utilitiesIncluded"]
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      }
+    }
+  },
+  {
+    "id": "sapperton",
+    "name": "Sapperton",
+    "district": "New Westminster",
+    "tagline": "Heritage streets, big yards and the transit paradox that works in your favour",
+    "heroImage": "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=800&q=80",
+    "personalityDescription": "Sapperton is a quiet, residential corner of New Westminster with a surprising amount of heritage housing stock — older character homes on generous lots, many with yards that would cost twice as much anywhere closer to Vancouver. The Royal Columbian Hospital anchors one end of the neighbourhood and a small but solid craft beer strip on Braid Street adds some evening life. The week here is calm and domestic in the best sense.\n\nThe curious thing about Sapperton is its transit paradox: a walk score of 26 (daily errands require a car) alongside a transit score of 75 (getting to downtown Vancouver by SkyTrain is genuinely easy). If you commute by transit and are happy to drive for groceries, this works well. If walkable errands matter as much as the commute, it’s a harder fit.\n\nNot much within walking distance beyond the immediate neighbourhood. The craft beer strip is worth knowing but narrow. Sapperton suits people who want a quiet residential base with a reliable commute more than an activated neighbourhood streetscape.",
+    "analogousComparisons": {
+      "default": "A working-class neighbourhood that commutes well but walks poorly — and is honest about that trade-off."
+    },
+    "communityQuote": "“I take the SkyTrain to downtown Vancouver in 25 minutes. Then I drive to the grocery store. That’s Sapperton.” — a lab technician at Royal Columbian",
+    "attributes": {
+      "walkability": 3,
+      "transitScore": 7,
+      "cyclingScore": 4,
+      "outdoorsAccess": 5,
+      "culturalDiversity": 6,
+      "safetyPerception": 7,
+      "socialEnergy": 4,
+      "fitnessAccess": 4,
+      "quietness": 8
+    },
+    "medianRent": {
+      "oneBed": 2490,
+      "twoBed": 3200,
+      "threeBed": 4200
+    },
+    "vacancyRate": 2.1,
+    "listings": {
+      "oneBed": {
+        "headline": "1BR Sapperton — updated, SkyTrain nearby",
+        "price": 2117,
+        "bedroomCount": 1,
+        "bodyText": "One-bedroom near Sapperton SkyTrain station. Updated kitchen and bath, in-suite laundry. Utilities included. Available immediately.",
+        "photos": [
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80",
+          "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&q=80",
+          "https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=600&q=80"
+        ],
+        "postedAt": "6 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      },
+      "twoBed": {
+        "headline": "2BR New Westminster — Sapperton, quiet street",
+        "price": 2720,
+        "bedroomCount": 2,
+        "bodyText": "Two-bedroom on a quiet Sapperton street. Updated throughout, good storage. All utilities included. Available now.",
+        "photos": [
+          "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80",
+          "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80"
+        ],
+        "postedAt": "1 day ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      },
+      "threeBed": {
+        "headline": "3BR Sapperton — spacious, near Royal Columbian",
+        "price": 3570,
+        "bedroomCount": 3,
+        "bodyText": "Three-bedroom near Royal Columbian Hospital. Two bathrooms, good yard. Utilities included. Available immediately.",
+        "photos": [
+          "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80",
+          "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&q=80",
+          "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80"
+        ],
+        "postedAt": "4 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      }
+    }
+  },
+  {
+    "id": "fort-langley",
+    "name": "Fort Langley",
+    "district": "Langley Township",
+    "tagline": "1800s heritage village, one of a kind, genuinely far from everything",
+    "heroImage": "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&q=80",
+    "personalityDescription": "Fort Langley looks like what Vancouver neighbourhoods aspire to be — brick storefronts from the 1800s, a Hudson’s Bay fort that’s now a national historic site and a Saturday market that people drive an hour to attend. But what makes it worth considering as a place to live rather than just visit is what it feels like the rest of the week: quiet streets, real yards, a community league that functions and a river trail that goes somewhere meaningful.\n\nLife here runs on seasons and the village rhythm — the market fills up in summer, the trails are busy on autumn weekends and the community tends toward people who chose this deliberately and stayed. Residents have typically been here a long time. Housing is almost entirely detached homes and townhouses with proper outdoor space.\n\n50-60 minutes to downtown Vancouver by car on a reasonable day and transit is not a practical commuting option. This neighbourhood makes sense for remote workers and people who have genuinely decided the city is behind them — not people testing the idea.",
+    "analogousComparisons": {
+      "default": "A heritage village that the city hasn't reached yet — and the people who live there are actively grateful for that."
+    },
+    "communityQuote": "“I moved here from Yaletown five years ago. I have never once thought about going back.” — a copywriter who works remotely and runs the river trail on weekday mornings",
+    "attributes": {
+      "walkability": 6,
+      "transitScore": 4,
+      "cyclingScore": 5,
+      "outdoorsAccess": 7,
+      "culturalDiversity": 4,
+      "safetyPerception": 9,
+      "socialEnergy": 4,
+      "fitnessAccess": 3,
+      "quietness": 9
+    },
+    "medianRent": {
+      "oneBed": 2100,
+      "twoBed": 2800,
+      "threeBed": 3700
+    },
+    "vacancyRate": 2.4,
+    "listings": {
+      "oneBed": {
+        "headline": "1BR Fort Langley — walk to the village",
+        "price": 1785,
+        "bedroomCount": 1,
+        "bodyText": "One-bedroom a short walk from Fort Langley village. Updated kitchen, quiet building, good storage. Utilities included. Available immediately.",
+        "photos": [
+          "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80",
+          "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80"
+        ],
+        "postedAt": "7 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      },
+      "twoBed": {
+        "headline": "2BR Fort Langley — character home, private garden",
+        "price": 2380,
+        "bedroomCount": 2,
+        "bodyText": "Two-bedroom in a character home with private garden. Hardwood floors, updated throughout. All utilities included. Available now.",
+        "photos": [
+          "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80",
+          "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&q=80",
+          "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80"
+        ],
+        "postedAt": "1 day ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      },
+      "threeBed": {
+        "headline": "3BR Fort Langley — near the fort, quiet street",
+        "price": 3145,
+        "bedroomCount": 3,
+        "bodyText": "Three-bedroom on a quiet Fort Langley street near the national historic site. Two bathrooms, good yard. Utilities included. Available immediately.",
+        "photos": [
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80",
+          "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&q=80",
+          "https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=600&q=80"
+        ],
+        "postedAt": "3 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      }
+    }
+  },
+  {
+    "id": "white-rock",
+    "name": "White Rock",
+    "district": "White Rock",
+    "tagline": "Beachfront promenade, seaside town scale, a long way south",
+    "heroImage": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
+    "personalityDescription": "White Rock has a promenade, a pier and a beach that gets genuinely warm in August. The town above the hill operates at a pace that’s deliberately slower than the rest of Metro Vancouver — unhurried, neighbourly and oriented around the water and the week’s small rituals rather than the city’s agenda. The demographic skews toward people who have made their peace with slowing down: retirees, remote workers and families who want outdoor space and a community that actually shows up for each other.\n\nIf the idea of walking the pier on a Tuesday morning before work — or instead of it — resonates, White Rock is worth serious consideration. Housing here is predominantly detached homes and townhouses with yards. The town feels genuinely like a place rather than a suburb.\n\nAn hour minimum to downtown Vancouver — plan on it and decide if the trade-off works before you sign anything. Summers bring day-trippers to the waterfront and the town gets busier than its year-round character suggests. Winters are quiet in a way that suits some people and doesn’t suit others.",
+    "analogousComparisons": {
+      "default": "A seaside town that happens to be inside a metropolitan area — for people who need both sentences to be true."
+    },
+    "communityQuote": "“I walk the pier every morning at 7am. In eight years I’ve missed maybe twenty days. That’s why I’m here.” — a retired teacher who moved from Burnaby",
+    "attributes": {
+      "walkability": 6,
+      "transitScore": 5,
+      "cyclingScore": 5,
+      "outdoorsAccess": 8,
+      "culturalDiversity": 5,
+      "safetyPerception": 9,
+      "socialEnergy": 4,
+      "fitnessAccess": 4,
+      "quietness": 8
+    },
+    "medianRent": {
+      "oneBed": 1950,
+      "twoBed": 2600,
+      "threeBed": 3500
+    },
+    "vacancyRate": 2.3,
+    "listings": {
+      "oneBed": {
+        "headline": "1BR White Rock — steps from the promenade",
+        "price": 1658,
+        "bedroomCount": 1,
+        "bodyText": "One-bedroom a short walk from the White Rock promenade. Updated kitchen, ocean glimpses from the living room. Utilities included. Available immediately.",
+        "photos": [
+          "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80",
+          "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&q=80",
+          "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80"
+        ],
+        "postedAt": "4 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      },
+      "twoBed": {
+        "headline": "2BR White Rock — quiet street, updated suite",
+        "price": 2210,
+        "bedroomCount": 2,
+        "bodyText": "Two-bedroom on a quiet street above the beach town. Updated throughout, good storage. All utilities included. Available now.",
+        "photos": [
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80",
+          "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&q=80",
+          "https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=600&q=80"
+        ],
+        "postedAt": "1 day ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
+      },
+      "threeBed": {
+        "headline": "3BR White Rock — near the beach, immediate availability",
+        "price": 2975,
+        "bedroomCount": 3,
+        "bodyText": "Three-bedroom near White Rock beach. Two bathrooms, good yard, updated kitchen. Utilities included. Available immediately.",
+        "photos": [
+          "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80",
+          "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80"
+        ],
+        "postedAt": "2 hours ago",
+        "scamFlags": [
+          "belowMedian",
+          "immediateAvailability",
+          "utilitiesIncluded"
+        ]
       }
     }
   }
