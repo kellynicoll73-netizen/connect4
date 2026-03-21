@@ -30,8 +30,8 @@ export function QuizLayout({
     <div className="min-h-screen bg-neutral-50 flex flex-col">
       {/* Top bar: back button at far left, logo left-aligned with content column — same row */}
       <div className="relative w-full pt-5 pb-3">
-        {/* Logo: content-column left edge */}
-        <div className="max-w-lg w-full mx-auto px-5">
+        {/* Logo: content-column left edge — on mobile, pad left to clear the back button */}
+        <div className="max-w-lg w-full mx-auto px-5 pl-12 sm:pl-5">
           <AptLogoHorizontal scheme="light" size="sm" />
         </div>
         {/* Back button: vertically centered on the logo row, pinned to left edge */}

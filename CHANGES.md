@@ -219,6 +219,110 @@ Match signal pills on the results page derive from the same weights: attributes 
 
 ---
 
+---
+
+## UX Polish: Pre-loading, Secondary Match Exploration & Mobile Layout — March 2026
+
+> **Scope:** UX improvements to the results flow and mobile layout. No changes to matching logic, data, or API contracts.
+
+---
+
+### Architecture Decision Records
+
+#### ADR-001: Pre-load Claude personalisation during the loading screen
+
+**Context:**
+The results page was firing the Claude `/api/personalise` call after the page rendered, causing a visible flash — static fallback text appeared briefly before the personalised text replaced it. This was jarring and undermined the sense that the result was thoughtfully prepared.
+
+**Options considered:**
+- A) Show a skeleton shimmer in the comparison block while Claude loads
+- B) Hide the comparison block entirely until Claude responds
+- C) Show a Lena-voice placeholder line ("Finding the connection...") while loading
+- D) Pre-load the Claude call during the loading screen, so results render complete
+
+**Decision:** Option D — pre-load during the loading screen.
+
+**Rationale:**
+The loading screen already exists as a deliberate pause between quiz completion and results. It is the honest moment where the app is "thinking." Firing both the Voyage semantic call and the Claude personalisation call in parallel during this window means the results page renders fully formed on first paint. The loading screen may run slightly longer on slow connections, but this is preferable to a results page that visibly assembles itself. Options A–C all involve the user watching something load on what should be a finished screen.
+
+**Implementation:**
+- `SessionContext.tsx`: `runMatching()` now fires both the Voyage call and the Claude personalisation call in parallel using `Promise.all`
+- `personalText` stored in session state alongside match results
+- `loading/page.tsx`: waits for both calls to complete (with a 3-second minimum display time) before navigating to `/result`
+- `result/page.tsx`: reads `personalText` from session state directly — no API call on mount
+
+---
+
+#### ADR-002: Expandable secondary matches with lazy Claude personalisation
+
+**Context:**
+Secondary match scores are often close to the primary match (within 5–10%). Users naturally want to compare — understanding why they got their top result means understanding how the alternatives differ. The previous design showed secondary matches as collapsed cards with limited information.
+
+**Options considered:**
+- A) Accordion expand in place — full card detail loads on click
+- B) Modal/drawer — secondary match opens full-screen overlay
+- C) Dedicated comparison page — side-by-side view of top 3
+- D) A + lazy personalisation — accordion, Claude text only fetched on expand
+
+**Decision:** Option A + D — accordion with lazy Claude personalisation on expand.
+
+**Rationale:**
+The accordion keeps the user on the results page without navigation overhead, making it easy to compare and collapse. Lazy personalisation means Claude is only called for secondary matches the user actually wants to explore — avoiding unnecessary API calls for results nobody looks at. The Lena-voice placeholder ("Finding the connection...") during the Claude call makes the wait feel intentional rather than broken, consistent with the brand voice throughout.
+
+**Implementation:**
+- `result/page.tsx`: each secondary match card has an expand toggle
+- On expand: fires `/api/personalise` for that neighbourhood using the same user free text
+- While loading: renders placeholder text in the comparison block
+- On response: swaps in personalised text
+
+---
+
+#### ADR-003: Logo overlap fix on mobile viewports
+
+**Context:**
+On mobile viewports, the absolute-positioned back button in the quiz header overlapped the Apt logo lockup, obscuring the mark at small screen widths.
+
+**Options considered:**
+- A) Add responsive left padding to the logo container on small screens
+- B) Add right margin to the back button
+- C) Restructure the header to flex layout on mobile
+
+**Decision:** Option A — responsive left padding on the logo.
+
+**Rationale:**
+Least invasive fix. Tailwind's `pl-12 sm:pl-0` adds 48px of left padding below 640px (the `sm` breakpoint), clearing the back button, then resets to zero at tablet width and above. The 640px breakpoint safely covers the widest common phones (iPhone Pro Max at 430px in portrait). No layout restructuring needed and no impact on wider viewports.
+
+**Implementation:**
+- `QuizLayout.tsx`: added `pl-12 sm:pl-0` to the logo wrapper div
+
+---
+
+### Changes
+
+#### Loading screen (`src/app/loading/page.tsx`)
+- Now fires both Voyage semantic matching and Claude personalisation calls in parallel during the loading window
+- Results page receives fully pre-loaded data — no post-render API calls
+- Fixed: unhandled promise rejection if `runMatching` throws — user is now always forwarded to `/result` even on catastrophic failure (governance fix)
+
+#### Session context (`src/context/SessionContext.tsx`)
+- `runMatching()` extended to fire `/api/personalise` in parallel with the Voyage call
+- `personalText` added to session state — stores the Claude-generated comparison text
+- Result page reads `personalText` from context rather than calling the API itself
+
+#### Results page (`src/app/result/page.tsx`)
+- Removed the `useEffect` that previously fired `/api/personalise` on mount
+- Now reads `personalText` directly from session context — renders complete on first paint
+- Secondary match cards are now expandable — clicking triggers a lazy Claude call for that neighbourhood
+- Lena-voice placeholder shown while personalisation loads for secondary matches
+
+#### Quiz layout (`src/components/quiz/QuizLayout.tsx`)
+- Added `pl-12 sm:pl-0` to the logo wrapper to prevent back button overlap on mobile viewports
+
+#### NeighbourhoodMatchCard (`src/components/result/NeighbourhoodMatchCard.tsx`)
+- Fixed: added `type="button"` to the read more/less toggle (governance fix — accessibility hygiene)
+
+---
+
 ### Blended scoring — semantic layer (active)
 
 The API route at `src/app/api/match/route.ts` adds a semantic similarity layer using Voyage AI embeddings (`voyage-3`). It works as follows:
