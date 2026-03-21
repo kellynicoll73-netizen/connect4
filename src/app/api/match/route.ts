@@ -64,7 +64,9 @@ export async function POST(req: NextRequest) {
 
     // Single batch call: user text first, then all neighbourhood descriptions
     const allTexts = [text, ...entries.map(([, desc]) => desc)]
+    console.log('[Voyage] Calling embeddings API — input count:', allTexts.length)
     const allEmbeddings = await getEmbeddings(apiKey, allTexts)
+    console.log('[Voyage] Embeddings received — dimension:', allEmbeddings[0]?.length)
 
     const userEmbedding = allEmbeddings[0]
     const neighbourhoodEmbeddings = allEmbeddings.slice(1)
