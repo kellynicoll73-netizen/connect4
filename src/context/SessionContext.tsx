@@ -73,6 +73,8 @@ interface SessionContextValue {
   matchedNeighbourhood: Neighbourhood | null
   selectedListing:      ListingObject | null
   topMatches:           Array<{ neighbourhood: Neighbourhood; score: number }>
+  // Claude personalisation — pre-loaded during matching
+  personalText:         string | null
 }
 
 // ─── Context ──────────────────────────────────────────────────────────────────
@@ -83,6 +85,7 @@ const SessionContext = createContext<SessionContextValue | null>(null)
 
 export function SessionProvider({ children }: { children: ReactNode }) {
   const [state, setState] = useState<SessionState>(INITIAL_STATE)
+  const [personalText, setPersonalText] = useState<string | null>(null)
 
   const setAnswer = (field: keyof SessionState, value: unknown) => {
     setState((prev) => ({ ...prev, [field]: value }))
@@ -127,10 +130,36 @@ export function SessionProvider({ children }: { children: ReactNode }) {
 
     const best = blendedScores.reduce((a, b) => b.score > a.score ? b : a)
     setState((prev) => ({ ...prev, matchedNeighbourhoodId: best.id }))
+
+    // ── Claude personalisation — run immediately after match is found ──────────
+    // This runs during the loading screen so results page renders fully complete.
+    const bestNeighbourhood = neighbourhoods.find((n) => n.id === best.id)
+    const description = state.favouriteDescription ?? state.currentDescription
+    if (bestNeighbourhood && description && description.trim().length >= 30) {
+      const place = [state.favouriteNeighbourhood, state.favouriteCity, state.favouriteCountry]
+        .filter(Boolean).join(', ')
+      try {
+        const res = await fetch('/api/personalise', {
+          method:  'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            userPlace:                place || 'a place they love',
+            userDescription:          description,
+            neighbourhoodName:        bestNeighbourhood.name,
+            neighbourhoodDescription: bestNeighbourhood.personalityDescription,
+          }),
+        })
+        if (res.ok) {
+          const data = await res.json() as { text: string | null }
+          if (data.text) setPersonalText(data.text)
+        }
+      } catch { /* silent fallback to static text */ }
+    }
   }
 
   const resetSession = () => {
     setState({ ...INITIAL_STATE, cardVersion: state.cardVersion })
+    setPersonalText(null)
   }
 
   // Derived values — computed, not stored
@@ -176,6 +205,7 @@ export function SessionProvider({ children }: { children: ReactNode }) {
       matchedNeighbourhood,
       selectedListing,
       topMatches,
+      personalText,
     }),
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [state]

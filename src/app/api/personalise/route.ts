@@ -32,8 +32,8 @@ export async function POST(req: NextRequest) {
         'content-type':       'application/json',
       },
       body: JSON.stringify({
-        model:      'claude-sonnet-4-6',
-        max_tokens: 160,
+        model:      'claude-haiku-4-5',
+        max_tokens: 220,
         system: `You write for Apt, a Vancouver neighbourhood matching tool. Your voice is warm, observational, and specific — like a knowledgeable friend who knows both cities well, not a travel brochure. Short sentences. No hype. No superlatives. Write in the present tense.`,
         messages: [{
           role:    'user',
@@ -45,7 +45,7 @@ The neighbourhood we matched them with is ${neighbourhoodName}:
 
 "${neighbourhoodDescription}"
 
-Write 2–3 sentences connecting what they loved about their place to what they will find in ${neighbourhoodName}. Be specific to both places. Reference the user's own words where it feels natural. Do not begin with "Just like" or "Similar to". Do not use superlatives. Do not mention the tool or the matching process.`,
+Write 2–3 sentences connecting what they loved about their place to what they will find in ${neighbourhoodName}. Aim for 3 sentences but never cut a thought short to hit a number. Be specific to both places. Reference the user's own words where it feels natural. Do not begin with "Just like" or "Similar to". Do not use superlatives. Do not mention the tool or the matching process.`,
         }],
       }),
     })
