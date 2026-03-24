@@ -23,7 +23,11 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ text: null })
     }
 
-    console.log('[Anthropic] Calling Claude API — model: claude-sonnet-4-6, description length:', userDescription.trim().length)
+    console.log(
+      '[Anthropic] Calling Claude — userPlace:', userPlace,
+      '| description length:', userDescription.trim().length,
+      '| neighbourhood:', neighbourhoodName,
+    )
     const response = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
       headers: {

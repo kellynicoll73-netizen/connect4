@@ -104,6 +104,8 @@ export function SessionProvider({ children }: { children: ReactNode }) {
       state.culturalCommunityText,
     ].filter(Boolean).join('. ')
 
+    console.log('[Matching] Semantic text sent to Voyage:', userText || '(none — structural only)')
+
     let semanticScores: Record<string, number> = {}
     if (userText.trim()) {
       try {
@@ -129,6 +131,14 @@ export function SessionProvider({ children }: { children: ReactNode }) {
     }))
 
     const best = blendedScores.reduce((a, b) => b.score > a.score ? b : a)
+
+    const top5blended = [...blendedScores].sort((a, b) => b.score - a.score).slice(0, 5)
+    console.log(
+      '[Matching] Top 5 blended (70% structural + 30% semantic):',
+      top5blended.map(({ id, score }) => `${id}:${score.toFixed(1)}`).join(' | ')
+    )
+    console.log('[Matching] Winner:', best.id)
+
     setState((prev) => ({ ...prev, matchedNeighbourhoodId: best.id }))
 
     // ── Claude personalisation — run immediately after match is found ──────────

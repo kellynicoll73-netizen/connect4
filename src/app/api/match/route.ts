@@ -79,6 +79,14 @@ export async function POST(req: NextRequest) {
       semanticScores[id] = Math.round(((sim + 1) / 2) * 100)
     })
 
+    const top5semantic = Object.entries(semanticScores)
+      .sort(([, a], [, b]) => b - a)
+      .slice(0, 5)
+    console.log(
+      '[Voyage] Top 5 semantic scores:',
+      top5semantic.map(([id, s]) => `${id}:${s.toFixed(1)}`).join(' | ')
+    )
+
     return NextResponse.json({ semanticScores })
   } catch (err) {
     console.error('Semantic match error:', err)
