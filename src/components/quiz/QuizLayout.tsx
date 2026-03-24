@@ -31,7 +31,7 @@ export function QuizLayout({
       {/* Top bar: back button at far left, logo left-aligned with content column — same row */}
       <div className="relative w-full pt-5 pb-3">
         {/* Logo: content-column left edge */}
-        <div className="max-w-lg md:max-w-xl w-full mx-auto px-5 sm:px-0">
+        <div className="max-w-lg md:max-w-xl w-full mx-auto px-5">
           <AptLogoHorizontal scheme="light" size="sm" />
         </div>
         {/* Back button: vertically centered on the logo row, pinned to left edge */}

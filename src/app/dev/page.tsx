@@ -239,6 +239,8 @@ const [scamModalOpen, setScamModalOpen]   = useState(false)
               score={87}
               matches={['Walkable', 'Social energy']}
               gaps={['Quiet streets']}
+              userDescription="A vibrant, walkable neighbourhood with great coffee shops and a strong sense of community. Lots of independent businesses and people out on the street at all hours."
+              userPlace="Shoreditch, London, UK"
             />
           </div>
         </section>
