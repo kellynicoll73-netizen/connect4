@@ -13,6 +13,8 @@ interface SecondaryMatchCardProps {
   userPlace:       string
 }
 
+/** Expandable card for a secondary neighbourhood match. Lazily fetches a
+ *  Claude-generated comparison blurb when the user taps "Explore this match". */
 export function SecondaryMatchCard({
   neighbourhood,
   score,
@@ -21,10 +23,10 @@ export function SecondaryMatchCard({
   userDescription,
   userPlace,
 }: SecondaryMatchCardProps) {
-  const [isExpanded, setIsExpanded] = useState(false)
-  const [personalText, setPersonalText]   = useState<string | null>(null)
-  const [isLoading, setIsLoading]         = useState(false)
-  const [hasFetched, setHasFetched]       = useState(false)
+  const [isExpanded, setIsExpanded]     = useState(false)
+  const [personalText, setPersonalText] = useState<string | null>(null)
+  const [isLoading, setIsLoading]       = useState(false)
+  const [hasFetched, setHasFetched]     = useState(false)
 
   const handleExpand = async () => {
     setIsExpanded(true)
@@ -50,11 +52,9 @@ export function SecondaryMatchCard({
         const data = await res.json() as { text: string | null }
         if (data.text) setPersonalText(data.text)
       }
-    } catch { /* silent — no comparison block if it fails */ }
+    } catch { /* silent — fallback copy shown instead */ }
     finally { setIsLoading(false) }
   }
-
-  const hasEnoughText = !!userDescription && userDescription.trim().length >= 30
 
   return (
     <div className="border border-neutral-200 rounded-md px-4 py-4 space-y-3">
@@ -77,6 +77,7 @@ export function SecondaryMatchCard({
       {/* Expand / collapse */}
       {!isExpanded ? (
         <button
+          type="button"
           onClick={handleExpand}
           className="font-body text-sm text-primary-400 hover:text-primary-600 transition-colors"
         >
@@ -90,25 +91,28 @@ export function SecondaryMatchCard({
             {neighbourhood.personalityDescription}
           </p>
 
-          {/* How it compares — lazy Claude text */}
-          {hasEnoughText && (
-            <div className="border border-neutral-200 rounded-md px-4 py-3">
-              <p className="font-body text-xs font-semibold uppercase tracking-widest text-neutral-400 mb-2">
-                How it compares to what you know
+          {/* How it compares — lazy Claude text, always shown when expanded */}
+          <div className="border border-neutral-200 rounded-md px-4 py-3">
+            <p className="font-body text-xs font-semibold uppercase tracking-widest text-neutral-400 mb-2">
+              How it compares to what you know
+            </p>
+            {isLoading ? (
+              <p className="font-display italic text-neutral-400 text-sm">
+                Finding the connection…
               </p>
-              {isLoading ? (
-                <p className="font-display italic text-neutral-400 text-sm">
-                  Finding the connection…
-                </p>
-              ) : personalText ? (
-                <p className="font-body text-sm text-neutral-700 leading-relaxed">
-                  {personalText}
-                </p>
-              ) : null}
-            </div>
-          )}
+            ) : personalText ? (
+              <p className="font-body text-sm text-neutral-700 leading-relaxed">
+                {personalText}
+              </p>
+            ) : (
+              <p className="font-body text-sm text-neutral-500 leading-relaxed">
+                Every neighbourhood has its own rhythm — explore to find yours.
+              </p>
+            )}
+          </div>
 
           <button
+            type="button"
             onClick={() => setIsExpanded(false)}
             className="font-body text-sm text-neutral-400 hover:text-neutral-600 transition-colors"
           >

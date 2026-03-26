@@ -25,27 +25,27 @@ export function PhaseIntroCard({
   return (
     <div className="min-h-screen bg-primary-400 flex flex-col">
 
-      {/* Row 1: mono logo (content-column left) + cream back button (absolute left) */}
-      <div className="relative w-full pt-5 pb-3">
-        <div className="max-w-lg w-full mx-auto px-5">
+      {/* Row 1: flex row — back button in flow, logo clears it naturally at all viewport widths */}
+      <div className="w-full pt-5 pb-3">
+        <div className="max-w-lg w-full mx-auto px-5 flex items-center gap-3">
+          <button
+            type="button"
+            onClick={onBack}
+            aria-label={en.quiz.shared.backAriaLabel}
+            className="shrink-0 w-8 h-8 rounded-full bg-apt-cream flex items-center justify-center hover:bg-white transition-colors"
+          >
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path
+                d="M9 2L4 7L9 12"
+                stroke="#A3614A"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
           <AptLogoHorizontal scheme="mono" size="sm" />
         </div>
-        <button
-          type="button"
-          onClick={onBack}
-          aria-label={en.quiz.shared.backAriaLabel}
-          className="absolute left-4 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-apt-cream flex items-center justify-center hover:bg-white transition-colors"
-        >
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-            <path
-              d="M9 2L4 7L9 12"
-              stroke="#A3614A"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </button>
       </div>
 
       {/* Phase label — no background, matches pill vertical position on quiz pages */}
