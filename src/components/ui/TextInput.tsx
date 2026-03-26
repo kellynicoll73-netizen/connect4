@@ -32,6 +32,7 @@ export function TextInput({
         value={value}
         required={required}
         placeholder={placeholder}
+        autoComplete="off"
         onChange={(e) => onChange(e.target.value)}
         className="
           w-full px-3 py-2.5 rounded-md border border-neutral-200

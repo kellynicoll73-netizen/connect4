@@ -20,7 +20,7 @@ export default function ListingPage() {
 
   const main = (
     <div className="min-h-screen bg-neutral-50">
-      <div className="max-w-lg mx-auto px-5 py-6">
+      <div className="max-w-lg md:max-w-xl mx-auto px-5 md:px-8 py-6">
         <button
           type="button"
           onClick={() => router.back()}
