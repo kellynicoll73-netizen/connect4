@@ -20,7 +20,7 @@ export function SingleSelectOptions({
   options,
   value,
   onChange,
-  showEscape = true,
+  showEscape = false,
   escapeFreeText = null,
   onEscapeChange,
 }: SingleSelectOptionsProps) {

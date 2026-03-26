@@ -290,12 +290,32 @@ export function computeDisplayScores(
 ): Record<string, number> {
   const weights = applyWeightAdjustments(session)
 
+  console.log(
+    '[Matching] Answers → Q3:', session.household,
+    '| Q5:', session.transport,
+    '| Q6:', session.freeDay,
+    '| Q7:', session.neighbourhoodEnergy,
+    '| Q8:', session.outdoorsAccess,
+    '| Q9:', session.culturalCommunity,
+    '| Q10:', session.comfortPriority,
+  )
+  console.log(
+    '[Matching] Weights (base 1):',
+    Object.entries(weights).map(([k, v]) => `${k}:${v}`).join(' | ')
+  )
+
   const rawScores = neighbourhoods.map((n) => ({
     id:    n.id,
     score: computeRawScore(n, weights)
            + applyBudgetPenalty(n, session)
            + applyRawBonuses(n, session),
   }))
+
+  const top5raw = [...rawScores].sort((a, b) => b.score - a.score).slice(0, 5)
+  console.log(
+    '[Matching] Top 5 raw scores:',
+    top5raw.map(({ id, score }) => `${id}:${score}`).join(' | ')
+  )
 
   const maxRaw = Math.max(...rawScores.map((s) => s.score), 1)
   return Object.fromEntries(

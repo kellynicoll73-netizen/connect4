@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { useSession } from '@/context/SessionContext'
 import { NeighbourhoodMatchCard } from '@/components/result/NeighbourhoodMatchCard'
@@ -34,42 +34,18 @@ function getAnalogousText(
 
 export default function ResultPage() {
   const router = useRouter()
-  const { matchedNeighbourhood, state, resetSession, topMatches } = useSession()
-  const [saveOpen, setSaveOpen]                       = useState(false)
-  const [dynamicAnalogousText, setDynamicAnalogousText] = useState<string | null>(null)
-
-  // ── Fetch personalised analogous comparison from Claude ────────────────────
-  useEffect(() => {
-    if (!matchedNeighbourhood) return
-
-    const description = state.favouriteDescription ?? state.currentDescription
-    if (!description || description.trim().length < 30) return
-
-    const place = [state.favouriteNeighbourhood, state.favouriteCity, state.favouriteCountry]
-      .filter(Boolean).join(', ')
-
-    fetch('/api/personalise', {
-      method:  'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        userPlace:                place || 'a place they love',
-        userDescription:          description,
-        neighbourhoodName:        matchedNeighbourhood.name,
-        neighbourhoodDescription: matchedNeighbourhood.personalityDescription,
-      }),
-    })
-      .then(r => r.json())
-      .then((data: { text: string | null }) => {
-        if (data.text) setDynamicAnalogousText(data.text)
-      })
-      .catch(() => { /* silent fallback to static text */ })
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [matchedNeighbourhood?.id])
+  const { matchedNeighbourhood, state, resetSession, topMatches, personalText } = useSession()
+  const [saveOpen, setSaveOpen] = useState(false)
+  // personalText is pre-loaded during the loading screen via SessionContext — no flash
 
   if (!matchedNeighbourhood) {
     if (typeof window !== 'undefined') router.replace('/quiz/1')
     return null
   }
+
+  const userDescription = state.favouriteDescription ?? state.currentDescription
+  const userPlace = [state.favouriteNeighbourhood, state.favouriteCity, state.favouriteCountry]
+    .filter(Boolean).join(', ') || 'a place they love'
 
   const winnerScore   = topMatches[0]?.score ?? 100
   const runnerUps     = topMatches
@@ -103,7 +79,7 @@ export default function ResultPage() {
               score={winnerScore}
               matches={winnerSignals.matches}
               gaps={winnerSignals.gaps}
-              analogousText={showAnalogous ? (dynamicAnalogousText ?? analogousText) : undefined}
+              analogousText={showAnalogous ? (personalText ?? analogousText) : undefined}
               bedroomKey={bedroomKey}
               onCta={() => router.push('/result/listing')}
             />
@@ -128,6 +104,8 @@ export default function ResultPage() {
                       score={score}
                       matches={signals.matches}
                       gaps={signals.gaps}
+                      userDescription={userDescription}
+                      userPlace={userPlace}
                     />
                   )
                 })}

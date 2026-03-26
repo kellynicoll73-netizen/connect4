@@ -22,6 +22,20 @@ const figtree = Figtree({
 export const metadata: Metadata = {
   title: en.meta.title,
   description: en.meta.description,
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: '32x32', type: 'image/x-icon' },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+    apple: { url: '/apple-touch-icon.png', sizes: '180x180' },
+  },
+  openGraph: {
+    title: en.meta.title,
+    description: en.meta.description,
+    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
+    type: 'website',
+  },
+  manifest: '/manifest.json',
 };
 
 export default function RootLayout({

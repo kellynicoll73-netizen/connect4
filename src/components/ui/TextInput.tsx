@@ -21,7 +21,7 @@ export function TextInput({
 }: TextInputProps) {
   return (
     <div className={`flex flex-col gap-1 ${className}`}>
-      <label className="text-sm font-body font-semibold text-neutral-900">
+      <label htmlFor={label.toLowerCase().replace(/\s+/g, '-')} className="text-sm font-body font-semibold text-neutral-900">
         {label}
         {optional && (
           <span className="ml-1 font-normal text-neutral-400">{optional}</span>
@@ -29,6 +29,8 @@ export function TextInput({
       </label>
       <input
         type="text"
+        id={label.toLowerCase().replace(/\s+/g, '-')}
+        name={label.toLowerCase().replace(/\s+/g, '-')}
         value={value}
         required={required}
         placeholder={placeholder}

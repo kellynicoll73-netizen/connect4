@@ -22,17 +22,28 @@ export default function LoadingPage() {
   const [visibleCount, setVisibleCount] = useState(0)
 
   useEffect(() => {
-    runMatching()
+    let cancelled = false
 
     const timers: ReturnType<typeof setTimeout>[] = []
 
+    // Animate chips regardless of API timing
     CHIP_DELAYS.forEach((delay, i) => {
       timers.push(setTimeout(() => setVisibleCount(i + 1), delay))
     })
 
-    timers.push(setTimeout(() => router.push('/result'), 3500))
+    // Wait for both: minimum display time AND full matching + personalisation
+    // This ensures results page renders complete — no flash of static text
+    const minDelay = new Promise<void>((resolve) => setTimeout(resolve, 3500))
+    Promise.all([minDelay, runMatching()]).then(() => {
+      if (!cancelled) router.push('/result')
+    }).catch(() => {
+      if (!cancelled) router.push('/result')
+    })
 
-    return () => timers.forEach(clearTimeout)
+    return () => {
+      cancelled = true
+      timers.forEach(clearTimeout)
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 

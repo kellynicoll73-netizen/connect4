@@ -219,6 +219,39 @@ Match signal pills on the results page derive from the same weights: attributes 
 
 ---
 
+---
+
+## UX Polish: Pre-loading, Secondary Match Exploration & Mobile Layout — March 2026
+
+> **Scope:** UX improvements to the results flow and mobile layout. No changes to matching logic, data, or API contracts.
+> **ADRs:** See [`docs/adr/`](docs/adr/) for full decision rationale — ADR-001, ADR-002, ADR-003.
+
+### Changes
+
+#### Loading screen (`src/app/loading/page.tsx`)
+- Now fires both Voyage semantic matching and Claude personalisation calls in parallel during the loading window
+- Results page receives fully pre-loaded data — no post-render API calls
+- Fixed: unhandled promise rejection if `runMatching` throws — user is now always forwarded to `/result` even on catastrophic failure (governance fix)
+
+#### Session context (`src/context/SessionContext.tsx`)
+- `runMatching()` extended to fire `/api/personalise` in parallel with the Voyage call
+- `personalText` added to session state — stores the Claude-generated comparison text
+- Result page reads `personalText` from context rather than calling the API itself
+
+#### Results page (`src/app/result/page.tsx`)
+- Removed the `useEffect` that previously fired `/api/personalise` on mount
+- Now reads `personalText` directly from session context — renders complete on first paint
+- Secondary match cards are now expandable — clicking triggers a lazy Claude call for that neighbourhood
+- Lena-voice placeholder shown while personalisation loads for secondary matches
+
+#### Quiz layout (`src/components/quiz/QuizLayout.tsx`)
+- Added `pl-12 sm:pl-0` to the logo wrapper to prevent back button overlap on mobile viewports
+
+#### NeighbourhoodMatchCard (`src/components/result/NeighbourhoodMatchCard.tsx`)
+- Fixed: added `type="button"` to the read more/less toggle (governance fix — accessibility hygiene)
+
+---
+
 ### Blended scoring — semantic layer (active)
 
 The API route at `src/app/api/match/route.ts` adds a semantic similarity layer using Voyage AI embeddings (`voyage-3`). It works as follows:

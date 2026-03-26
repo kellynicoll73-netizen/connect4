@@ -26,3 +26,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# MCP config (may contain API keys)
+.mcp.json
+
+# Claude Code local settings
+.claude/settings.local.json

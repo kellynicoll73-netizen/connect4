@@ -64,7 +64,9 @@ export async function POST(req: NextRequest) {
 
     // Single batch call: user text first, then all neighbourhood descriptions
     const allTexts = [text, ...entries.map(([, desc]) => desc)]
+    console.log('[Voyage] Calling embeddings API — input count:', allTexts.length)
     const allEmbeddings = await getEmbeddings(apiKey, allTexts)
+    console.log('[Voyage] Embeddings received — dimension:', allEmbeddings[0]?.length)
 
     const userEmbedding = allEmbeddings[0]
     const neighbourhoodEmbeddings = allEmbeddings.slice(1)
@@ -76,6 +78,14 @@ export async function POST(req: NextRequest) {
       // Convert from [-1,1] to [0,100]
       semanticScores[id] = Math.round(((sim + 1) / 2) * 100)
     })
+
+    const top5semantic = Object.entries(semanticScores)
+      .sort(([, a], [, b]) => b - a)
+      .slice(0, 5)
+    console.log(
+      '[Voyage] Top 5 semantic scores:',
+      top5semantic.map(([id, s]) => `${id}:${s.toFixed(1)}`).join(' | ')
+    )
 
     return NextResponse.json({ semanticScores })
   } catch (err) {

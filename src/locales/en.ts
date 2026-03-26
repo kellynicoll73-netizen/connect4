@@ -57,9 +57,9 @@ export const en = {
       subQuestion: 'Select all that apply',
       options: {
         'just-me': 'Just me',
-        'me-and-pet': 'Me and a pet',
-        'me-and-partner': 'Me and a partner',
-        'me-and-children': 'Me and children',
+        'me-and-pet': 'A pet',
+        'me-and-partner': 'My partner',
+        'me-and-children': 'My children',
       },
       whyWeAsk:
         "A neighbourhood that works for someone moving solo is a very different place to one that works for a family. Safety, quiet, access to schools and parks all shift significantly depending on who’s with you.",

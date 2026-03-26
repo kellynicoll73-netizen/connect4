@@ -20,7 +20,7 @@ export function MultiSelectOptions({
   options,
   value,
   onChange,
-  showEscape = true,
+  showEscape = false,
   escapeFreeText = null,
   onEscapeChange,
 }: MultiSelectOptionsProps) {
