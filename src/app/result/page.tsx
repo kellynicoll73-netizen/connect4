@@ -81,7 +81,6 @@ export default function ResultPage() {
               gaps={winnerSignals.gaps}
               analogousText={showAnalogous ? (personalText ?? analogousText) : undefined}
               bedroomKey={bedroomKey}
-              onCta={() => router.push('/result/listing')}
             />
           </div>
 

@@ -5,7 +5,6 @@ import type { Neighbourhood } from '@/types'
 import { MatchSignalPills } from './MatchSignalPills'
 import { AnalogousComparisonBlock } from './AnalogousComparisonBlock'
 import { CommunityVoiceBlock } from './CommunityVoiceBlock'
-import { Button } from '@/components/ui/Button'
 import { en } from '@/locales/en'
 
 interface NeighbourhoodMatchCardProps {
@@ -15,7 +14,6 @@ interface NeighbourhoodMatchCardProps {
   gaps:           string[]
   analogousText?: string
   bedroomKey?:    'oneBed' | 'twoBed' | 'threeBed'
-  onCta?:         () => void
 }
 
 export function NeighbourhoodMatchCard({
@@ -25,7 +23,6 @@ export function NeighbourhoodMatchCard({
   gaps,
   analogousText,
   bedroomKey = 'oneBed',
-  onCta,
 }: NeighbourhoodMatchCardProps) {
   const [showFull, setShowFull] = useState(false)
 
@@ -106,15 +103,6 @@ export function NeighbourhoodMatchCard({
       {neighbourhood.communityQuote && (
         <div className="mb-6">
           <CommunityVoiceBlock quote={neighbourhood.communityQuote} />
-        </div>
-      )}
-
-      {/* CTA */}
-      {onCta && (
-        <div className="mb-2">
-          <Button variant="primary" fullWidth onClick={onCta}>
-            See what&apos;s available in {neighbourhood.name} →
-          </Button>
         </div>
       )}
     </div>

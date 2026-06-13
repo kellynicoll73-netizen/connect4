@@ -10,7 +10,6 @@ import {
 import type {
   SessionState,
   Neighbourhood,
-  ListingObject,
   CardVersion,
 } from '@/types'
 import { computeTopMatches, computeDisplayScores } from '@/lib/matching'
@@ -71,7 +70,6 @@ interface SessionContextValue {
   // Derived
   isQuizComplete:       boolean
   matchedNeighbourhood: Neighbourhood | null
-  selectedListing:      ListingObject | null
   topMatches:           Array<{ neighbourhood: Neighbourhood; score: number }>
   // Claude personalisation — pre-loaded during matching
   personalText:         string | null
@@ -196,15 +194,6 @@ export function SessionProvider({ children }: { children: ReactNode }) {
     [state]
   )
 
-  const selectedListing: ListingObject | null = (() => {
-    if (!matchedNeighbourhood || !state.bedrooms) return null
-    const key =
-      state.bedrooms === 1 ? 'oneBed' :
-      state.bedrooms === 2 ? 'twoBed' :
-      'threeBed'
-    return matchedNeighbourhood.listings[key]
-  })()
-
   const value = useMemo<SessionContextValue>(
     () => ({
       state,
@@ -213,7 +202,6 @@ export function SessionProvider({ children }: { children: ReactNode }) {
       resetSession,
       isQuizComplete,
       matchedNeighbourhood,
-      selectedListing,
       topMatches,
       personalText,
     }),
