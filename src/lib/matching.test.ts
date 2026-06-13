@@ -38,7 +38,6 @@ function baseSession(overrides: Partial<SessionState> = {}): SessionState {
     favouriteNeighbourhood:   null,
     favouriteDescription:     null,
     matchedNeighbourhoodId:   null,
-    cardVersion:              'C',
     ...overrides,
   }
 }

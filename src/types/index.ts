@@ -137,8 +137,6 @@ export type ComfortPriority =
   | 'grit'
   | 'other'
 
-export type CardVersion = 'A' | 'B' | 'C'
-
 // ─── Session state ────────────────────────────────────────────────────────────
 
 export interface SessionState {
@@ -178,5 +176,4 @@ export interface SessionState {
   favouriteDescription:     string | null
   // Output
   matchedNeighbourhoodId:   string | null
-  cardVersion:              CardVersion
 }

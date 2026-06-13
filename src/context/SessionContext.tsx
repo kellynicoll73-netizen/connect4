@@ -10,7 +10,6 @@ import {
 import type {
   SessionState,
   Neighbourhood,
-  CardVersion,
 } from '@/types'
 import { computeTopMatches, computeDisplayScores } from '@/lib/matching'
 import neighbourhoodsData from '@/data/neighbourhoods.json'
@@ -18,12 +17,6 @@ import neighbourhoodsData from '@/data/neighbourhoods.json'
 const neighbourhoods = neighbourhoodsData as unknown as Neighbourhood[]
 
 // ─── Initial state ────────────────────────────────────────────────────────────
-
-function getInitialCardVersion(): CardVersion {
-  const env = process.env.NEXT_PUBLIC_CARD_VERSION
-  if (env === 'A' || env === 'B' || env === 'C') return env
-  return 'C'
-}
 
 const INITIAL_STATE: SessionState = {
   reasonForMoving:          null,
@@ -57,7 +50,6 @@ const INITIAL_STATE: SessionState = {
   favouriteCountry:         null,
   favouriteDescription:     null,
   matchedNeighbourhoodId:   null,
-  cardVersion:              getInitialCardVersion(),
 }
 
 // ─── Context value type ───────────────────────────────────────────────────────
@@ -166,7 +158,7 @@ export function SessionProvider({ children }: { children: ReactNode }) {
   }
 
   const resetSession = () => {
-    setState({ ...INITIAL_STATE, cardVersion: state.cardVersion })
+    setState({ ...INITIAL_STATE })
     setPersonalText(null)
   }
 
