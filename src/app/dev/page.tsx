@@ -14,14 +14,10 @@ import { MatchSignalPills } from '@/components/result/MatchSignalPills'
 import { AnalogousComparisonBlock } from '@/components/result/AnalogousComparisonBlock'
 import { CommunityVoiceBlock } from '@/components/result/CommunityVoiceBlock'
 import { SecondaryMatchCard } from '@/components/result/SecondaryMatchCard'
-import { RentalListingCard } from '@/components/listing/RentalListingCard'
-import { ScamFlagItem } from '@/components/listing/ScamFlagItem'
-import { ScamShieldModal } from '@/components/modals/ScamShieldModal'
 import { SaveBottomSheet } from '@/components/modals/SaveBottomSheet'
 import type { Neighbourhood } from '@/types'
 import neighbourhoodsData from '@/data/neighbourhoods.json'
 import { ProgressBar } from '@/components/quiz/ProgressBar'
-import { PhasePill } from '@/components/quiz/PhasePill'
 import { QuizQuestion } from '@/components/quiz/QuizQuestion'
 import { WhyWeAskToggle } from '@/components/quiz/WhyWeAskToggle'
 import { SingleSelectOptions } from '@/components/quiz/SingleSelectOptions'
@@ -53,7 +49,6 @@ export default function DevPage() {
   const [singleVal, setSingleVal] = useState<string | null>(null)
   const [singleEscape, setSingleEscape] = useState('')
   const [multiVal, setMultiVal] = useState<string[]>([])
-const [scamModalOpen, setScamModalOpen]   = useState(false)
   const [saveSheetOpen, setSaveSheetOpen]   = useState(false)
 
   const mountPleasant = (neighbourhoodsData as unknown as Neighbourhood[]).find(
@@ -137,52 +132,19 @@ const [scamModalOpen, setScamModalOpen]   = useState(false)
             Phase 8 — Modals
           </h2>
           <div className="flex gap-3">
-            <Button variant="primary" onClick={() => setScamModalOpen(true)}>
-              Open ScamShield Modal
-            </Button>
             <Button variant="secondary" onClick={() => setSaveSheetOpen(true)}>
               Open Save Bottom Sheet
             </Button>
           </div>
           <p className="text-xs text-neutral-400 font-body">
-            Tab cycles within each modal. Escape closes. Re-opening resets the form.
+            Tab cycles within the modal. Escape closes. Re-opening resets the form.
           </p>
         </section>
 
-        <ScamShieldModal
-          isOpen={scamModalOpen}
-          onClose={() => setScamModalOpen(false)}
-          listing={mountPleasant.listings.oneBed}
-        />
         <SaveBottomSheet
           isOpen={saveSheetOpen}
           onClose={() => setSaveSheetOpen(false)}
         />
-
-        {/* ── Phase 7: Listing components ───────────────────────────────── */}
-        <section className="space-y-6 pb-8 border-b border-neutral-200">
-          <h2 className="font-body text-xs font-semibold tracking-widest text-neutral-400 uppercase">
-            Phase 7 — Listing components
-          </h2>
-
-          <div>
-            <p className="text-xs text-neutral-400 font-body mb-3">ScamFlagItem</p>
-            <ul className="space-y-2">
-              <ScamFlagItem label="Price 10% below the neighbourhood median" />
-              <ScamFlagItem label='"Available immediately — or sooner for the right person"' />
-              <ScamFlagItem label="Utilities included (uncommon at this price point in this area)" />
-            </ul>
-          </div>
-
-          <div>
-            <p className="text-xs text-neutral-400 font-body mb-3">RentalListingCard — Mount Pleasant 1BR</p>
-            <RentalListingCard
-              listing={mountPleasant.listings.oneBed}
-              neighbourhoodName={mountPleasant.name}
-              onReply={() => alert('ScamShieldModal would open here')}
-            />
-          </div>
-        </section>
 
         {/* ── Result components ─────────────────────────────────────────── */}
         <section className="space-y-6 pb-8 border-b border-neutral-200">
@@ -204,7 +166,6 @@ const [scamModalOpen, setScamModalOpen]   = useState(false)
                 gaps={['Quiet streets']}
                 analogousText={mountPleasant.analogousComparisons['Dublin_The Liberties'] ?? mountPleasant.analogousComparisons['default']}
                 bedroomKey="oneBed"
-                onCta={() => alert('→ /result/listing')}
               />
             </div>
           </div>
@@ -287,14 +248,6 @@ const [scamModalOpen, setScamModalOpen]   = useState(false)
                 </button>
               ))}
             </div>
-          </div>
-
-          {/* Phase pill — rendered via PhasePill component (same as QuizLayout) */}
-          <div className="space-y-3">
-            <p className="text-xs text-neutral-400 font-body">PhasePill — auto-synced from component</p>
-            {([1, 2, 3] as const).map((phase) => (
-              <PhasePill key={phase} phase={phase} />
-            ))}
           </div>
 
           {/* QuizQuestion */}

@@ -218,8 +218,6 @@ export const en = {
       'This is a match, not a certainty. No algorithm replaces walking the streets on a Tuesday morning. Shortlist two or three and visit each before you commit.',
     saveButton: 'Save my results',
     startAgain: 'Start again',
-    rentalEntry: "See what’s available in {neighbourhood} right now →",
-    comingNext: 'Coming next',
     howItCompares: 'How it compares to what you know',
     whatItsLike: 'What this neighbourhood is actually like',
     communityVoice: 'From someone who lives here',
@@ -229,36 +227,6 @@ export const en = {
       cmhc: 'CMHC vacancy',
       community: 'Community data',
     },
-  },
-
-  listing: {
-    backLink: '← Back to your match',
-    titleBar: '{neighbourhood} · {bedrooms} bed · {price}/month',
-    postedAt: 'Posted {time}',
-    replyCta: 'Reply to this post / Express interest',
-    photoAlt: '{alt} — photo {number}',
-  },
-
-  scamShield: {
-    header: 'Wait — this listing has 3 red flags.',
-    body1:
-      'Listings priced below market, described as renovated, and available immediately are the most common pattern used in phantom rental scams targeting newcomers in Vancouver.',
-    body2:
-      "The typical next step: the \u201clandlord\u201d asks for a deposit by e-transfer before you’ve seen the property. Once sent, it’s gone.",
-    body3:
-      'We flagged this listing deliberately. On Craigslist and Kijiji, real listings and fake ones look identical. Without a way to check, the difference is impossible to spot.',
-    flags: {
-      belowMedian: 'Price 10% below the neighbourhood median',
-      immediateAvailability: '\u201cAvailable immediately — or sooner for the right person\u201d',
-      utilitiesIncluded: 'Utilities included (uncommon at this price point in this area)',
-    },
-    pitch1:
-      "Scam Shield is our listing verification tool. Paste a URL — we’ll flag phantom listings, suspicious landlord patterns, and illegal deposit requests before you commit.",
-    pitch2: "We’re building it now. Leave your email for early access.",
-    emailPlaceholder: 'your@email.com',
-    emailCta: 'Get early access',
-    confirmation: "You’re on the list.",
-    dismiss: 'No thanks, go back',
   },
 
   save: {
@@ -275,10 +243,6 @@ export const en = {
   meta: {
     title: 'Apt — Find your Vancouver neighbourhood',
     description: 'Find the Vancouver neighbourhood that fits who you are.',
-  },
-
-  modals: {
-    scamShieldAriaLabel: 'Scam Shield warning',
   },
 } as const
 
