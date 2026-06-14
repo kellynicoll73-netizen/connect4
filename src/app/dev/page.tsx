@@ -18,7 +18,6 @@ import { SaveBottomSheet } from '@/components/modals/SaveBottomSheet'
 import type { Neighbourhood } from '@/types'
 import neighbourhoodsData from '@/data/neighbourhoods.json'
 import { ProgressBar } from '@/components/quiz/ProgressBar'
-import { PhasePill } from '@/components/quiz/PhasePill'
 import { QuizQuestion } from '@/components/quiz/QuizQuestion'
 import { WhyWeAskToggle } from '@/components/quiz/WhyWeAskToggle'
 import { SingleSelectOptions } from '@/components/quiz/SingleSelectOptions'
@@ -249,14 +248,6 @@ export default function DevPage() {
                 </button>
               ))}
             </div>
-          </div>
-
-          {/* Phase pill — rendered via PhasePill component (same as QuizLayout) */}
-          <div className="space-y-3">
-            <p className="text-xs text-neutral-400 font-body">PhasePill — auto-synced from component</p>
-            {([1, 2, 3] as const).map((phase) => (
-              <PhasePill key={phase} phase={phase} />
-            ))}
           </div>
 
           {/* QuizQuestion */}
