@@ -1,20 +1,29 @@
 import type { SessionState, Neighbourhood, NeighbourhoodAttributes } from '@/types'
+import { computeProximityScores, commuteWeight, proximityScore } from './centrality'
 
 // ─── Weight table ─────────────────────────────────────────────────────────────
 
 type AttributeWeights = Record<keyof NeighbourhoodAttributes, number>
 
+// Base weight for every attribute before quiz answers adjust it.
+// Kept at 1: it regularises toward well-rounded fit. Lowering it (tested 0 and
+// 0.5 against the persona suite) surfaces remote single-axis extremes
+// (Deep Cove, White Rock) for quiet/outdoors personas — worse, not better.
+// The real magnitude-bias fix is per-attribute normalisation (with penalty
+// rescaling), and the bigger lever is a missing centrality/commute dimension.
+const BASE_WEIGHT = 1.5
+
 function baseWeights(): AttributeWeights {
   return {
-    walkability:       1,
-    transitScore:      1,
-    cyclingScore:      1,
-    outdoorsAccess:    1,
-    culturalDiversity: 1,
-    safetyPerception:  1,
-    socialEnergy:      1,
-    fitnessAccess:     1,
-    quietness:         1,
+    walkability:       BASE_WEIGHT,
+    transitScore:      BASE_WEIGHT,
+    cyclingScore:      BASE_WEIGHT,
+    outdoorsAccess:    BASE_WEIGHT,
+    culturalDiversity: BASE_WEIGHT,
+    safetyPerception:  BASE_WEIGHT,
+    socialEnergy:      BASE_WEIGHT,
+    fitnessAccess:     BASE_WEIGHT,
+    quietness:         BASE_WEIGHT,
   }
 }
 
@@ -212,7 +221,11 @@ function applyBudgetPenalty(
   if (!bedroomKey) return 0
 
   const medianRent = neighbourhood.medianRent[bedroomKey]
-  return medianRent > cap ? -50 : 0
+  if (medianRent <= cap) return 0
+  // Graduated penalty: scales with how far over budget, capped at -40.
+  // Replaces a flat -50 "cliff" that collapsed all over-budget options equally.
+  const overFraction = (medianRent - cap) / cap
+  return -Math.min(40, Math.round(overFraction * 100))
 }
 
 function applyRawBonuses(
@@ -268,12 +281,15 @@ export function computeMatch(
   neighbourhoods: Neighbourhood[]
 ): string {
   const weights = applyWeightAdjustments(session)
+  const proximity = computeProximityScores(session, neighbourhoods)
+  const cWeight = commuteWeight(session)
 
   const scores = neighbourhoods.map((n) => ({
     id:    n.id,
     score: computeRawScore(n, weights)
            + applyBudgetPenalty(n, session)
-           + applyRawBonuses(n, session),
+           + applyRawBonuses(n, session)
+           + (proximity[n.id] ?? 0) * cWeight,
   }))
 
   const best = scores.reduce((a, b) => (b.score > a.score ? b : a))
@@ -289,6 +305,8 @@ export function computeDisplayScores(
   neighbourhoods: Neighbourhood[]
 ): Record<string, number> {
   const weights = applyWeightAdjustments(session)
+  const proximity = computeProximityScores(session, neighbourhoods)
+  const cWeight = commuteWeight(session)
 
   console.log(
     '[Matching] Answers → Q3:', session.household,
@@ -308,7 +326,8 @@ export function computeDisplayScores(
     id:    n.id,
     score: computeRawScore(n, weights)
            + applyBudgetPenalty(n, session)
-           + applyRawBonuses(n, session),
+           + applyRawBonuses(n, session)
+           + (proximity[n.id] ?? 0) * cWeight,
   }))
 
   const top5raw = [...rawScores].sort((a, b) => b.score - a.score).slice(0, 5)
@@ -336,13 +355,16 @@ export function computeTopMatches(
   n = 3
 ): Array<{ neighbourhood: Neighbourhood; score: number }> {
   const weights = applyWeightAdjustments(session)
+  const proximity = computeProximityScores(session, neighbourhoods)
+  const cWeight = commuteWeight(session)
 
   const scored = neighbourhoods
     .map((neighbourhood) => ({
       neighbourhood,
       raw: computeRawScore(neighbourhood, weights)
            + applyBudgetPenalty(neighbourhood, session)
-           + applyRawBonuses(neighbourhood, session),
+           + applyRawBonuses(neighbourhood, session)
+           + (proximity[neighbourhood.id] ?? 0) * cWeight,
     }))
     .sort((a, b) => b.raw - a.raw)
 
@@ -383,4 +405,73 @@ export function computeMatchSignals(
   }
 
   return { matches: matches.slice(0, 4), gaps: gaps.slice(0, 3) }
+}
+
+// ─── Honest scoring (no display compression) ───────────────────────────────────
+
+/**
+ * Structural scores normalised 0–100 across the set — for ranking and blending,
+ * NOT a user-facing percentage. Min-max with no artificial floor/ceiling, so
+ * strong signals (commute, budget) keep their full spread and influence.
+ * (Replaces computeDisplayScores's 50–88 transform in the ranking pipeline.)
+ */
+export function computeStructuralScores(
+  session: SessionState,
+  neighbourhoods: Neighbourhood[]
+): Record<string, number> {
+  const weights = applyWeightAdjustments(session)
+  const proximity = computeProximityScores(session, neighbourhoods)
+  const cWeight = commuteWeight(session)
+
+  const raw = neighbourhoods.map((n) => ({
+    id:    n.id,
+    score: computeRawScore(n, weights)
+           + applyBudgetPenalty(n, session)
+           + applyRawBonuses(n, session)
+           + (proximity[n.id] ?? 0) * cWeight,
+  }))
+
+  const vals = raw.map((r) => r.score)
+  const min  = Math.min(...vals)
+  const max  = Math.max(...vals)
+  const span = max - min || 1
+  return Object.fromEntries(raw.map((r) => [r.id, ((r.score - min) / span) * 100]))
+}
+
+export type FitTier = 'strong' | 'good' | 'stretch'
+
+/**
+ * Honest confidence: how many of the user's priorities this neighbourhood hits.
+ * Priorities = attributes the user weighted highly (≥3), plus commute when a
+ * workplace/campus was named. No normalisation — just "x of y", which doubles
+ * as the explanation ("strong fit — matches 5 of the 6 things you cared about").
+ */
+export function computeFitTier(
+  session: SessionState,
+  neighbourhood: Neighbourhood
+): { tier: FitTier; hits: number; priorities: number } {
+  const weights = applyWeightAdjustments(session)
+  const attrs   = neighbourhood.attributes
+
+  let priorities = 0
+  let hits = 0
+  for (const k of Object.keys(weights) as (keyof NeighbourhoodAttributes)[]) {
+    if (weights[k] >= 3) {
+      priorities++
+      if (attrs[k] >= 7) hits++
+    }
+  }
+  // Commute counts as a priority only when a workplace/campus was named.
+  if (commuteWeight(session) > 0) {
+    priorities++
+    if (proximityScore(session, neighbourhood) >= 5) hits++
+  }
+
+  const ratio = priorities > 0 ? hits / priorities : 0
+  const tier: FitTier =
+    priorities === 0 ? 'stretch' :
+    ratio >= 0.6     ? 'strong'  :
+    ratio >= 0.34    ? 'good'    : 'stretch'
+
+  return { tier, hits, priorities }
 }
